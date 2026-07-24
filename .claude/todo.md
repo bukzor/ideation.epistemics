@@ -2,18 +2,18 @@
 
 Ranked by `mission.md`: reach the rungs the operator runs on first.
 
-- [ ] Land {TL, RN} at repo weight — answer
-      `questions.kb/how-should-repo-weight-absorb-tl-rn.md` by deriving
-      collections, statuses and edges from the axioms, then land it in
-      `bukzor-agent-skills/`. The shipped design is prior art and
-      evidence of intent, never canon
-      (`claims.kb/incumbent-design-is-evidence-not-canon.md`). Highest
-      leverage: reaches every `.kb/` in the fleet
-      (`claims.kb/repo-weight-rung-is-unbuilt.md`)
-- [ ] Preservation audit — `preservation-audit.md` inventories what the
-      incumbent gets right; the derivation owes each entry a verdict:
-      improves, preserves, or obviates, argued. Acceptance test for the
-      above, not a postscript to it
+- [ ] Operator fiat on two points in `repo-weight-derivation.md`: does
+      `likelihood` survive (recommendation: obviate), and does
+      `questions.kb/` stay given that the axioms merge open claims with
+      questions (recommendation: keep, on ergonomic grounds). Both block
+      landing the schema
+- [ ] Land {TL, RN} at repo weight in `bukzor-agent-skills/` —
+      `repo-weight-derivation.md` is the proposal, `preservation-audit.md`
+      the side-by-side, `claims.kb/warrant-by-field-presence.md` the core.
+      Highest leverage: reaches every `.kb/` in the fleet
+      (`claims.kb/repo-weight-rung-is-unbuilt.md`). Dogfood first: this
+      realm's own 9 claim→claim `depends:` edges become deductions or
+      lose their support reading
 - [ ] Give RP a mechanism at repo weight — type the support edge, then
       walk it on retraction (`llm.kb-validate` is the existing surface;
       `2026-07-24-000-warrant-audit.prototype/` states the invariant in

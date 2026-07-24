@@ -1,6 +1,8 @@
 ---
 sources: [../sources.kb/bukzor.md]
-candidate-resolutions: [../claims.kb/two-base-statuses-not-four.md]
+candidate-resolutions:
+  - ../claims.kb/warrant-by-field-presence.md
+  - ../claims.kb/two-base-statuses-not-four.md
 depends:
   - ../claims.kb/repo-weight-rung-is-unbuilt.md
   - ../claims.kb/incumbent-design-is-evidence-not-canon.md
@@ -13,8 +15,15 @@ How does repo weight absorb {TL, RN}? Derive the collections, statuses
 and edges from the axioms directly, asking whether five collections and
 the design/discourse split are what {TL, RN} actually implies.
 
-Open. What is settled is only the method: the shipped design is prior
-art and evidence of intent, not canon
+Open, with a proposal on the table: `../repo-weight-derivation.md`
+carries the derivation, `../preservation-audit.md` the side-by-side
+against the incumbent, and `../claims.kb/warrant-by-field-presence.md`
+the core of it. Two points are held for operator fiat — whether
+`likelihood` survives, and whether `questions.kb/` stays given that the
+axioms merge open claims with questions.
+
+Method settled first: the shipped design is prior art and evidence of
+intent, not canon
 (`../claims.kb/incumbent-design-is-evidence-not-canon.md`). The
 question was first posed as patch vs. rewrite; that framing is retired,
 since both branches measure edit distance from the incumbent and so
