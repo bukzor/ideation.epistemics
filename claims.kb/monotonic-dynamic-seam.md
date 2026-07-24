@@ -1,6 +1,4 @@
 ---
-status: asserted
-likelihood: 0.9
 sources: [../sources.kb/knot-theory-chat.md]
 tags: [ladder, architecture]
 ---

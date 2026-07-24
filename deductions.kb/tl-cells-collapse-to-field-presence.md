@@ -1,5 +1,4 @@
 ---
-status: asserted
 kind: entailment
 conclusion: ../claims.kb/warrant-by-field-presence.md
 premises:

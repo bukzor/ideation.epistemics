@@ -2,7 +2,6 @@
 title: "E-graphs and equality saturation (egg)"
 originators: [Ross Tate et al. (equality saturation), Max Willsey et al. (egg)]
 sources: [../../sources.kb/knot-theory-chat.md]
-likelihood: 0.7
 converges-on: [Class-E, FP2]
 tags: [prior-art, rewriting, engines]
 ---

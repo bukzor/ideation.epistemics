@@ -6,13 +6,13 @@ last-updated: "2026-07-24"
 
 `Skill(llm-claim-ledger)` is the conversational realization of the
 {TL, RN} basis that ACS/FP2 mechanize (see
-`sources.kb/knot-theory-chat.md`). The chat's own reduction: "'LC: we
+`./sources.kb/knot-theory-chat.md`). The chat's own reduction: "'LC: we
 Label our Claims' is TL; 'strive to ensure all claims are sound or
 else retracted' is RN, verbatim — your prompt was already the minimal
 basis." The skill states the axioms; ACS/FP2 are their derived
 machinery at the mechanized rung (`prompts/`).
 
-Between them sits **repo weight** (`definitions.kb/repo-weight.md`):
+Between them sits **repo weight** (`./definitions.kb/repo-weight.md`):
 claims as files in a `.kb/` tree, on `Skill(llm-discourse-graph)`.
 Distinguished by medium and by persistence — it is where sessions
 accumulate, and so the rung the operator's productivity actually rests
@@ -31,7 +31,7 @@ on (`mission.md`).
 | warrant-mix at point of use, eyeballed | — no propagation, no view | ATMS-style label propagation, computed |
 
 The dashes are the finding: the middle rung is the least built, and it
-is the one that runs every day (`claims.kb/repo-weight-rung-is-unbuilt.md`).
+is the one that runs every day (`./claims.kb/repo-weight-rung-is-unbuilt.md`).
 The realm reached the hardest rung before the nearest one.
 
 `claim certify` and `claim accept` are exactly RN's two resolution
@@ -46,5 +46,5 @@ rung too: RN-without-TL is sycophancy; TL-without-RN is a perfectly
 labeled graveyard.
 
 Revision flowing up-ladder (2026-07-24): obligation is derived, not
-stored — see `claims.kb/obligation-is-derived-not-stored.md`. Executors
+stored — see `./claims.kb/obligation-is-derived-not-stored.md`. Executors
 of `prompts/` inherit this revision, per RN: last wins.

@@ -2,7 +2,6 @@
 title: "Justification logic"
 originators: [Sergei Artemov]
 sources: [../../sources.kb/knot-theory-chat.md]
-likelihood: 0.7
 converges-on: [TL]
 tags: [prior-art, logic]
 ---

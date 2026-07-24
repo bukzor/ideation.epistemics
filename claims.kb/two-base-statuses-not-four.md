@@ -1,7 +1,6 @@
 ---
-status: asserted
 sources: [../sources.kb/claim-ledger-notation-session.md, ../sources.kb/bukzor.md]
-depends: [../definitions.kb/total-ledger.md, ../claims.kb/obligation-is-derived-not-stored.md]
+depends: [../definitions.kb/total-ledger.md]
 date-observed: 2026-07-24
 tags: [notation, obligation]
 ---

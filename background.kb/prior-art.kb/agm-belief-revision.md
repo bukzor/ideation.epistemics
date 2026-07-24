@@ -2,7 +2,6 @@
 title: "AGM belief revision"
 originators: [Carlos Alchourrón, Peter Gärdenfors, David Makinson]
 sources: [../../sources.kb/knot-theory-chat.md]
-likelihood: 0.7
 converges-on: [RN]
 tags: [prior-art, logic]
 ---

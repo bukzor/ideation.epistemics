@@ -2,7 +2,6 @@
 title: "LCF kernel discipline"
 originators: [Robin Milner]
 sources: [../../sources.kb/knot-theory-chat.md]
-likelihood: 0.8
 converges-on: [TL, MT]
 tags: [prior-art, proof-assistants]
 ---

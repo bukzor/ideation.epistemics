@@ -1,5 +1,4 @@
 ---
-status: asserted
 sources: [../sources.kb/claude.md]
 depends:
   - ../definitions.kb/total-ledger.md
@@ -12,8 +11,9 @@ At repo weight, TL is represented by **field presence, not a status
 enum**. Absence of any warrant field is the open-obligation cell — the
 cheap default. `stipulated:` names the declaring source and is the
 declared-axiom cell. `certified:` names a re-runnable check and is the
-checked-certificate cell. `retracted:` marks a tombstone, which is
-revision under last-wins rather than a fourth status.
+checked-certificate cell. Retraction is not a field at all — it is a
+rename, per `./retraction-breaks-the-path.md`, because the path is what
+the tooling tests.
 
 Consequence: `status:` disappears from claims and deductions, and
 `contested` with it. A contested claim is one with a live contradiction

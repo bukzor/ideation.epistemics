@@ -1,5 +1,4 @@
 ---
-status: asserted
 sources: [../sources.kb/claude.md]
 tags: [ladder, gap]
 ---

@@ -1,11 +1,8 @@
 ---
-status: asserted
 sources: [../sources.kb/bukzor.md]
 depends:
   - ../definitions.kb/repo-weight.md
   - ../background.kb/prior-art.kb/bukzor.kb/discourse-graph-claims-schema.md
-  - ./two-base-statuses-not-four.md
-  - ./obligation-is-derived-not-stored.md
 date-observed: 2026-07-24
 tags: [ladder, repo-weight, strategy]
 ---

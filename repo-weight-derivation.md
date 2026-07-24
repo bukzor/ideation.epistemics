@@ -5,7 +5,7 @@ last-updated: "2026-07-24"
 # Repo weight, derived from {TL, RN}
 
 A proposal, not a decision. Answers
-`questions.kb/how-should-repo-weight-absorb-tl-rn.md` by deriving the
+`./questions.kb/how-should-repo-weight-absorb-tl-rn.md` by deriving the
 schema from the axioms and only then comparing against the incumbent
 (`preservation-audit.md`, which carries the verdicts). Two points need
 operator fiat and are marked.
@@ -15,7 +15,7 @@ operator fiat and are marked.
 > No item enters the accepted set without an explicit justification
 > status ∈ {checked certificate, open obligation, declared axiom}.
 
-Three cells, and `claims.kb/two-base-statuses-not-four.md` already
+Three cells, and `./claims.kb/two-base-statuses-not-four.md` already
 collapsed them once: `open obligation` is the unmarked default (an
 asserted claim is "effectively a question"), while `declared axiom` and
 `checked certificate` differ not in standing but in *how* the standing
@@ -32,13 +32,13 @@ to claims and TL falls out with no enum at all:
 | *(nothing)* | open obligation | Asserted, warranted only by consistency with the admitted set |
 | `stipulated: <source path>` | declared axiom | Warrant by fiat; the source says whose |
 | `certified: <check>` | checked certificate | Warrant by a named, re-runnable check |
-| `retracted: <tombstone>` | — | Withdrawn; body says why, path survives |
+| *filename* `NAME.retracted.md` | — | Withdrawn; body says why, stem survives, path does not |
 
 Absence is the cheap default, which is `good-smells`' CE (cheap entry,
 expensive promotion) and BF (bare form stays legal). Nothing is
 demanded at entry — UO. And a `certified:` claim is visibly different
 from one nobody checked, which is the gap
-`claims.kb/repo-weight-rung-is-unbuilt.md` opens with.
+`./claims.kb/repo-weight-rung-is-unbuilt.md` opens with.
 
 `status: asserted | contested | retracted` goes away, and takes two
 problems with it. `contested` had no resolution procedure; under this
@@ -74,15 +74,20 @@ judgment it records). This realm's own graph, 11 claims and zero
 deductions, is the first thing the rule would reject.
 
 **Obligation is a view.** Per
-`claims.kb/obligation-is-derived-not-stored.md`: a claim is obligated
+`./claims.kb/obligation-is-derived-not-stored.md`: a claim is obligated
 to the extent conclusions rest on it — an importance-weighted
 reverse-dependency query over the spine. A command, never a field.
 
-**Tombstones, not deletions.** Per
-`claims.kb/retraction-is-revision-to-tombstone.md`, retraction is
-revision under last-wins: the body becomes the tombstone, the path
-stays. Names outlive contents, so every existing reference keeps
-resolving and the walker can still see what died.
+**Retraction breaks the path and keeps the body.** Per
+`./claims.kb/retraction-breaks-the-path.md`: rename `NAME.md` to
+`NAME.retracted.md`. The body survives, so the refutation stays on the
+record and the dead branch is not re-derived; the path dies, so every
+dependent fails `llm.kb-validate-links` — which reads frontmatter edges
+by field name and therefore *already is* the propagator, at zero
+implementation cost. Deletion would buy the same propagation and lose
+the refutation; a tombstone left in place would keep the refutation and
+need a bespoke walker. Neither trade is necessary, because content
+survival and path survival are independent.
 
 **The seam holds.** `certified:` names a check that runs below the
 ledger and is monotonic; the certification record lives above and is
@@ -93,15 +98,15 @@ the seam — hence a check reference, not a boolean.
 
 Stated rather than smuggled, per the audit's own rule.
 
-- **`questions.kb/` is not derivable.** Worse, the realm's own
+- **`./questions.kb/` is not derivable.** Worse, the realm's own
   `two-base-statuses-not-four.md` says an open claim *is* effectively a
   question, so the axioms arguably merge them. Keeping questions is an
   ergonomic decision: at repo weight files are cheap, and "how should X
   absorb Y" does not restate as a proposition without distortion.
   Legitimate — but a decision, not a derivation. **Needs fiat.**
-- **`definitions.kb/` is not derivable.** A definition is not truth-apt.
+- **`./definitions.kb/` is not derivable.** A definition is not truth-apt.
   Keep on independent grounds; the axioms simply do not reach it.
-- **`sources.kb/` is half-derivable.** TL's `declared axiom` cell needs
+- **`./sources.kb/` is half-derivable.** TL's `declared axiom` cell needs
   an attributable declarer, so `stipulated:` requires provenance —
   which is precisely why ADR-2026-07-03-001's `user`/`assistant` kinds
   matter more under this design than they did under the old one.
@@ -116,8 +121,14 @@ Everything above is inert without checks. `llm.kb-validate` is the
 existing surface; `2026-07-24-000-warrant-audit.prototype/` is a
 working sketch of the hard one.
 
-1. **No claim→claim `depends:`.** Schema-level. Closes the leak.
-2. **No live node points at a retracted node.** Already implemented and
+1. **No claim→claim `depends:`.** Closes the leak. Not schema-level: a
+   JSON schema sees one file and the rule needs both ends, so it is
+   documented in the schema and enforced by the audit.
+2. **No live node points at a tombstone.** The link checker catches the
+   moment of retraction for free. This catches what is *deferred* after
+   it: repointing a dependent at `NAME.retracted.md` is legal and
+   honest — "this rested on something withdrawn" — and this check is
+   what keeps that from becoming permanent. Already implemented and
    already catching a real defect.
 3. **Stale certificates.** A `certified:` node with a retracted
    ancestor on its premise chain is flagged: re-run or fall back to
@@ -146,5 +157,15 @@ seam again: mechanical facts are enforced, judgment is surfaced.
 
 Migration is real: every graph in the fleet drops `status:` and
 `likelihood:`, and every claim→claim `depends:` becomes a deduction or
-loses its support reading. This realm migrates first — the only honest
-test. The rule that rejects our own graph is the evidence it bites.
+loses its support reading. This realm migrated first, the same day —
+the only honest test, and the rule that rejects our own graph is the
+evidence it bites.
+
+What it actually cost here: two local schemas diverged from the shipped
+skill, `status`/`likelihood` stripped from every node, one claim→claim
+edge promoted to a deduction and one demoted to prose, and 16 body
+references rewritten to the `./` form — that last one unplanned, and
+the most valuable thing found, since those references had never been
+checked by anything. Two hours. All three checks pass. Every applied
+decision has an entry in `./.claude/todo.kb/suggestions-to-audit.kb/`
+saying what to check and how to reverse it.

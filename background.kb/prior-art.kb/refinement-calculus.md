@@ -2,7 +2,6 @@
 title: "Refinement calculus and deductive synthesis (incl. Fiat)"
 originators: [Edsger Dijkstra, Ralph-Johan Back, Carroll Morgan, MIT PLV (Fiat)]
 sources: [../../sources.kb/knot-theory-chat.md]
-likelihood: 0.7
 converges-on: [FP2, AU]
 tags: [prior-art, methodology, synthesis]
 ---

@@ -24,13 +24,22 @@ anything is.
   Found a real instance on first run: a deduction in template.python-project
   still concluding a retracted claim.
 
+  Retraction is read two ways, because the fleet is mid-migration. Legacy
+  graphs mark it `status: retracted` in frontmatter. This realm renames the
+  file to `NAME.retracted.md`, so the path itself dies and every referrer
+  fails `llm.kb-validate-links` -- which makes *that* the propagator and
+  leaves this check the narrower job of catching deferred debt, where
+  someone repointed at the tombstone rather than resolving it
+  (`claims.kb/retraction-breaks-the-path.md`).
+
 - **Diagnostic**: `depends:` edges bucketed by target collection. A typed
   support edge already exists -- `premises`/`conclusion` on deductions --
   but `depends:` leaks around it: documented as context ("without implying
   support or refutation"), it is also written claim -> claim as real
   support, against the design's own rule that deductions are the sole
-  mechanism connecting claims. The claims bucket sizes the leak, which is
-  what a propagation walker would silently miss.
+  mechanism connecting claims. Only *claim -> claim* is the leak; a question
+  depending on a claim is genuine context and stays legal, so the two are
+  counted apart -- conflating them overstates the problem roughly twofold.
 
 Written against today's vocabulary, which is being re-derived from the axioms
 (`questions.kb/how-should-repo-weight-absorb-tl-rn.md`). The invariant is what
@@ -57,6 +66,7 @@ EDGE_FIELDS = (
     "why",
 )
 RETRACTED = "retracted"
+TOMBSTONE_SUFFIX = ".retracted.md"
 
 
 @dataclass(frozen=True)
@@ -69,6 +79,11 @@ class Node:
     def status(self) -> str | None:
         status = self.frontmatter.get("status")
         return status if isinstance(status, str) else None
+
+    @property
+    def retracted(self) -> bool:
+        """Tombstoned by filename (current) or by status field (legacy)."""
+        return self.path.name.endswith(TOMBSTONE_SUFFIX) or self.status == RETRACTED
 
     def edges(self, fields: Iterable[str] = EDGE_FIELDS) -> list[tuple[str, Path | None]]:
         """(field, resolved-target) per edge; None when nothing resolves."""
@@ -136,13 +151,18 @@ def load_nodes(root: Path) -> list[Node]:
     return nodes
 
 
-def depends_by_target(nodes: list[Node]) -> dict[str, int]:
-    """Bucket `depends:` edges by target collection: the overload measure."""
-    counts: dict[str, int] = {}
+def depends_by_edge(nodes: list[Node]) -> dict[tuple[str, str], int]:
+    """Bucket `depends:` edges by (source, target) collection.
+
+    Both ends matter. Only claim -> claim bypasses the deduction spine;
+    question -> claim is context and legal.
+    """
+    counts: dict[tuple[str, str], int] = {}
     for node in nodes:
         for _, target in node.edges(("depends",)):
             name = collection_of(target) if target is not None else "(unresolved)"
-            counts[name] = counts.get(name, 0) + 1
+            key = (node.collection, name)
+            counts[key] = counts.get(key, 0) + 1
     return dict(sorted(counts.items(), key=lambda kv: (-kv[1], kv[0])))
 
 
@@ -151,25 +171,25 @@ def unpropagated_retractions(nodes: list[Node]) -> list[tuple[Node, str, Node]]:
     by_path = {node.path: node for node in nodes}
     violations = []
     for node in nodes:
-        if node.status == RETRACTED:
+        if node.retracted:
             continue
         for field, target in node.edges():
             target_node = by_path.get(target) if target is not None else None
-            if target_node is not None and target_node.status == RETRACTED:
+            if target_node is not None and target_node.retracted:
                 violations.append((node, field, target_node))
     return violations
 
 
 def render_report(nodes: list[Node], root: Path) -> tuple[str, int]:
     violations = unpropagated_retractions(nodes)
-    out = [f"=== warrant audit: {root} ===", "", "edge typing (`depends:` by target)"]
+    out = [f"=== warrant audit: {root} ===", "", "edge typing (`depends:` by source -> target)"]
 
-    buckets = depends_by_target(nodes)
-    for name, count in buckets.items():
-        out.append(f"  -> {name:<19} {count:>4}")
+    buckets = depends_by_edge(nodes)
+    for (source, target), count in buckets.items():
+        out.append(f"  {f'{source} -> {target}':<34} {count:>4}")
     if not buckets:
         out.append("  (none)")
-    if leak := buckets.get("claims"):
+    if leak := buckets.get(("claims", "claims")):
         out.append(f"  => {leak} claim->claim, bypassing the deduction spine a walker follows")
 
     out += ["", "retraction propagation (RN)"]
@@ -180,7 +200,7 @@ def render_report(nodes: list[Node], root: Path) -> tuple[str, int]:
             dead = target.path.relative_to(root)
             out.append(f"     {source}  --{field}-->  {dead}  [retracted]")
     else:
-        retracted = sum(1 for node in nodes if node.status == RETRACTED)
+        retracted = sum(1 for node in nodes if node.retracted)
         out.append(f"  ✅ clean ({retracted} retracted node(s), no live dependents)")
 
     out.append("")

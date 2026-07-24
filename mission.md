@@ -23,7 +23,7 @@ on (`ladder.md`):
 1. **Chat weight** — `Skill(llm-claim-ledger)`. Ships; runs today.
 2. **Repo weight** — the `.kb/` graphs every session reads and writes.
    Ships, but has absorbed the least of {TL, RN}
-   (`claims.kb/repo-weight-rung-is-unbuilt.md`). Highest leverage
+   (`./claims.kb/repo-weight-rung-is-unbuilt.md`). Highest leverage
    available: the fix lands where the daily work already lives.
 3. **Mechanized** — ACS/FP2. Research rungs; they pay out someday, and
    sharpen the ideas meanwhile. Genuine, but not ahead of 1–2.
@@ -35,7 +35,7 @@ from tomorrow's sessions.
 ## Non-goals
 
 - **Novelty as a driver.** Whether the {TL, RN} fusion is a
-  contribution (`questions.kb/is-tl-rn-fusion-novel.md`) is quaternary:
+  contribution (`./questions.kb/is-tl-rn-fusion-novel.md`) is quaternary:
   worth not foreclosing, not worth prioritizing. Prior-art work is
   justified when it changes *our* ontology, not when it establishes
   precedence.

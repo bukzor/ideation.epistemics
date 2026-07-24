@@ -2,7 +2,6 @@
 title: "Dedukti / λΠ-calculus modulo rewriting"
 originators: [Gilles Dowek, Deducteam]
 sources: [../../sources.kb/knot-theory-chat.md]
-likelihood: 0.6
 converges-on: [CP, MT, Class-E]
 tags: [prior-art, transport, proof-assistants]
 ---

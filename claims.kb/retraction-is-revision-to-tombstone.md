@@ -1,5 +1,4 @@
 ---
-status: asserted
 sources: [../sources.kb/claim-ledger-notation-session.md, ../sources.kb/bukzor.md]
 depends: [../definitions.kb/refinement-norm.md]
 date-observed: 2026-07-24

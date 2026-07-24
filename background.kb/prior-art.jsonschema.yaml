@@ -1,10 +1,20 @@
 # yaml-language-server: $schema=https://json-schema.org/draft-07/schema
+#
+# MIGRATED, 2026-07-24 — `likelihood` replaced by `certified`; see
+# `../repo-weight-derivation.md`. The old field's own gloss gave the
+# game away: "inherits the chat source's 0.7 until independently
+# verified against the actual literature" is not a confidence, it is an
+# open obligation with a named discharge route. Now said directly —
+# absent means unverified model memory, `certified` names the check
+# that was actually run.
 $schema: "http://json-schema.org/draft-07/schema#"
 description: >
   One prior-art system/theory partially convergent with the realm's
   designs ({TL, RN}, ACS, FP2). The body text states what it is, the
   convergent facet, the divergent gap, and how to verify the
-  characterization. Provenance and its reliability live in frontmatter.
+  characterization. Provenance lives in frontmatter, and so does
+  whether the characterization has been checked against the literature
+  rather than recalled.
 type: object
 additionalProperties: false
 required:
@@ -27,15 +37,13 @@ properties:
     type: array
     items:
       type: string
-  likelihood:
+  certified:
     description: >
-      Confidence the characterization is accurate, 0-1. Model-memory
-      entries inherit the chat source's 0.7 until independently
-      verified against the actual literature.
-    default: 1.0
-    type: number
-    minimum: 0
-    maximum: 1
+      Names the check that verified this characterization against the
+      primary literature — a citation reached and read, not recalled.
+      Absence is the open cell: an unverified entry, useful for
+      orientation and not yet evidence.
+    type: string
   converges-on:
     description: Realm concepts this work partially anticipates (short labels, e.g. TL, RN, ACS)
     type: array

@@ -1,6 +1,4 @@
 ---
-status: asserted
-likelihood: 0.95
 sources: [../sources.kb/knot-theory-chat.md]
 depends: [../definitions.kb/total-ledger.md, ../definitions.kb/refinement-norm.md]
 tags: [ladder]

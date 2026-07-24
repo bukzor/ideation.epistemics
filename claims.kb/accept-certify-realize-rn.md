@@ -1,5 +1,4 @@
 ---
-status: asserted
 sources: [../sources.kb/knot-theory-chat.md, ../sources.kb/claude.md]
 depends: [../definitions.kb/refinement-norm.md]
 tags: [ladder]

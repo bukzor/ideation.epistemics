@@ -1,16 +1,16 @@
 ---
-status: asserted
+stipulated: ../sources.kb/bukzor.md
 sources: [../sources.kb/bukzor.md]
 depends:
   - ../definitions.kb/repo-weight.md
-  - ./repo-weight-rung-is-unbuilt.md
 date-observed: 2026-07-24
 tags: [repo-weight, strategy, method]
 ---
 
 The incumbent design at repo weight — `Skill(llm-discourse-graph)` as
 it ships — is admissible as prior art and as evidence of past intent.
-It is not admissible as canon. Operator fiat, 2026-07-24.
+It is not admissible as canon. Operator fiat, 2026-07-24, made against
+the gap analysis in `./repo-weight-rung-is-unbuilt.md`.
 
 **The retired frame.** This was first posed as patch vs. rewrite. That
 dichotomy is malformed: both branches take the incumbent as the

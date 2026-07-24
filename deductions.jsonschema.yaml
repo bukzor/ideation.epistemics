@@ -1,20 +1,31 @@
 # yaml-language-server: $schema=https://json-schema.org/draft-07/schema
+#
+# MIGRATED, 2026-07-24 — diverges from `Skill(llm-discourse-graph)`'s
+# shipped schema on purpose; see `repo-weight-derivation.md`.
+# Changes: `status` and `likelihood` removed. A disputed inference is
+# disputed by a contradiction deduction aimed at it — the undercut the
+# shipped design already supports — so a stored status was a second
+# representation that could disagree with the graph. Retraction is a
+# filename suffix rather than a field, for the same reason.
 $schema: "http://json-schema.org/draft-07/schema#"
 description: >
   Structured inference connecting premises to a conclusion. Entailments
   assert the conclusion follows; contradictions assert it is refuted.
   The body text is the inferential narrative — why these premises
   support or undermine the conclusion.
+
+  This is the only edge a retraction propagates along: support between
+  claims lives here and nowhere else.
+
+  A retracted deduction is renamed `NAME.retracted.md`. The inference
+  is withdrawn but stays readable, and the broken path makes every
+  conclusion that rested on it fail the link check until someone
+  revisits it.
 type: object
 additionalProperties: false
 required:
-  - status
   - conclusion
 properties:
-  status:
-    description: Epistemic standing of this deduction
-    type: string
-    enum: [asserted, contested, retracted]
   kind:
     description: Whether premises support or contradict the conclusion
     type: string
@@ -35,14 +46,8 @@ properties:
     type: array
     items:
       type: string
-  likelihood:
-    description: How likely this deduction is to be sound, 0-1 (default 1.0 — sound until told otherwise)
-    default: 1.0
-    type: number
-    minimum: 0
-    maximum: 1
   depends:
-    description: Paths to nodes this deduction depends on for context
+    description: Paths to nodes this deduction needs context from — not premises
     type: array
     items:
       type: string

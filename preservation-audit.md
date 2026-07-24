@@ -5,7 +5,7 @@ last-updated: "2026-07-24"
 # Preservation audit — what the incumbent gets right
 
 `Skill(llm-discourse-graph)` is prior art and evidence of intent, not
-canon (`claims.kb/incumbent-design-is-evidence-not-canon.md`). This is
+canon (`./claims.kb/incumbent-design-is-evidence-not-canon.md`). This is
 the side-by-side it owes: what the shipped design does well, and what
 the derivation in `repo-weight-derivation.md` does with each — so that
 nothing is lost by inattention. Verdicts are **improves**,
@@ -38,7 +38,7 @@ wrong than they are.
   Warrant/Rebuttal types, quoting Clark et al.: "one publication's
   backing is another's warrant." That is the same move as this realm's
   warrant-mix-at-point-of-use and
-  `claims.kb/obligation-is-derived-not-stored.md`, made three months
+  `./claims.kb/obligation-is-derived-not-stored.md`, made three months
   earlier on other grounds.
   → **preserves.** No role annotations added; obligation stays a query.
 - **Derived state over stored state.** Questions carry no status field:
@@ -70,13 +70,13 @@ wrong than they are.
   the parent node *is* the roll-up. Explicitly rejected IBIS's
   questions-only hierarchy as forcing artificial reframing.
   → **preserves.** Untouched by the axioms.
-- **`sources.kb/` as reusable provenance, including `kind: user` and
+- **`./sources.kb/` as reusable provenance, including `kind: user` and
   `kind: assistant`.** ADR-2026-07-03-001 refused a parallel singular
   `source` field and extended the existing enum instead.
   → **improves.** Becomes load-bearing rather than optional: TL's
   declared-axiom cell is warrant by fiat, and a fiat is unreadable
   without an attributable declarer, so `stipulated:` requires a source.
-- **`definitions.kb/`.** Outside {TL, RN}'s remit — a definition is not
+- **`./definitions.kb/`.** Outside {TL, RN}'s remit — a definition is not
   truth-apt — and valuable anyway.
   → **preserves**, on independent grounds, stated as such: the axioms
   do not imply everything a working graph needs.
@@ -104,7 +104,7 @@ wrong than they are.
   enforcement was missing.
 - **`likelihood: 0–1`, default 1.0.** Neither a status nor a computed
   warrant-mix but a third, stored thing.
-  `claims.kb/two-base-statuses-not-four.md` says warrant is read off
+  `./claims.kb/two-base-statuses-not-four.md` says warrant is read off
   the premise chain at point of use; a scalar written by hand and never
   recomputed cannot be that.
   → **obviates, pending fiat.** "How sure" is not a warrant; genuine

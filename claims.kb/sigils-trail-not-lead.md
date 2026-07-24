@@ -1,5 +1,4 @@
 ---
-status: asserted
 sources: [../sources.kb/claim-ledger-notation-session.md]
 depends: [../definitions.kb/total-ledger.md]
 tags: [notation]

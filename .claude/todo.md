@@ -2,26 +2,38 @@
 
 Ranked by `mission.md`: reach the rungs the operator runs on first.
 
+- [ ] **Audit what was decided on your behalf.** Every suggestion applied
+      2026-07-24 has an entry in `todo.kb/suggestions-to-audit.kb/`
+      saying what changed, why, what to check, and how to reverse it.
+      Start here — the rest assumes these stand
 - [ ] Operator fiat on two points in `repo-weight-derivation.md`: does
-      `likelihood` survive (recommendation: obviate), and does
-      `questions.kb/` stay given that the axioms merge open claims with
-      questions (recommendation: keep, on ergonomic grounds). Both block
-      landing the schema
+      `likelihood` survive (recommendation: obviate, and applied here
+      pending your call), and does `questions.kb/` stay given that the
+      axioms merge open claims with questions (recommendation: keep, on
+      ergonomic grounds). Both block landing the schema
 - [ ] Land {TL, RN} at repo weight in `bukzor-agent-skills/` —
       `repo-weight-derivation.md` is the proposal, `preservation-audit.md`
       the side-by-side, `claims.kb/warrant-by-field-presence.md` the core.
       Highest leverage: reaches every `.kb/` in the fleet
-      (`claims.kb/repo-weight-rung-is-unbuilt.md`). Dogfood first: this
-      realm's own 9 claim→claim `depends:` edges become deductions or
-      lose their support reading
-- [ ] Give RP a mechanism at repo weight — type the support edge, then
-      walk it on retraction (`llm.kb-validate` is the existing surface;
-      `2026-07-24-000-warrant-audit.prototype/` states the invariant in
-      runnable form and already caught a live violation). Prose telling
-      agents to propagate is the failure mode v1 disproved
+      (`claims.kb/repo-weight-rung-is-unbuilt.md`). Dogfooded here first;
+      this realm now has zero claim→claim `depends:` and passes all three
+      checks
+- [x] Give RP a mechanism at repo weight — done, and cheaper than
+      expected: retraction is a rename, so `llm.kb-validate-links` is
+      the propagator (`claims.kb/link-checker-is-the-propagator.md`,
+      certified by `2026-07-24-000-warrant-audit.prototype/certify_path_breakage.sh`).
+      `warrant_audit.py` keeps the narrower job — deferred debt, live
+      nodes pointing at tombstones — and still catches the live
+      violation in `template.python-project`
+- [ ] Fix `llm.kb-validate-links` to resolve bare `claims.kb/x.md` body
+      paths, or warn on path-shaped text it declined to resolve. Today
+      only `./`-relative body paths are checked, silently; 16 references
+      in this realm's own root docs had never been validated
+      (`todo.kb/suggestions-to-audit.kb/relative-path-prefix-is-unwritten-law.md`)
 - [ ] Adjudicate open `questions.kb/` items as evidence lands, including
       `questions.kb/acs-status-set-mirror-chat-weight.md` (one-line
-      operator call; candidate answer recorded in the node)
+      operator call; candidate answer recorded in the node and in
+      `todo.kb/suggestions-to-audit.kb/acs-status-set-is-stale-both-ways.md`)
 
 ## Research rung — pays out later, sharpens meanwhile
 

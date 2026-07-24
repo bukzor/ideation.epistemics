@@ -2,7 +2,6 @@
 title: "Lakatos — Proofs and Refutations"
 originators: [Imre Lakatos]
 sources: [../../sources.kb/knot-theory-chat.md]
-likelihood: 0.8
 converges-on: [RN]
 tags: [prior-art, methodology]
 ---

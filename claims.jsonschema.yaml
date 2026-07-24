@@ -1,24 +1,43 @@
 # yaml-language-server: $schema=https://json-schema.org/draft-07/schema
+#
+# MIGRATED, 2026-07-24 — diverges from `Skill(llm-discourse-graph)`'s
+# shipped schema on purpose. This realm dogfoods the {TL, RN}
+# derivation before proposing it to the fleet; see
+# `repo-weight-derivation.md` and `preservation-audit.md`.
+# Changes: `status` and `likelihood` removed; warrant is field presence;
+# retraction is a filename suffix rather than a field.
 $schema: "http://json-schema.org/draft-07/schema#"
 description: >
   Propositional assertions — the atomic units of the knowledge graph.
   Covers both observations and hypotheses. The body text states the
   claim and any relevant context or caveats.
+
+  Warrant is represented by field presence, per TL's three cells: no
+  warrant field means an open obligation (the cheap default — asserted,
+  warranted only so far as it stays consistent with the admitted set);
+  `stipulated` means a declared axiom; `certified` means a discharged
+  check.
+
+  Retraction is not a field. A retracted claim is renamed
+  `NAME.retracted.md`, keeping its body and its stem: the broken path
+  is what makes every dependent surface in the link checker, which is
+  how RN's propagation is enforced without a bespoke walker.
 type: object
 additionalProperties: false
-required:
-  - status
 properties:
-  status:
-    description: Epistemic standing of this claim
+  stipulated:
+    description: >
+      Warrant by fiat — TL's declared-axiom cell. Path to the
+      sources.kb node that declared it; a fiat is unreadable without an
+      attributable declarer.
     type: string
-    enum: [asserted, contested, retracted]
-  likelihood:
-    description: How likely this claim is to be true, 0-1 (default 1.0 — certain until told otherwise)
-    default: 1.0
-    type: number
-    minimum: 0
-    maximum: 1
+  certified:
+    description: >
+      Warrant by a discharged check — TL's checked-certificate cell.
+      Names the re-runnable check (a command, or a path to one), never
+      a bare boolean: the check is monotonic and lives below the
+      ledger, while the record of it is dynamic and lives above.
+    type: string
   sources:
     description: >
       Paths to sources providing this claim -- empirical provenance, or the
@@ -30,7 +49,11 @@ properties:
     description: When this was observed or collected, if empirical (ISO 8601)
     type: date  # YAML parses ISO dates (2026-03-10) as date objects; see llm-kb schema-design
   depends:
-    description: Paths to nodes this claim depends on for context
+    description: >
+      Paths to nodes this claim needs context from. NOT support: a
+      claim may not `depends` on another claim, because support between
+      claims goes through a deduction. Enforced by the warrant audit,
+      which can see across files as this schema cannot.
     type: array
     items:
       type: string
@@ -39,3 +62,9 @@ properties:
     type: array
     items:
       type: string
+# TL's cells are exclusive: a claim cannot be warranted by fiat and by
+# check at once. Either may be retracted -- a certified claim can still
+# be withdrawn -- which is why retraction lives in the filename and not
+# here, where it would have to be a third mutually-exclusive cell.
+not:
+  required: [stipulated, certified]

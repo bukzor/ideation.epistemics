@@ -14,14 +14,14 @@ its rungs: conversational (`Skill(llm-claim-ledger)`), repo weight (the
 `.kb/` graphs), and mechanized (ACS, FP2). `mission.md` states what the
 realm is *for* and how to rank work — read it before proposing or
 executing any; the rungs are not equally valuable. Discourse graph at
-root; `background.kb/` holds primers and the prior-art convergence map;
+root; `./background.kb/` holds primers and the prior-art convergence map;
 `prompts/` holds transport artifacts addressed to fresh executors
 (`prompts.md` for DAG and deltas); `ladder.md` is the
 rung-correspondence synthesis; `repo-weight-derivation.md` proposes the
 repo-weight schema from the axioms and `preservation-audit.md` holds it
 against the incumbent, improves/preserves/obviates. The captured
 chat and its mining aids (snapshot, transcript map, codename glossary,
-O-ledger) live under `sources.kb/knot-theory-chat.kb/`.
+O-ledger) live under `./sources.kb/knot-theory-chat.kb/`.
 
 ## Current Work
 

@@ -3,6 +3,8 @@ sources: [../sources.kb/bukzor.md]
 candidate-resolutions:
   - ../claims.kb/warrant-by-field-presence.md
   - ../claims.kb/two-base-statuses-not-four.md
+  - ../claims.kb/retraction-breaks-the-path.md
+  - ../claims.kb/link-checker-is-the-propagator.md
 depends:
   - ../claims.kb/repo-weight-rung-is-unbuilt.md
   - ../claims.kb/incumbent-design-is-evidence-not-canon.md
@@ -29,12 +31,13 @@ question was first posed as patch vs. rewrite; that framing is retired,
 since both branches measure edit distance from the incumbent and so
 presume its authority.
 
-**The semantics, so far.** Applying this realm's settled claims
-uniformly gives stored `{asserted, stipulated, retracted}`; derived
-views `{certified, obligated}` — certified read off a named re-runnable
-check, obligated off importance-weighted reverse dependencies;
-`contested` dropped or given a resolution procedure. Today's shipped
-schema is `asserted/contested/retracted` plus `likelihood`.
+**The semantics, so far.** No status field survives. Warrant is field
+presence — absence is the open cell, `stipulated:` is fiat, `certified:`
+names a re-runnable check — and retraction is a rename to
+`NAME.retracted.md`, so the path dies and the existing link checker
+propagates it. `obligated` is a reverse-dependency view, `contested` a
+live contradiction deduction; both computed, neither stored. Today's
+shipped schema is `asserted/contested/retracted` plus `likelihood`.
 
 **Constraints.**
 
@@ -50,13 +53,17 @@ schema is `asserted/contested/retracted` plus `likelihood`.
   epistemic class now (`040-design.kb/class-epistemic.md`), which
   currently inherits v1's vocabulary without reference to this realm.
   Cheapest before v2 solidifies, dearer after.
-- *Mechanism, not prose.* Something must walk support edges on
-  retraction. Per `mechanism-over-exhortation`, an instruction telling
-  agents to propagate is the failure mode v1 already disproved — and
-  the cost is demonstrated, not hypothetical: a one-off audit
+- *Mechanism, not prose.* **Largely discharged.** Something must walk
+  support edges on retraction; per `mechanism-over-exhortation`, an
+  instruction telling agents to propagate is the failure mode v1 already
+  disproved, and the cost is demonstrated — a one-off audit
   (`../2026-07-24-000-warrant-audit.prototype/`) found a live rotted
   edge in `template.python-project`, a deduction still concluding a
-  retracted claim.
+  retracted claim. The walker turns out to exist already:
+  `llm.kb-validate-links` resolves every frontmatter edge, so retracting
+  by rename surfaces all dependents at zero cost
+  (`../claims.kb/link-checker-is-the-propagator.md`, certified). What
+  remains bespoke is the narrower audit of deferred debt.
 - *Edge typing.* The typed support edge already exists —
   `premises`/`conclusion` on deductions, with polarity. The problem is
   that `depends:` leaks around it, documented as context yet written
@@ -65,9 +72,14 @@ schema is `asserted/contested/retracted` plus `likelihood`.
   rather than inventing an edge.
 - *Path conventions.* Two are live at once: file-relative (a leading
   `../`, current per ADR) and collection-relative (a bare `claims.kb/`
-  prefix, still in older graphs). Settle this.
-- *Dogfood.* This realm's own graph migrates too — a real cost, and
-  the only honest test of the result.
+  prefix, still in older graphs). Settle this — and note it is now
+  load-bearing rather than cosmetic, since only the explicitly-relative
+  form is resolved in body text, so the bare form is silently unchecked
+  (`../.claude/todo.kb/suggestions-to-audit.kb/relative-path-prefix-is-unwritten-law.md`).
+- *Dogfood.* **Done, 2026-07-24.** This realm's own graph migrated:
+  local schemas diverged, `status`/`likelihood` stripped, the last
+  claim→claim `depends:` promoted to a deduction. All three checks pass
+  against it.
 - *Scope discipline.* {TL, RN} is a theory of truth-apt content;
   whether it should reach `Skill(llm-design-kb)`'s held/desired tower
   at all is separable, and the conservative answer is no.

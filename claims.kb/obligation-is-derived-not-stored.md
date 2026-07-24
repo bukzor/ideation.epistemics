@@ -1,5 +1,5 @@
 ---
-status: asserted
+stipulated: ../sources.kb/bukzor.md
 sources: [../sources.kb/bukzor.md]
 date-observed: 2026-07-24
 tags: [ladder, obligation]

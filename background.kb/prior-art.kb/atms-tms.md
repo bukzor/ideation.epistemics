@@ -2,7 +2,6 @@
 title: "Truth Maintenance Systems (TMS) and Assumption-based TMS (ATMS)"
 originators: [Jon Doyle, Johan de Kleer]
 sources: [../../sources.kb/knot-theory-chat.md]
-likelihood: 0.7
 converges-on: [TL, RP, SI]
 tags: [prior-art, ledger, mechanized-ancestor]
 ---
