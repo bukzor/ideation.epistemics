@@ -18,5 +18,6 @@ background.kb). Superseded-branch terms are kept and marked — later
 turns sometimes reference them.
 
 Belongs: terms coined *in the chat*. Repo-coined terms get root
-`definitions.kb/` entries instead. Colliding aliases (RN, SS, CS, CM)
-get one file per sense, cross-linked.
+`definitions.kb/` entries instead. Colliding aliases (RN, SS) get one
+file per sense, cross-linked; the chat's own numbered disambiguations
+(CS/CS2, CM/CM2) cross-link likewise.
