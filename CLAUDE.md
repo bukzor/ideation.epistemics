@@ -17,7 +17,8 @@ executing any; the rungs are not equally valuable. Discourse graph at
 root; `background.kb/` holds primers and the prior-art convergence map;
 `prompts/` holds transport artifacts addressed to fresh executors
 (`prompts.md` for DAG and deltas); `ladder.md` is the
-rung-correspondence synthesis. The captured
+rung-correspondence synthesis; `preservation-audit.md` holds the
+incumbent repo-weight design to improves/preserves/obviates. The captured
 chat and its mining aids (snapshot, transcript map, codename glossary,
 O-ledger) live under `sources.kb/knot-theory-chat.kb/`.
 

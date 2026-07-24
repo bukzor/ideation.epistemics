@@ -22,13 +22,17 @@ it carries almost none of {TL, RN}:
   one nobody checked.
 - **No fiat status.** Operator decree (`stipulated`) has no
   representation, so conclusions can't inherit it as a premise.
-- **RP has no substrate to run on.** Nothing walks edges on retraction,
-  and the edges could not be walked as they stand: `depends:` is
-  documented as context "without implying support or refutation" yet is
-  also written claim→claim as genuine support, so a propagator cannot
-  tell which retractions should travel. Not latent machinery — an
-  untyped edge. The cost is observed: a one-off audit found a live
-  rotted edge in `template.python-project`
+- **RP has a substrate and no engine.** The deduction spine is a real
+  typed support edge — `premises` → `conclusion`, with polarity, and
+  undercut by aiming `conclusion` at another deduction — so the graph
+  a propagator needs is already schema-enforced. Nothing walks it. And
+  `depends:` leaks around it: documented as context "without implying
+  support or refutation," it is also written claim→claim as genuine
+  support, contradicting the design's own rule that deductions are the
+  sole mechanism connecting claims. So a walker following the spine
+  alone misses real support, and one following `depends:` too
+  propagates through mere context. The cost is observed: a one-off
+  audit found a live rotted edge in `template.python-project`
   (`../2026-07-24-000-warrant-audit.prototype/`).
 - **No obligation view.** With edges unwalked, the reverse-dependency
   query that derives obligation has no consumer.

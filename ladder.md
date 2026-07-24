@@ -23,7 +23,7 @@ on (`mission.md`).
 | LC — label claims | one node per claim, addressable by path | TL, total ledger: nothing enters unlabeled |
 | sound/open/retracted; last wins; retraction propagates | `status:` field; supersession by edit | RN, refinement norm: the set is revised under attack |
 | ledger as conversation spine | the `.kb/` tree *is* the knowledge | SI, spine inversion: the claim store *is* the system |
-| `XY <- AB CD` premise lists | `depends:` — untyped, context and support at once; unwalked | dependency edges; RP, mechanical retraction propagation |
+| `XY <- AB CD` premise lists | `premises:`/`conclusion:` — typed, polarized, unwalked; `depends:` leaks support around them | dependency edges; RP, mechanical retraction propagation |
 | bare / `?` / `stipulated` / `!` | `asserted` / `contested` / `retracted`, plus `likelihood` | asserted / described-or-open / declared axiom / certified(checker) |
 | `claim certify` — name and run an executable check | — no certificate status | discharge engines: Lean proof, e-graph, benchmark |
 | `claim accept` — operator fiat | — no fiat status | promotion-to-axiom, TL's third status |

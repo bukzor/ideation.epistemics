@@ -24,11 +24,13 @@ anything is.
   Found a real instance on first run: a deduction in template.python-project
   still concluding a retracted claim.
 
-- **Diagnostic**: `depends:` edges bucketed by target collection. The field
-  is documented as context ("without implying support or refutation") but is
-  also written claim -> claim as genuine support. A propagation walker cannot
-  separate the two from the data, so the counts size an ambiguity the new
-  design has to resolve by typing the edge.
+- **Diagnostic**: `depends:` edges bucketed by target collection. A typed
+  support edge already exists -- `premises`/`conclusion` on deductions --
+  but `depends:` leaks around it: documented as context ("without implying
+  support or refutation"), it is also written claim -> claim as real
+  support, against the design's own rule that deductions are the sole
+  mechanism connecting claims. The claims bucket sizes the leak, which is
+  what a propagation walker would silently miss.
 
 Written against today's vocabulary, which is being re-derived from the axioms
 (`questions.kb/how-should-repo-weight-absorb-tl-rn.md`). The invariant is what
@@ -167,8 +169,8 @@ def render_report(nodes: list[Node], root: Path) -> tuple[str, int]:
         out.append(f"  -> {name:<19} {count:>4}")
     if not buckets:
         out.append("  (none)")
-    if len(buckets) > 1:
-        out.append("  => mixes context and support; the new design must type this edge")
+    if leak := buckets.get("claims"):
+        out.append(f"  => {leak} claim->claim, bypassing the deduction spine a walker follows")
 
     out += ["", "retraction propagation (RN)"]
     if violations:

@@ -29,11 +29,14 @@ schema is `asserted/contested/retracted` plus `likelihood`.
 
 **Constraints.**
 
-- *Preservation audit.* The incumbent has aspects worth keeping. Each
-  gets a verdict — improves, preserves, or obviates — argued
+- *Preservation audit.* The incumbent has aspects worth keeping,
+  inventoried in `../preservation-audit.md`. Each gets a verdict — improves, preserves, or obviates — argued
   side-by-side. Silence is not a verdict; an aspect dropped without one
   is a regression. This is the deliverable's acceptance test, not a
-  postscript to it.
+  postscript to it. Five entries are convergent: the incumbent reached
+  a {TL, RN} principle from argumentation prior art, months earlier and
+  on other grounds. Breaking one of those is evidence against the
+  derivation, not against the incumbent.
 - *Timing.* `bukzor-agent-skills/design-next.kb/` is designing v2's
   epistemic class now (`040-design.kb/class-epistemic.md`), which
   currently inherits v1's vocabulary without reference to this realm.
@@ -45,10 +48,12 @@ schema is `asserted/contested/retracted` plus `likelihood`.
   (`../2026-07-24-000-warrant-audit.prototype/`) found a live rotted
   edge in `template.python-project`, a deduction still concluding a
   retracted claim.
-- *Edge typing.* `depends:` is documented as context ("without
-  implying support or refutation") yet is also written claim→claim as
-  genuine support. A walker cannot separate them from the data, so the
-  edge must be typed.
+- *Edge typing.* The typed support edge already exists —
+  `premises`/`conclusion` on deductions, with polarity. The problem is
+  that `depends:` leaks around it, documented as context yet written
+  claim→claim as support, contradicting the design's own rule that
+  deductions are the sole mechanism connecting claims. Close the leak
+  rather than inventing an edge.
 - *Path conventions.* Two are live at once: file-relative (a leading
   `../`, current per ADR) and collection-relative (a bare `claims.kb/`
   prefix, still in older graphs). Settle this.

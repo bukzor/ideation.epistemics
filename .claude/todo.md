@@ -10,10 +10,10 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       (`claims.kb/incumbent-design-is-evidence-not-canon.md`). Highest
       leverage: reaches every `.kb/` in the fleet
       (`claims.kb/repo-weight-rung-is-unbuilt.md`)
-- [ ] Preservation audit — enumerate the incumbent's aspects worth
-      keeping and give each a verdict: improves, preserves, or
-      obviates, argued. Acceptance test for the above, so draft the
-      inventory alongside the derivation rather than after it
+- [ ] Preservation audit — `preservation-audit.md` inventories what the
+      incumbent gets right; the derivation owes each entry a verdict:
+      improves, preserves, or obviates, argued. Acceptance test for the
+      above, not a postscript to it
 - [ ] Give RP a mechanism at repo weight — type the support edge, then
       walk it on retraction (`llm.kb-validate` is the existing surface;
       `2026-07-24-000-warrant-audit.prototype/` states the invariant in
