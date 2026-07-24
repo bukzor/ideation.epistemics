@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=https://json-schema.org/draft-07/schema
+$schema: "http://json-schema.org/draft-07/schema#"
+description: >
+  One prior-art system/theory partially convergent with the realm's
+  designs ({TL, RN}, ACS, FP2). The body text states what it is, the
+  convergent facet, the divergent gap, and how to verify the
+  characterization. Provenance and its reliability live in frontmatter.
+type: object
+additionalProperties: false
+required:
+  - title
+  - sources
+properties:
+  title:
+    description: Canonical name of the prior-art system or theory
+    type: string
+  originators:
+    description: People or groups credited with the work
+    type: array
+    items:
+      type: string
+  sources:
+    description: >
+      Paths to sources.kb nodes provenancing this characterization
+      (e.g. the captured chat for model-memory entries, bukzor for
+      operator-contributed ones)
+    type: array
+    items:
+      type: string
+  likelihood:
+    description: >
+      Confidence the characterization is accurate, 0-1. Model-memory
+      entries inherit the chat source's 0.7 until independently
+      verified against the actual literature.
+    default: 1.0
+    type: number
+    minimum: 0
+    maximum: 1
+  converges-on:
+    description: Realm concepts this work partially anticipates (short labels, e.g. TL, RN, ACS)
+    type: array
+    items:
+      type: string
+  depends:
+    description: Paths to nodes this entry depends on for context
+    type: array
+    items:
+      type: string
+  tags:
+    description: Topic tags for cross-referencing
+    type: array
+    items:
+      type: string

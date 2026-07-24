@@ -7,9 +7,13 @@ likelihood: 0.7
 tags: [tl-rn, acs, fp2, provenance]
 ---
 
-Captured claude.ai conversation (chatfs pipeline). Local copy:
-`~/repo/github.com/bukzor/prototype.chatfs/docs/dev/design-incubators/chatfs-cli-mockup/chatfs.demo/claude/.chat/5627ae70-4f6c-4512-b4dc-daa4e1b8489a/`
-— `chat.md` is the rendered transcript; line references cite it.
+Captured claude.ai conversation (chatfs pipeline). Verbatim snapshot:
+`knot-theory-chat.kb/chat.md` — the authoritative target of every
+`chat.md:NNN` line reference in this repo. Elaboration
+(`knot-theory-chat.kb/`): `transcript-map.md` (live-path arc),
+`glossary.kb/` (codename decoder ring), `obligations.kb/` (the chat's
+O-ledger). Raw capture (27 MB CDP, per-message files) remains at
+`~/repo/github.com/bukzor/prototype.chatfs/docs/dev/design-incubators/chatfs-cli-mockup/chatfs.demo/claude/.chat/5627ae70-4f6c-4512-b4dc-daa4e1b8489a/`.
 
 Produced: the {TL, RN} reduction (chat.md:720-741), the SI/RP design
 revision (:755-769), the ACS convergence analysis (:811-823), the

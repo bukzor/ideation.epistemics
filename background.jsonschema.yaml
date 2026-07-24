@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://json-schema.org/draft-07/schema
+$schema: "http://json-schema.org/draft-07/schema#"
+description: >
+  Items directly inside background.kb/ are `$TOPIC.md` synthesis files
+  rolling up a sibling `$TOPIC.kb/` collection (which carries its own
+  item schema, e.g. prior-art.jsonschema.yaml).
+type: object
+additionalProperties: false
+required:
+  - last-updated
+properties:
+  last-updated:
+    description: When this synthesis was last brought up to date with its collection
+    type: date  # YAML parses ISO dates as date objects; see llm-kb schema-design
