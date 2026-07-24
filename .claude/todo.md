@@ -2,17 +2,23 @@
 
 Ranked by `mission.md`: reach the rungs the operator runs on first.
 
-- [ ] Land {TL, RN} at repo weight — decide
-      `questions.kb/how-should-repo-weight-absorb-tl-rn.md` (patch vs.
-      rewrite; operator is weighing a re-derivation of
-      `Skill(llm-discourse-graph)`, maybe `Skill(llm-design-kb)` too),
-      then land it in `bukzor-agent-skills/`. Highest leverage: reaches
-      every `.kb/` in the fleet
+- [ ] Land {TL, RN} at repo weight — answer
+      `questions.kb/how-should-repo-weight-absorb-tl-rn.md` by deriving
+      collections, statuses and edges from the axioms, then land it in
+      `bukzor-agent-skills/`. The shipped design is prior art and
+      evidence of intent, never canon
+      (`claims.kb/incumbent-design-is-evidence-not-canon.md`). Highest
+      leverage: reaches every `.kb/` in the fleet
       (`claims.kb/repo-weight-rung-is-unbuilt.md`)
-- [ ] Give RP a mechanism at repo weight — something that walks
-      `depends:` on retraction (`llm.kb-validate` is the existing
-      surface). Prose telling agents to propagate is the failure mode
-      v1 already disproved. Folds into a rewrite if that's the call
+- [ ] Preservation audit — enumerate the incumbent's aspects worth
+      keeping and give each a verdict: improves, preserves, or
+      obviates, argued. Acceptance test for the above, so draft the
+      inventory alongside the derivation rather than after it
+- [ ] Give RP a mechanism at repo weight — type the support edge, then
+      walk it on retraction (`llm.kb-validate` is the existing surface;
+      `2026-07-24-000-warrant-audit.prototype/` states the invariant in
+      runnable form and already caught a live violation). Prose telling
+      agents to propagate is the failure mode v1 disproved
 - [ ] Adjudicate open `questions.kb/` items as evidence lands, including
       `questions.kb/acs-status-set-mirror-chat-weight.md` (one-line
       operator call; candidate answer recorded in the node)

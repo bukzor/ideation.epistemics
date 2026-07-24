@@ -22,9 +22,14 @@ it carries almost none of {TL, RN}:
   one nobody checked.
 - **No fiat status.** Operator decree (`stipulated`) has no
   representation, so conclusions can't inherit it as a premise.
-- **RP is latent, not implemented.** `depends:` edges exist and nothing
-  walks them on retraction — the substrate is there, the propagation
-  isn't.
+- **RP has no substrate to run on.** Nothing walks edges on retraction,
+  and the edges could not be walked as they stand: `depends:` is
+  documented as context "without implying support or refutation" yet is
+  also written claim→claim as genuine support, so a propagator cannot
+  tell which retractions should travel. Not latent machinery — an
+  untyped edge. The cost is observed: a one-off audit found a live
+  rotted edge in `template.python-project`
+  (`../2026-07-24-000-warrant-audit.prototype/`).
 - **No obligation view.** With edges unwalked, the reverse-dependency
   query that derives obligation has no consumer.
 - **`contested` names a state with no resolution procedure.**
