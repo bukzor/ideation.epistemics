@@ -18,3 +18,9 @@ Operator-contributed entries cite `../../sources.kb/bukzor.md`.
 
 Belongs: external prior work. Our own systems (ACS, FP2, the skill) are
 definitions/claims at root, not prior art.
+
+Operator-authored antecedents that predate this project — convergent by
+provenance, not by literature — nest under `bukzor.kb/` rather than
+sitting flat here: same shape, schema `bukzor.jsonschema.yaml` (stub of
+`prior-art.jsonschema.yaml`), but verified by reading the artifact, not
+by likelihood-discounted recall. See `bukzor.kb/CLAUDE.md`.
