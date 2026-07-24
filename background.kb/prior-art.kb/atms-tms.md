@@ -18,5 +18,10 @@ Cost question: classical ATMS label propagation is worst-case
 exponential in assumption sets — see
 `../../questions.kb/atms-cost-at-scale.md`.
 
+In this realm: `../../claims.kb/link-checker-is-the-propagator.md`
+takes the propagation half only, and gets it from the link checker
+rather than a label algebra — notification instead of repair, which is
+also how it dodges the cost question above.
+
 Verify: read Doyle 1979 ("A Truth Maintenance System") and de Kleer
 1986 ("An Assumption-based TMS"); check complexity claims.

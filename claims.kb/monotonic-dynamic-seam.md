@@ -1,5 +1,8 @@
 ---
 sources: [../sources.kb/knot-theory-chat.md]
+depends:
+  - ../background.kb/prior-art.kb/lcf-kernel-discipline.md
+  - ../background.kb/prior-art.kb/dedukti.md
 tags: [ladder, architecture]
 ---
 

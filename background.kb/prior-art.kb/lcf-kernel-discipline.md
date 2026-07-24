@@ -16,4 +16,10 @@ monotonic layer).
 Gap: certificates only — no open-obligation or declared-axiom statuses
 with lifecycle, no revision above the kernel.
 
+In this realm: `../../claims.kb/monotonic-dynamic-seam.md`. It is also
+why `certified:` names a re-runnable check rather than storing a
+boolean verdict — the check belongs to the monotonic layer, the record
+of it to the dynamic one
+(`../../claims.kb/warrant-by-field-presence.md`).
+
 Verify: Milner's Edinburgh LCF (1979); uncontroversial, low priority.

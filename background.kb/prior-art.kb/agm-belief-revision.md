@@ -15,6 +15,11 @@ Gap: no evidence terms — beliefs are bare propositions; nothing records
 *why* a belief is held, so revision can't follow justification edges.
 The dual gap to justification logic's.
 
+In this realm: `../../claims.kb/retraction-is-revision-to-tombstone.md`
+is contraction from the practitioner's side, and the gap above is
+exactly why retraction here follows justification edges — the deduction
+spine — rather than operating on bare propositions.
+
 Verify: AGM 1985 ("On the Logic of Theory Change"); check the
 literature for justification-aware AGM variants (bears directly on
 `../../questions.kb/is-tl-rn-fusion-novel.md`).

@@ -12,7 +12,9 @@ are the operator's own pre-existing artifacts — none written for this
 project — that independently converged on part of {TL, RN} before this
 realm named the axioms. "Primordial" means genuinely antecedent:
 verifiable by reading the artifact directly (`sources:` cites
-`../../../sources.kb/bukzor.md`; no memory-recall likelihood discount).
+`../../../sources.kb/bukzor.md`). These entries can carry `certified:`
+naming the artifact read, where the model-memory entries one level up
+cannot until someone reaches the literature.
 
 Belongs: an operator-authored tool, convention, or standing instruction
 that predates this project and exhibits a real facet of the design —

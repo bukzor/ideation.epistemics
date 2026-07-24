@@ -24,12 +24,14 @@ The map, by convergent facet:
   refinement calculus/Fiat (FP2's methodological ancestor).
 
 Epistemic status: every characterization in `prior-art.kb/` entered on
-model authority via the captured chat (its standing O4 caveat) —
-likelihood ≤ 0.7 until someone reads the actual literature. Each entry
-names its verification route; discharging one means adding the real
-paper to `../sources.kb/` and re-sourcing the entry.
+model authority via the captured chat (its standing O4 caveat), so none
+carries `certified:` — absence is the open cell, meaning recalled
+rather than read. Each entry names its verification route; discharging
+one means adding the real paper to `../sources.kb/`, re-sourcing the
+entry, and setting `certified:` to name the check. Query the undone
+work with `grep -L certified prior-art.kb/*.md`.
 
 Operator-contributed prior art (distinct provenance: bukzor's own
-knowledge, likelihood set per entry) joins the same collection,
-delimited by `sources:` frontmatter — query with
-`grep -l 'bukzor' prior-art.kb/*.md`.
+knowledge, verified by reading the artifact rather than by recall)
+joins the same collection, delimited by `sources:` frontmatter — query
+with `grep -l 'bukzor' prior-art.kb/*.md`.

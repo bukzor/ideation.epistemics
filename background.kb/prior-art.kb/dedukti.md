@@ -16,7 +16,8 @@ are monotonic; HG — it can't host).
 Gap: monotonic by construction — no retraction, no budgeted (Class-R)
 rules, no obligation lifecycle.
 
-Likelihood 0.6: ecosystem-maturity claims (Lean 4 export status,
+Uncertified, and the least trustworthy entry here: ecosystem-maturity
+claims (Lean 4 export status,
 verified checkers) are exactly what O8/O9 exist to verify — see
 `../../questions.kb/cross-prover-certificate-exchange.md` and the
 chat's O-ledger

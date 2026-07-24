@@ -13,8 +13,14 @@ Refuted claims aren't discarded; they're refined under attack, last
 revision wins.
 
 Gap: entirely informal — no ledger, no statuses, no mechanization.
-Likelihood 0.8: the book's thesis is common knowledge; only the
-tightness of the RN mapping is model judgment.
+Uncertified: the book's thesis is common knowledge, but the tightness
+of the RN mapping is model judgment and nobody has re-read the text
+against it.
+
+In this realm: `../../claims.kb/retraction-breaks-the-path.md` is the
+direct consequence — a retracted node keeps its body, because the
+refutation that killed it is the content Lakatos says you must not
+throw away.
 
 Verify: the mapping is philosophical, not factual — adjudicate by
 argument, not lookup.

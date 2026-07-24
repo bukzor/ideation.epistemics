@@ -1,5 +1,6 @@
 ---
 sources: [../sources.kb/bukzor.md, ../sources.kb/claude.md]
+depends: [../background.kb/prior-art.kb/lakatos-proofs-and-refutations.md]
 date-observed: 2026-07-24
 tags: [repo-weight, notation, retraction]
 ---
@@ -22,8 +23,11 @@ this system is browsed. *Propagate* — every dependent breaks the link
 check, per `./link-checker-is-the-propagator.md`, at zero
 implementation cost. *Retain the refutation* — the body survives, so a
 successful attack stays knowledge and the dead branch is not
-re-derived; RN is Lakatos-shaped and this is the part deletion throws
-away. The stem survives too, so `grep` still finds the stone and its
+re-derived. This is the part deletion throws away, and it is the part
+Lakatos is about: refuted conjectures are not discarded, they are
+refined under attack, and the refutation that forced the refinement is
+the content
+(`../background.kb/prior-art.kb/lakatos-proofs-and-refutations.md`). The stem survives too, so `grep` still finds the stone and its
 citers together — `NM`'s actual benefit, intact. `NM` protects a label
 through polarity reversal, which retraction is not.
 

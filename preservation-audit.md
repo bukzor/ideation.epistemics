@@ -34,6 +34,11 @@ wrong than they are.
   nothing walks it, not that it is missing.
   → **improves.** Kept whole and made load-bearing: it becomes the one
   walkable edge, and the leak that let claims connect around it closes.
+  The independent ancestor is TMS
+  (`./background.kb/prior-art.kb/atms-tms.md`), which had justification
+  edges and propagation in 1979; what the incumbent adds is polarity
+  and undercut. Realized in
+  `./claims.kb/link-checker-is-the-propagator.md`.
 - **Function is contextual, not intrinsic.** ADR-000 declined separate
   Warrant/Rebuttal types, quoting Clark et al.: "one publication's
   backing is another's warrant." That is the same move as this realm's
@@ -45,8 +50,13 @@ wrong than they are.
   `resolved` means answered, `candidate-resolutions` means under
   investigation, neither means open. State is read off field presence.
   → **improves.** Generalized from questions to claims, which is the
-  whole of TL's representation: warrant by field presence, no enum.
-  The incumbent's own best move, applied one collection over.
+  whole of TL's representation: warrant by field presence, no enum
+  (`./claims.kb/warrant-by-field-presence.md`, derived in
+  `./deductions.kb/tl-cells-collapse-to-field-presence.md`). The
+  incumbent's own best move, applied one collection over — and it lands
+  on justification logic's `t:P`
+  (`./background.kb/prior-art.kb/justification-logic.md`) from a third
+  direction entirely.
 - **Open world.** ADR-005: absence of a claim is not a claim. RN needs
   this — a revisable set cannot treat silence as commitment — and it is
   the standing rebuttal to reading a graph's gaps as findings.
@@ -57,7 +67,11 @@ wrong than they are.
   `mechanism-over-exhortation` already honored.
   → **improves.** Same surface, three more checks: no claim→claim
   `depends:`, no live node pointing at a retracted one, no certificate
-  standing on a retracted premise.
+  standing on a retracted premise. And one of them turned out to be
+  already built — `llm.kb-validate-links` propagates retraction once
+  retraction breaks a path
+  (`./claims.kb/retraction-breaks-the-path.md`), which is the incumbent
+  honoring `mechanism-over-exhortation` harder than it knew.
 
 ## Sound and orthogonal — kept, and why
 
