@@ -6,8 +6,10 @@ requires:
 # glossary.kb — the chat's codename decoder ring
 
 One file per codename the captured chat introduced (`**XX**` bolded
-introductions, plus operator-coined terms). Filename = alias + full
-expansion (`hc-hidden-cost.md`), so `ls` reproduces the decoder ring.
+introductions, plus operator-coined terms). Filename = alias + `--` +
+full expansion (`HC--hidden-cost.md`), the alias cased as the chat
+writes it (`Class-E--certified-rules.md`), so `ls` reproduces the
+decoder ring and the double dash marks where the alias ends.
 
 Each entry: `chat.md:NNN` line ref, message number, one-two sentence
 meaning, lifecycle notes (retracted/superseded/collision), and a link
