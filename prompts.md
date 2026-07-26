@@ -21,3 +21,14 @@ deliverable alongside.
   "described/stipulated/certified(checker)" plus an obligation view.
 - **Routes/checks are named at discharge time**, never demanded at
   claim entry (same fiat).
+- **Toy-weight modality is admitted; phases reorder** (2026-07-25,
+  derived, not fiat; `./deductions.kb/toy-weight-is-a-degenerate-point-of-acs.md`):
+  payload structure and checker strength are parameters, not
+  commitments. Atomic constants are legal λΠ payloads and
+  `certified(checker)` is an open set, so a store of prose-atom claims
+  checked by fiat/LLM-judge/script is a valid ACS instance —
+  trust-base-of keeps weak certificates visibly weak. Consequence:
+  deliverables 2–4 (store, transitions, retraction drill, queries) may
+  be built and acceptance-tested at toy weight before the λΠ embedding
+  (deliverable 1) exists; the embedding upgrades payloads, it does not
+  gate the kernel.
