@@ -1,6 +1,6 @@
 #!/bin/bash
 # Re-runnable check certifying
-# `claims.kb/link-checker-resolves-frontmatter-edges.md`.
+# `claims.kb/link-checker-is-the-propagator.md`.
 #
 # The claim: retracting a node by renaming it `NAME.retracted.md` makes
 # every node that referenced it fail `llm.kb-validate-links` -- so RN's
