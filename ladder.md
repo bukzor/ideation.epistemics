@@ -1,5 +1,5 @@
 ---
-last-updated: "2026-07-24"
+last-updated: "2026-07-26"
 ---
 
 # The Ladder — rungs of the {TL, RN} basis
@@ -58,3 +58,9 @@ retraction is a rename, so `llm.kb-validate-links` surfaces every
 dependent (`./claims.kb/link-checker-is-the-propagator.md`). That is
 the row most worth re-reading: the middle rung looked like the one
 needing the most machinery, and it needed a naming convention.
+
+The three columns are *ports* of one representation-independent ACS
+core (`./claims.kb/acs-rungs-are-ports-of-one-core.md`): ACS.chat,
+ACS.kb, ACS.agda. What survives every port is the kernel, and porting
+survival is the kernel's validation metric. Worked through in
+`./acs-counterfactual.md`.

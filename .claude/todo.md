@@ -17,7 +17,20 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       Highest leverage: reaches every `.kb/` in the fleet
       (`claims.kb/repo-weight-rung-is-unbuilt.md`). Dogfooded here first;
       this realm now has zero claim→claim `depends:` and passes all three
-      checks
+      checks. In the counterfactual frame this is the
+      `llm-discourse-graph` → ACS.kb migration
+      (`acs-counterfactual.md`)
+- [~] ACS counterfactual (operator, 2026-07-26): "what if ACS
+      existed, ready to use, before the fleet" — stress-test and
+      validate ACS against `bukzor-agent-skills`, derive its
+      filesystem organization. Deliverables are schematics, not
+      ready-to-use systems, graded on rigor and comprehensibility.
+      `acs-counterfactual.md`: frame (ports, ACS.kb as class),
+      per-skill standings, findings; evidence done in
+      `acs-counterfactual.kb/` (clean-room derivation, incumbent
+      inventory, preservation audit). Next: abstract core → ACS.kb
+      class package → port comparison. Method debt: no replication
+      run yet; state axioms bare in any re-run payload
 - [x] Give RP a mechanism at repo weight — done, and cheaper than
       expected: retraction is a rename, so `llm.kb-validate-links` is
       the propagator (`claims.kb/link-checker-is-the-propagator.md`,
@@ -25,6 +38,14 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       `warrant_audit.py` keeps the narrower job — deferred debt, live
       nodes pointing at tombstones — and still catches the live
       violation in `template.python-project`
+- [ ] Operator call on `inquiry-scoped-layout.md` (proposal, 2026-07-26):
+      scopes become inquiries rather than types, node type moves to a
+      filename suffix, placement is computed at the LUCA of citers and
+      visibility is projected by symlink. Sequence it with the landing
+      item above — both change repo weight, and landing the schema
+      first means migrating twice. Rests on a certified defect
+      (`claims.kb/path-conflates-type-and-topic.md`); the honest gap is
+      that it is not yet dogfooded, unlike the schema proposal
 - [ ] Fix `llm.kb-validate-links` to resolve bare `claims.kb/x.md` body
       paths, or warn on path-shaped text it declined to resolve. Today
       only `./`-relative body paths are checked, silently; 16 references

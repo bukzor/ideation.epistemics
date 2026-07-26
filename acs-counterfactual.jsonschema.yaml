@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://json-schema.org/draft-07/schema
+$schema: "http://json-schema.org/draft-07/schema#"
+description: >
+  Evidence artifacts of the ACS counterfactual (`acs-counterfactual.md`):
+  the frozen derivation payload and its output, the incumbent aspect
+  register, the preservation audit, and working design material. Not a
+  homogeneous claim collection — findings promote out to `claims.kb/`
+  (e.g. `claims.kb/acs-rungs-are-ports-of-one-core.md`); what lives
+  here is the evidence they rest on.
+type: object
+additionalProperties: false
+properties:
+  last-updated:
+    description: ISO date of last substantive edit.
+    type: string
+    pattern: "^\\d{4}-\\d{2}-\\d{2}$"
+  superseded-by:
+    description: >
+      Path to the artifact that replaces this one's framing; the body
+      is kept where it still serves as working material.
+    type: string
