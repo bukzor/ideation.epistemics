@@ -100,6 +100,10 @@ in any re-run); the inventory is verified by sample (5/5 checked).
 - `abstract-core.md` — plan part 1, done: the thirteen-point
   representation-independent core (the mechanisms joined with the full
   spec), the port parameter vector, and the mechanism↔spec join table.
+- `acs-kb-class-package.md` — plan part 2, done: ACS.kb's assignment
+  of the parameter vector, the read-off status realization, node
+  kinds and schema deltas, the class-package shape, the four checks,
+  and the engine verbs demanded of llm-kb.
 
 ## What the evidence established
 
@@ -162,10 +166,13 @@ in any re-run); the inventory is verified by sample (5/5 checked).
    audit are forced by the basis but absent from the spec text), plus
    stress finding 4; the eight choice points became the port
    parameter vector part 2 must assign.
-2. **The ACS.kb class package** — the filesystem-organization
-   deliverable: schema (node kinds, warrant fields), conventions
-   page, checks (intake, cone, staleness, liveness), and the engine
-   verbs it demands of `llm-kb`.
+2. **The ACS.kb class package** — done:
+   `./acs-counterfactual.kb/acs-kb-class-package.md`. The parameter
+   assignment (git as revision order, frontmatter paths as edges,
+   tombstone renames as retraction), the status lattice realized by
+   field presence + collection kind + path state rather than an enum,
+   the four checks, and six new engine verbs; nine stipulations
+   awaiting ratification.
 3. **Port-comparison ledger** — chat / kb / agda: what each port
    strengthens, weakens, or cannot express; stress findings 1–4
    adjudicated as kernel change vs realization choice vs client-side
