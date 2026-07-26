@@ -1,5 +1,6 @@
 ---
-last-updated: "2026-07-24"
+stipulated: ./sources.kb/bukzor.md # ratified 2026-07-25; content was the operator's from authoring, marker was missing
+last-updated: "2026-07-25"
 ---
 
 # Mission — why this realm exists
