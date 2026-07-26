@@ -97,6 +97,9 @@ in any re-run); the inventory is verified by sample (5/5 checked).
   axiom basis; its concrete forms (claim-file, prose as
   staleness-checked view, two strata, the verbs, the kept-on-merit
   list) are working material for the ACS.kb class package.
+- `abstract-core.md` — plan part 1, done: the thirteen-point
+  representation-independent core (the mechanisms joined with the full
+  spec), the port parameter vector, and the mechanism↔spec join table.
 
 ## What the evidence established
 
@@ -139,7 +142,12 @@ in any re-run); the inventory is verified by sample (5/5 checked).
    synthesis files and the attention banks become ACS.kb's
    view/retrieval layer — a realization concern the kernel never
    names.
-4. **Validation: the kernel's parameterization points hold.** Payload
+4. **Retraction's downgrade target is unstated.** The spec says the
+   cone is "invalidated (downgraded)" but not to what — `certified →
+   obligated` reopens the obligation, `→ described` abandons it. The
+   abstract core makes the target a recorded per-port transition rule
+   (`./acs-counterfactual.kb/abstract-core.md` §6).
+5. **Validation: the kernel's parameterization points hold.** Payload
    embedding and `certified(checker)` admit prose payloads and
    shell-script checkers without bending the kernel; ACS.chat already
    runs as a degenerate port with a one-to-one status map.
@@ -147,15 +155,18 @@ in any re-run); the inventory is verified by sample (5/5 checked).
 
 ## Plan — three parts, one artifact each
 
-1. **Abstract core** — what must survive every port: the fifteen
-   mechanisms re-cut against the full ACS spec (`./prompts/acs.md`)
-   rather than the reduced basis, lattice included, `described`
-   restored.
+1. **Abstract core** — done:
+   `./acs-counterfactual.kb/abstract-core.md`. The fifteen mechanisms
+   joined with the full spec (`./prompts/acs.md`) into thirteen core
+   points; two spec gaps surfaced (attack intake and the degeneracy
+   audit are forced by the basis but absent from the spec text), plus
+   stress finding 4; the eight choice points became the port
+   parameter vector part 2 must assign.
 2. **The ACS.kb class package** — the filesystem-organization
    deliverable: schema (node kinds, warrant fields), conventions
    page, checks (intake, cone, staleness, liveness), and the engine
    verbs it demands of `llm-kb`.
 3. **Port-comparison ledger** — chat / kb / agda: what each port
-   strengthens, weakens, or cannot express; stress findings 1–3
+   strengthens, weakens, or cannot express; stress findings 1–4
    adjudicated as kernel change vs realization choice vs client-side
    workaround.

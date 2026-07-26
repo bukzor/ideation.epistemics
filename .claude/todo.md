@@ -28,7 +28,8 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       `acs-counterfactual.md`: frame (ports, ACS.kb as class),
       per-skill standings, findings; evidence done in
       `acs-counterfactual.kb/` (clean-room derivation, incumbent
-      inventory, preservation audit). Next: abstract core → ACS.kb
+      inventory, preservation audit); part 1 abstract core done
+      (`acs-counterfactual.kb/abstract-core.md`). Next: ACS.kb
       class package → port comparison. Method debt: no replication
       run yet; state axioms bare in any re-run payload
 - [x] Give RP a mechanism at repo weight — done, and cheaper than
