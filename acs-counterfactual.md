@@ -104,6 +104,10 @@ in any re-run); the inventory is verified by sample (5/5 checked).
   of the parameter vector, the read-off status realization, node
   kinds and schema deltas, the class-package shape, the four checks,
   and the engine verbs demanded of llm-kb.
+- `port-comparison.md` — plan part 3, done: the survival table
+  (thirteen core points × three ports), per-port
+  strengthens/weakens/cannot-express, and the stress-finding
+  adjudications.
 
 ## What the evidence established
 
@@ -157,7 +161,7 @@ in any re-run); the inventory is verified by sample (5/5 checked).
    runs as a degenerate port with a one-to-one status map.
    Domain-freedom survives first contact.
 
-## Plan — three parts, one artifact each
+## Deliverables — three parts, done
 
 1. **Abstract core** — done:
    `./acs-counterfactual.kb/abstract-core.md`. The fifteen mechanisms
@@ -173,7 +177,15 @@ in any re-run); the inventory is verified by sample (5/5 checked).
    field presence + collection kind + path state rather than an enum,
    the four checks, and six new engine verbs; nine stipulations
    awaiting ratification.
-3. **Port-comparison ledger** — chat / kb / agda: what each port
-   strengthens, weakens, or cannot express; stress findings 1–4
-   adjudicated as kernel change vs realization choice vs client-side
-   workaround.
+3. **Port-comparison ledger** — done:
+   `./acs-counterfactual.kb/port-comparison.md`. Zero core points die
+   in any port; ports differ by enforcement grade (attention →
+   tooling → typechecker) and are complements, not rivals. Stress
+   findings adjudicated: 1 and 4 are kernel changes, 2 and 3 are
+   realization choices.
+
+**Net output for ACS:** a four-item spec amendment list —
+described-edges, the downgrade rule, attack intake, the degeneracy
+audit — every item found by holding the spec against a working
+system. Landing them in `./prompts/acs.md` awaits ratification, as do
+the class package's nine stipulations.

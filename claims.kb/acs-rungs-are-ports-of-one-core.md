@@ -12,3 +12,8 @@ llm-kb, being designed in `../acs-counterfactual.md`), ACS.agda
 kernel, and porting survival is the kernel's validation metric.
 
 This reframes `../ladder.md`: the rungs are the port set.
+
+The metric has since been run once:
+`../acs-counterfactual.kb/port-comparison.md` carries the thirteen
+core points across all three ports with zero deletions — the ports
+differ only in enforcement grade (attention → tooling → typechecker).

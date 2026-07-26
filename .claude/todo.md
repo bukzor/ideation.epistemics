@@ -28,11 +28,13 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       `acs-counterfactual.md`: frame (ports, ACS.kb as class),
       per-skill standings, findings; evidence done in
       `acs-counterfactual.kb/` (clean-room derivation, incumbent
-      inventory, preservation audit); part 1 abstract core and
-      part 2 ACS.kb class package done (`acs-counterfactual.kb/
-      abstract-core.md`, `…/acs-kb-class-package.md`). Next: port
-      comparison. Method debt: no replication run yet; state axioms
-      bare in any re-run payload
+      inventory, preservation audit); all three plan parts done
+      (`acs-counterfactual.kb/`: abstract-core, acs-kb-class-package,
+      port-comparison). Net output: four-item ACS spec amendment
+      list. Awaiting operator: ratify/attack the nine class-package
+      stipulations and the spec amendments (then land them in
+      `prompts/acs.md`). Method debt: no replication run yet; state
+      axioms bare in any re-run payload
 - [x] Give RP a mechanism at repo weight — done, and cheaper than
       expected: retraction is a rename, so `llm.kb-validate-links` is
       the propagator (`claims.kb/link-checker-is-the-propagator.md`,
