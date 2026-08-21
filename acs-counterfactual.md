@@ -1,7 +1,3 @@
----
-last-updated: "2026-07-26"
----
-
 # The ACS counterfactual
 
 **What if ACS had existed, ready to use, before
