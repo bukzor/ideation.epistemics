@@ -1,0 +1,10 @@
+[project]
+name = "ideation-epistemics"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "llm-kb",
+]
+
+[tool.uv.sources]
+llm-kb = { path = "../bukzor-agent-skills/llm-kb", editable = true }

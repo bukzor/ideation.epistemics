@@ -5,6 +5,7 @@ requires:
 depends:
     - Skill(llm-claim-ledger)
     - Skill(llm-subtask)
+git-caution: personal
 ---
 
 # ideation.epistemics
