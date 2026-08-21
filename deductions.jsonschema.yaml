@@ -1,12 +1,14 @@
 # yaml-language-server: $schema=https://json-schema.org/draft-07/schema
-#
-# MIGRATED, 2026-07-24 — diverges from `Skill(llm-discourse-graph)`'s
-# shipped schema on purpose; see `repo-weight-derivation.md`.
-# Changes: `status` and `likelihood` removed. A disputed inference is
-# disputed by a contradiction deduction aimed at it — the undercut the
-# shipped design already supports — so a stored status was a second
-# representation that could disagree with the graph. Retraction is a
-# filename suffix rather than a field, for the same reason.
+$comment: |
+  NO-REF ruled 2026-08-21 (2026-05-15-000-schema-propagation-from-canonical):
+  MIGRATED 2026-07-24 -- diverges from `Skill(llm-discourse-graph)`'s
+  shipped schema on purpose; see `repo-weight-derivation.md`. Changes:
+  `status` and `likelihood` removed. A disputed inference is disputed by
+  a contradiction deduction aimed at it -- the undercut the shipped
+  design already supports -- so a stored status was a second
+  representation that could disagree with the graph. Retraction is a
+  filename suffix rather than a field, for the same reason. Not a `#base`
+  extender: the canonical requires the very fields this design removes.
 $schema: "http://json-schema.org/draft-07/schema#"
 description: >
   Structured inference connecting premises to a conclusion. Entailments

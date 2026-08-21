@@ -1,11 +1,13 @@
 # yaml-language-server: $schema=https://json-schema.org/draft-07/schema
-#
-# MIGRATED, 2026-07-24 — diverges from `Skill(llm-discourse-graph)`'s
-# shipped schema on purpose. This realm dogfoods the {TL, RN}
-# derivation before proposing it to the fleet; see
-# `repo-weight-derivation.md` and `preservation-audit.md`.
-# Changes: `status` and `likelihood` removed; warrant is field presence;
-# retraction is a filename suffix rather than a field.
+$comment: |
+  NO-REF ruled 2026-08-21 (2026-05-15-000-schema-propagation-from-canonical):
+  MIGRATED 2026-07-24 -- diverges from `Skill(llm-discourse-graph)`'s
+  shipped schema on purpose. This realm dogfoods the {TL, RN} derivation
+  before proposing it to the fleet; see `repo-weight-derivation.md` and
+  `preservation-audit.md`. Changes: `status` and `likelihood` removed;
+  warrant is field presence; retraction is a filename suffix rather than
+  a field. Not a `#base` extender: the canonical requires the very fields
+  this design removes.
 $schema: "skill://llm-kb/jsonschema/dialect.jsonschema.yaml"
 description: >
   Propositional assertions — the atomic units of the knowledge graph.
