@@ -16,10 +16,10 @@ enforced on disk.
 > That seems a lot of work for something that seems likely I'll find a flaw and re-do, repeatedly.
 > This was the aim of the schematic simulation, I think.
 
-This overrules the sequence proposed just before it (chat.md#L468 to
-chat.md#L492): debt function on real data first, attribution by hand,
-rules as must-read entries, two weeks, re-measure. That sequence's
-residue survives as `PAYOUT_TEST` and as the deferrals in
-`../rule-pricing.md`; its ordering does not. What the sandbox buys is
+Declined: substrate first -- run the debt function on real ledgers,
+attribute the debt by hand, adopt the rules the tally picks as must-read
+entries, run two weeks, re-measure. Its parts survive as `PAYOUT_TEST`
+and as the deferrals in `../rule-pricing.md`; its ordering does not.
+What the sandbox buys is
 that each flaw is found in seconds and fixed in a few lines, against
 generated states rather than against ledgers the owner has to reload.

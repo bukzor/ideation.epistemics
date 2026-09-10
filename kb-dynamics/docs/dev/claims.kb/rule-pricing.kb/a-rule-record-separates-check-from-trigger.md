@@ -1,7 +1,7 @@
 ---
 label: RECORD_FIELDS
 standing: user
-authority: chat.md#L392, the owner's typing of trigger and check
+authority: chat.md#L392, the owner's assignment of types to trigger and check
 why:
   - ../imported-terms.kb/rule.md
 ---

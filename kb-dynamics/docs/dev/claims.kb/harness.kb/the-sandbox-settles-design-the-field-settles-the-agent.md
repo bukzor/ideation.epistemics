@@ -17,5 +17,5 @@ the agent built on it, and at which move a rule would have caught it.
 Cheap, and it observes the real agent instead of a model of one.
 
 Keeping the two apart is what lets the harness need no model of the
-agent. The owner's original goal of "a clearer picture of what's going
-wrong" lives here, in the field, not in the harness.
+agent. What is actually going wrong in a real ledger is a field
+question, not a harness one.

@@ -26,7 +26,7 @@ provenance than a tally.
 
 The ladder for the generator: constant-worst, uniform random,
 adversarial search, biased toward observed behavior. Each rung is earned
-by a property the previous rung could not exercise. This dissolves the
-earlier disagreement about modeling the agent: "do not model the agent"
-was "do not write the agent model before a test demands it", which is
-TDD's own rule stated from the other side.
+by a property the previous rung could not exercise. This is consistent
+with `GENERATOR_NOT_AGENT`: the rule is not "never model the agent" but
+"never write the agent model before a property demands it", TDD's own
+rule. Only the top rung is a model of the agent, and it is earned last.

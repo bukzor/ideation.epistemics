@@ -15,6 +15,7 @@ non-claim-tokens:
   # `chat.md#L<n>` quote addresses: label-shaped, a known scanner collision
   - L103
   - L105
+  - L107
   - L177
   - L185
   - L190
@@ -24,10 +25,6 @@ non-claim-tokens:
   - L320
   - L392
   - L422
-  - L426
-  - L458
-  - L468
-  - L492
 
   - L498
   - L501

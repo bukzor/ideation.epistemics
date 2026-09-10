@@ -27,4 +27,5 @@ Judgment, at the move that creates the risk:
 
 Rule 4 is what makes the ledger trend rather than merely not worsen;
 without it agents only ever add. This set is a candidate: which rules
-are necessary the harness shows (`FIVE_PROPERTIES` in `../harness.md`), and what each costs is priced in `../rule-pricing.md`.
+are necessary the harness shows (`FIVE_PROPERTIES` in `../harness.md`),
+and what each costs is priced in `../rule-pricing.md`.

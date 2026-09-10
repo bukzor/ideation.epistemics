@@ -20,12 +20,14 @@ carries content that should be claims, it is a second ledger.
 
 The same log turns judgment checks into a funnel -- fired, acted,
 findings, later confirmed as debt -- so their stochasticity is a recall
-rate read from real events, not sampled from a model of the agent. That
-answers the owner's suggestion of stochastic triggers with Monte Carlo
-or funnel analysis (chat.md#L422): funnel yes, Monte Carlo no.
+rate read from real events.
 
-Open because the owner raised the log and the stochastic triggers on a
-message they then superseded (chat.md#L422 to chat.md#L426, superseded by
-chat.md#L458), so the owner never ruled, and the live thread deferred the
-move table's enforcement until an agent is caught setting a field it
-should not.
+Declined: treating a judgment trigger as a probability of firing given
+the context and sampling it. That probability is the agent's behavior,
+and sampling a model of it is the simulation problem entering by a side
+door; the funnel reads the same quantity from real events.
+
+Open: the owner raised the log and then withdrew the message that raised
+it (chat.md#L422), so no ruling exists; and enforcement of the move
+table, which the log is a line of, is itself deferred until an agent is
+caught setting a field it should not.

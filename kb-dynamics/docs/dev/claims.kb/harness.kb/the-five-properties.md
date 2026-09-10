@@ -20,8 +20,8 @@ why:
    converse of 2.
 4. For each rule, some sequence exists where removing it lets debt rise.
    Failure: the rule is dead weight. This is the flip test
-   (`IMPORTED_FLIP`) in miniature, and the minimality test as something the machine runs rather than an
-   argument.
+   (`IMPORTED_FLIP`) in miniature, and the minimality test as something
+   the machine runs rather than an argument.
 5. From any reachable state, some owner-plus-agent sequence reaches debt
    zero. Failure: a stuck state, a missing transition.
 
@@ -39,7 +39,6 @@ def test_agent_moves_never_raise_debt(moves):
 ```
 
 Each counterexample is a specific flaw found in seconds and fixed in a
-few lines, the revision the owner was dreading making repeatedly against
-real ledgers. When a property holds across thousands of sequences the
+few lines. When a property holds across thousands of sequences the
 design is internally coherent, and building against real data stops
 being a bet.

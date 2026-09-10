@@ -27,6 +27,4 @@ toward mechanical, and the record carries the flag.
 
 What made "always scan for near-duplicates" expensive was never the
 trigger; it was an order-n-squared judgment check. A constant trigger
-paired with a constant-time mechanical check is unremarkable. This
-corrects the first reading, which had rejected the constant trigger as
-unbounded.
+paired with a constant-time mechanical check is unremarkable.

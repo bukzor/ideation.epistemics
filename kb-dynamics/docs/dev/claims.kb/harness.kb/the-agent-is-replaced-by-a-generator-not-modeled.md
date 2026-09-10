@@ -21,14 +21,11 @@ function, the fields, and the rules are wrong.
 > Design a minimal simulation that will help me develop insight/confidence into such things before they're committed to.
 
 > [!DRAFT] chat.md#L177, chat.md#L501, chat.md#L576
-> The steelmanned proposal: an executable model of the ledger's state
-> space and the moves on it, so that design questions -- what fields,
-> what rules, what counts as good -- can be explored rigorously and
-> cheaply before real infrastructure is committed to. "Simulation" was
-> doing the work of "executable model I can experiment on". The
-> original named two goals; the harness serves "dynamics that ensure
-> constructive transitions" fully, and "a clearer picture of what's
-> going wrong" goes to the field (`SANDBOX_VS_FIELD`).
+> The owner's "simulation" is read as an executable model of the
+> ledger's state space and the moves on it, to be experimented on so
+> that design questions -- what fields, what rules, what counts as good
+> -- are settled before real infrastructure is committed to. It is not
+> read as a prediction of the agent.
 
 Declined: a simulation with a written agent policy. The unknown in the
 system is the agent's behavior, and a model of it would be the owner's
