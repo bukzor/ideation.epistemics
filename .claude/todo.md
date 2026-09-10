@@ -20,6 +20,16 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       checks. In the counterfactual frame this is the
       `llm-discourse-graph` → ACS.kb migration
       (`acs-counterfactual.md`)
+- [~] `kb-dynamics/`: an executable model of a claim ledger under
+      change -- moves, rules, a debt function the moves must not raise --
+      tested by generated sequences, not a modeled agent (origin: the
+      2026-09-09 chat under `docs/dev/chats/`). Landed: the ledger and its
+      `imported-terms` theory, the one place a `why:` may leave the
+      subpath, certified by `imported-terms.verify.py`. Next: the first
+      red test, a hand-written bad state with debt above zero, which
+      brings `examples/` and `python/` into existence. Reconciliation
+      with `session-model/` and the {TL, RN} schema is a deliberate
+      later pass, through that theory
 - [~] ACS counterfactual (operator, 2026-07-26): "what if ACS
       existed, ready to use, before the fleet" — stress-test and
       validate ACS against `bukzor-agent-skills`, derive its

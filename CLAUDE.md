@@ -35,3 +35,10 @@ O-ledger) live under `./sources.kb/knot-theory-chat.kb/`.
 
 Check `.claude/todo.md` and `.claude/todo.kb/` for active efforts. Load
 `Skill("llm-subtask")` for maintenance.
+
+## kb-dynamics/
+
+An executable model of a claim ledger under change -- moves, rules, and a
+debt function the moves must not raise -- tested by generated sequences
+rather than a modeled agent. Its ledger is `kb-dynamics/docs/dev/claims.md`;
+the subpath stays independent of its siblings, and the outer vocabulary it
