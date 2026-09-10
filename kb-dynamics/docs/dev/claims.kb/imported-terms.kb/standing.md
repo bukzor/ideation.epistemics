@@ -9,7 +9,7 @@ why:
 
 Standing is the on-disk spelling of the sigil, which records whose
 judgment a claim rests on: bare (no judge needed), open, agent, or user.
-Here standing is the field the model factors into basis (why we believe
-the claim) and wording (whether the text renders it faithfully), and the
-factoring is graded by whether the two round-trip to the four sigils.
+Here standing is the field the model splits in two -- why we believe the
+claim, and whether the text renders it faithfully -- and the split is
+graded by whether the two round-trip to the four sigils.
 Outer argument not restated.

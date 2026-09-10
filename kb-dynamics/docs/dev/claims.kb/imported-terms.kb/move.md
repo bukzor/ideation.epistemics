@@ -10,5 +10,5 @@ why:
 
 A move is one transition from a state, the thing a rule permits or obliges.
 Here a move is one ledger operation -- add, stipulate, reword, derive,
-split, merge, retract, close a question -- tagged with the actor making it.
+split, merge, retract, close a question -- tagged with who makes it, owner or agent.
 Outer argument not restated.

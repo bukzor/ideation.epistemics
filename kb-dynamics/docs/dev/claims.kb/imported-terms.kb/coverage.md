@@ -10,6 +10,6 @@ why:
 
 Every report over a state space says whether the space was exhausted
 within a stated bound or sampled, and sampled silence is not consistency.
-Here the fidelity ladder is a coverage ladder: property-based generation
+Here the harness's ladder is a coverage ladder: property-based generation
 samples, bounded enumeration exhausts within a depth, and a proof would be
 needed only for the unbounded claim. Outer argument not restated.

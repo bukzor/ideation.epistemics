@@ -5,7 +5,8 @@ owner can make on it, the rules that gate those moves, and a debt function
 the moves must not raise. The model is tested by property-based generation
 and bounded enumeration, with the agent replaced by an operation generator
 rather than modeled. Its origin is the captured chat under
-`../docs/dev/chats/claude/Created=2026/09/09/14:14:39-05:00/`.
+`../docs/dev/chats/claude/Created=2026/09/09/14:14:39-05:00/`; the design
+ledger at `docs/dev/claims.md` replaces that chat as the entry point.
 
 Layout, as it fills in:
 

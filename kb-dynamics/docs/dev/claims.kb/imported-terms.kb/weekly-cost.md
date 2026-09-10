@@ -10,5 +10,5 @@ why:
 
 Weekly cost is tokens per load times loads per week, summed over an
 instruction layer; it is the number a rewrite must lower. Here it prices a
-candidate rule. The exchange rate against the owner's attention is set by
-the owner, never derived. Outer argument not restated.
+candidate rule. The rate at which the owner trades attention for tokens is the owner's
+to set, never derived. Outer argument not restated.

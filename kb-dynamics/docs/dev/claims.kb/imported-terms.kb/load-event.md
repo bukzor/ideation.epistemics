@@ -9,5 +9,5 @@ why:
 
 A load event is one occasion on which a carrier's text enters an agent's
 context, priced at the text's token size. Here a rule's firing is a load
-event: the check's scope is what loads, and firings per period times
+event: what the check reads is what loads, and firings per period times
 tokens per firing is the rule's token cost. Outer argument not restated.

@@ -11,6 +11,6 @@ why:
 A claim with no warrant field is an open obligation, and its obligation is
 derived rather than stored: it is obligated exactly to the extent
 conclusions rest on it, an importance-weighted reverse-dependency query
-over the store. Here that query is the load-bearing count, and debt is
-what it sums. Distinct from `oblige.md`, which is what a rule requires of
+over the store. Here that query is the count of what rests on a claim, and debt is what
+it sums. Distinct from `oblige.md`, which is what a rule requires of
 a move. Outer argument not restated.
