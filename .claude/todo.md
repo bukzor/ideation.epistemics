@@ -29,7 +29,12 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       red test, a hand-written bad state with debt above zero, which
       brings `examples/` and `python/` into existence. Reconciliation
       with `session-model/` and the {TL, RN} schema is a deliberate
-      later pass, through that theory
+      later pass, through that theory. Two agent choices to audit:
+      `todo.kb/suggestions-to-audit.kb/kb-dynamics-*.md`
+- [ ] `session-model/`: the ownership scan (now runnable here) reports two
+      trespasses -- `law.kb` says "silence", owned by `session-sim.kb`;
+      `budget.kb` says "trace", owned by `trace-sim.kb`. Cull, move,
+      admit, or uniquify each (`llm-claims-kb-ownership --trespass`)
 - [~] ACS counterfactual (operator, 2026-07-26): "what if ACS
       existed, ready to use, before the fleet" — stress-test and
       validate ACS against `bukzor-agent-skills`, derive its
