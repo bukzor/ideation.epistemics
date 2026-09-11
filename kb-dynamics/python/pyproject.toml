@@ -1,0 +1,43 @@
+[project]
+name = "kb-dynamics"
+version = "0.1.0"
+description = "An executable model of a claim ledger under change"
+license = "Apache-2.0"
+authors = [{ name = "Buck Evan", email = "workitharder@gmail.com" }]
+requires-python = ">=3.13"
+dependencies = ["pyyaml>=6.0"]
+
+[dependency-groups]
+dev = [
+  "black>=25.1.0",
+  "hypothesis>=6.139.1",
+  "pyright>=1.1.405",
+  "pytest>=8.4.2",
+  "types-pyyaml>=6.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.11,<0.12"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules"
+python_classes = ["Describe*", "When*", "Test*"]
+python_functions = ["it_*", "test_*"]
+testpaths = ["src", "tests"]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+analyzeUnannotatedFunctions = true
+reportIncompatibleMethodOverride = "error"
+pythonVersion = "3.13"
+enableTypeIgnoreComments = true
+reportPrivateUsage = "warning"
+reportConstantRedefinition = "error"
+reportIncompatibleVariableOverride = "error"
+reportMissingImports = "error"
+reportMissingTypeStubs = false
+exclude = [".venv", "__pycache__", "trash"]
+
+[tool.black]
+target-version = ["py313"]

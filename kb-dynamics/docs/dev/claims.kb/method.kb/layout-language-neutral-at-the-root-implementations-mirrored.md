@@ -47,5 +47,7 @@ kb-dynamics/
 - Left out: a collection of rule-pricing records. That is the field-side
   artifact and belongs beside the must-read tooling, not in the sandbox.
 
-Decided and partly built: the ledger exists; `examples/` and `python/`
-come into existence with the first red test.
+Decided and partly built: the ledger, `examples/` (bad and good states,
+no traces yet), and `python/` with `model`, `debt`, `examples`, and
+`test_examples`. `transition`, `rules`, `agents/`, the four remaining
+property tests, and `lean/` wait on the property that demands each.
