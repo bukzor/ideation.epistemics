@@ -1,34 +1,29 @@
 ---
 label: TRUST_CORNERS
-standing: open
+standing: user
+verdict: dissolved
+authority: 9b6f24ad, the owner's ruling of 2026-09-11
 why:
   - any-of-three-conditions-restores-trust.md
-  - ../debt.kb/a-leaf-is-low-priority-never-exempt.md
-  - ../debt.kb/owner-review-is-a-queue-sorted-by-debt.md
+  - ../model.kb/trust-is-per-claim-a-ledgers-trust-is-an-aggregation.md
 ---
 
 # Which reading of each trust condition holds at the corners?
 
-The harness computes `TRUST_TEST`'s conditions under every reading the
-ledger's words admit and pins the verdicts on hand-written states in
-`examples/corners/` (`python/tests/test_trust.py`). Two decisions are
-what the corners reduce to:
+Dissolved: the question presumed trust is an attribute of the ledger,
+and the owner rejected the premise (`TRUST_PER_CLAIM`). The two decisions
+it posed, whether unruled leaves block trust and whether a sitting counts
+items or weight, do not survive it:
 
-1. Do unruled leaves, and rot other than a proposed basis, block trust?
-   Condition one is written as "queue empty" and glossed as "no
-   load-bearing claim rests on a proposed basis". `LEAF_EXEMPT` puts
-   leaves in the queue and `COMPONENTS` puts every rot kind in it, so the
-   letter says a ledger with three agent guesses nothing rests on, or two
-   owner claims that say one thing, is untrusted, and the gloss says
-   trusted. Condition three reads "derivable and disposable" the same two
-   ways for a leaf guess. The gloss also calls the recorded bad state of
-   confusions 1 and 2 trusted. Recommendation: the letter; the gloss was
-   agent wording naming one rot kind for all of them.
-2. Does a sitting count items or weight? One guess with ten derivations
-   on it is a one-item queue, so condition two calls it trusted while
-   everything rests on the guess.
+> [!@bukzor] 9b6f24ad
+> Unrelated unruled leaves don't block trust in claims that are well founded. Obviously?
 
-The third corner, a derivation whose arrows only motivate, is settled by
-the record: `GROUND_RECORD` puts sufficiency on the arrow and
-`FIDELITY_LADDER` admits it when a property demands it, which that corner
-does; it is the next rung, not a decision.
+> [!@bukzor] 9b6f24ad
+> Why does it "count", at all?
+
+What the corners in `examples/corners/` witness, restated: `TRUST_TEST`'s
+conditions are aggregations over claims that say when the review is done
+or doable; a claim's trust is its own fold; and the two come apart, which
+`EMPTY_QUEUE_TRUST` states exactly. "Fits one sitting" is a field
+quantity the sandbox does not compute. The weak-arrows corner stands as
+the property that demands the arrow record (`GROUND_RECORD`).

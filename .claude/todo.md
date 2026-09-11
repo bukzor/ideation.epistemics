@@ -34,10 +34,10 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       `ROUND_TRIP`, `ROT_LIST`. Built 2026-09-11: `examples/` and
       `python/` (debt vector, effective-basis fold, queue, trust
       conditions), properties two and three green on the owner's
-      confusions. **Awaiting operator:** `TRUST_CORNERS` -- two
-      decisions from six corner states (does unruled-leaf and
-      non-proposed rot block trust; does a sitting count items or
-      weight); rule by editing the open or moving a corner file. Also
+      confusions. Ruled 2026-09-11: trust is per claim, a ledger's
+      trust an aggregation (`TRUST_PER_CLAIM`); the harness settled the
+      owner's conjecture (`EMPTY_QUEUE_TRUST`: empty queue entails all
+      trusted, converse fails, witness pinned). Also
       vetoable, 2026-09-11: `UNREPAYABLE`'s fourth route withdrawn (a
       leaf is repaid by closure, not voided), `FIVE_PROPERTIES` 3 and 4
       re-scoped, `NO_SILENT_RAISE` and `FIELDS_NOT_CARRIED` re-signed

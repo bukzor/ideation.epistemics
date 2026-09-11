@@ -2,15 +2,12 @@
 verdicts:
   queue-empty: false
   no-load-bearing-on-proposed: true
-  fits-one-sitting: false
   skeleton-right: false
-question: >
-  Eight agent guesses, nothing resting on any, against a sitting of seven.
-  Trusted by the gloss of condition one alone: condition two says no,
-  and condition three says no by the letter, since a guess is not
-  derivable. If the gloss is sufficient this is trusted; is a ledger
-  with more unruled leaves than a sitting can clear one the owner
-  trusts?
+  all-trusted: false
+note: >
+  Eight agent guesses nothing rests on. Same shape as three: the ruling
+  is trusted, the guesses are not, the queue holds eight leaves. How many
+  a sitting clears is a field quantity the sandbox does not compute.
 claims:
   ruling:
     basis: user

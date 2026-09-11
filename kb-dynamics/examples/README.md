@@ -10,10 +10,10 @@ drawn from), the state itself under `claims:`, and for a bad state the
   each has debt above zero in the named component.
 - `good-states/` -- states the owner would trust; property three says
   each has debt zero.
-- `corners/` -- states where the trust conditions (`TRUST_TEST`) disagree
-  with each other or with a recorded bad state. Each carries the verdict
-  the implementation gives under every reading and the question that
-  puts to the owner; a ruling moves it to `bad-states/` or `good-states/`.
+- `corners/` -- queue shapes: states where the review conditions
+  (`TRUST_TEST`, read as aggregations over claims) and per-claim trust
+  come apart. Each pins the verdict the implementation gives under every
+  reading, with a note on what the state witnesses.
 - `traces/` -- move sequences with an expected debt trajectory; every
   fixed counterexample lands here.
 

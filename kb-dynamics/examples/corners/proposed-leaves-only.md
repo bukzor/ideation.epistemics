@@ -2,16 +2,13 @@
 verdicts:
   queue-empty: false
   no-load-bearing-on-proposed: true
-  fits-one-sitting: true
   skeleton-right: false
-question: >
-  TRUST_TEST's first condition is written two ways, "queue empty" and "no
-  load-bearing claim rests on a proposed basis". They part here: three
-  agent guesses nothing rests on. LEAF_EXEMPT puts leaves in the queue,
-  so the letter says no and the gloss says yes. Condition three splits
-  the same way: a guess is disposable but not derivable, and "derivable
-  and disposable" read as a conjunction says no. Which is the condition,
-  and is a leaf guess disposable enough to leave the skeleton right?
+  all-trusted: false
+note: >
+  Three agent guesses nothing rests on, beside one ruling. The ruling is
+  trusted and the guesses are not, each by its own fold; the queue holds
+  the three guesses as leaf items. A non-empty queue has no bearing on
+  the ruling.
 claims:
   ruling:
     basis: user

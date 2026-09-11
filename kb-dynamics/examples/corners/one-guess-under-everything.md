@@ -2,14 +2,12 @@
 verdicts:
   queue-empty: false
   no-load-bearing-on-proposed: false
-  fits-one-sitting: true
   skeleton-right: false
-question: >
-  One agent guess with a chain of ten derivations on it. The queue is one
-  item, so it fits a sitting and condition two says trusted, while
-  everything in the ledger rests on the guess. Does a sitting count items
-  or the weight it rules on, and is a one-ruling ledger trusted before
-  the ruling?
+  all-trusted: false
+note: >
+  One agent guess with ten derivations chained on it. The queue is one
+  item of weight eleven; no claim is trusted, since every fold reaches
+  the guess. One ruling repays the whole chain.
 claims:
   guess: {basis: proposed, wording: settled, grounds: [], content: [0]}
   d1: {basis: derived, wording: settled, grounds: [guess], content: [1]}

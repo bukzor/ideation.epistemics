@@ -2,17 +2,14 @@
 verdicts:
   queue-empty: true
   no-load-bearing-on-proposed: true
-  fits-one-sitting: true
   skeleton-right: true
-question: >
+  all-trusted: true
+note: >
   Identical in the model to the good state: a derived claim on two owner
-  rulings. DERIVED_TRUST says it earns unread trust only when it rests
-  entirely and rigorously on them, and GROUND_RECORD puts sufficiency on
-  the arrow; the model's arrow carries nothing yet, so every condition
-  says trusted for a derivation whose arrows may only motivate. Not a
-  decision: the record already admits the arrow record, and this corner
-  is the property that demands it. It becomes a bad state once the arrow
-  carries sufficiency.
+  rulings whose arrows may only motivate. DERIVED_TRUST says unread trust
+  needs sufficiency, GROUND_RECORD puts it on the arrow, and the model's
+  arrow carries nothing yet; this state is the property that demands it.
+  It becomes a bad state once the arrow carries sufficiency.
 claims:
   ruling-a:
     basis: user
