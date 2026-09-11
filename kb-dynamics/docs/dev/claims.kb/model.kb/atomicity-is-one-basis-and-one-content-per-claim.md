@@ -33,8 +33,11 @@ exact duplicates by comparison. Denotation: the recorded grounds, which
 two duplicates need not share and two different claims can share.
 Semantics: entailment, which is read, not computed; identical recorded
 ground sets are a candidate for reading, never a finding. The
-correspondence holds within one ledger: one content in two scopes is an
-import, a bare claim that cites the outer one (`IMPORTED_TERMS`).
+correspondence has no scope boundary: two files with one content are a
+duplicate pair whatever theories or ledgers they sit in.
+
+> [!@bukzor] d3d3f372
+> In general, we don't want two claim files with the same content regardless if they're cross-theory.
 
 > [!@bukzor] d3d3f372
 > ATOMICITY: looks good now. Perhaps a bit wordy? I'm not sure the last paragraph is necessary? But wordiness is okay in these docs as long as it conveys some value.
