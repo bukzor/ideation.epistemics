@@ -1,6 +1,6 @@
 ---
 label: EMPTY_QUEUE_TRUST
-standing: agent
+standing: bare
 verify: ../../../../python/tests/test_trust.py
 why:
   - ../method.kb/any-of-three-conditions-says-review-is-done-or-doable.md
@@ -21,4 +21,5 @@ queue item, so an empty queue leaves no untrusted claim. Converse: a
 duplicate pair or a non-atomic claim among settled owner claims is queue
 debt with every claim trusted; `examples/corners/rot-among-user-claims-only.md`
 is the witness. The test checks the forward direction on every recorded
-state and pins the witness.
+state, a sample and not an exhaustion (`IMPORTED_COVERAGE`); the argument
+above is what covers the rest. It pins the witness for the converse.
