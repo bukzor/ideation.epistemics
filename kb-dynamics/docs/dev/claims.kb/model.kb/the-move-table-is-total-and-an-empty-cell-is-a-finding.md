@@ -7,12 +7,13 @@ why:
   - ../problem.kb/one-standing-field-confuses-three-situations.md
 ---
 
-# The move table is total over (state, move, actor); an empty cell is a finding
+# The move table is total over (state, move, authority); an empty cell is a finding
 
 The moves are add, stipulate, settle wording, reword, derive, split,
-merge, retract, and close a question, each tagged with its actor. The
-transition is a literal table: `transition(state, move) -> state |
-Reject`, with a cell for every (state, move, actor). Prose lets a cell
+merge, retract, and close a question, each tagged with the authority it
+carries (`AUTHORITY_NOT_HANDS`). The transition is a literal table:
+`transition(state, move) -> state | Reject`, with a cell for every
+(state, move, authority). Prose lets a cell
 go unconsidered; the table makes the gap visible.
 
 The second confusion is an empty cell: (`basis: user`, agent rewords)

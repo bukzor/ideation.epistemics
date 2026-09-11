@@ -46,9 +46,12 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       the owner's view of the log minus the record (`OWNER_VIEW`), with
       `transition`, `rules`, and the constant-worst agent; property four
       as the flip test. The random agent (hypothesis, `strategies.py`)
-      then found three more rules and a debt bug (cycles had no root);
-      five rules, each with a witness. Next: property five and a
-      closing move for questions.
+      then found three more rules and a debt bug (cycles had no root).
+      Ruled: a move is tagged by the authority it carries, not the hands
+      (`AUTHORITY_NOT_HANDS`); the rules are now two, owner-only changes
+      need owner authority and unlicensed merges preserve content, each
+      with a witness. Next: property five and a closing move for
+      questions.
       Reconciliation with `session-model/` and the {TL, RN} schema is a
       deliberate later pass, through that theory. Two agent choices to
       audit: `todo.kb/suggestions-to-audit.kb/kb-dynamics-*.md`

@@ -16,13 +16,15 @@ In the sandbox the queue is computed from the state, so of
 `UNREPAYABLE`'s three routes only "no pathway" can occur, and only one
 way: an agent move makes the record stop showing rot that is still
 there. The harness catches it with a log and a sanction table. The
-sanction table is the actor column of the move table: what an agent's
-move means in the owner's eyes. An agent settling wording or
-stipulating means nothing; an agent adding a `user` claim means adding
-it as `proposed`; an agent retracting a `user` claim means nothing
-(`PRUNE_GUARD`). Replaying the log under it gives the owner's view, and
-`hidden` is, per component, the rot the owner's view has beyond the
-record.
+sanction table is the authority column of the move table
+(`AUTHORITY_NOT_HANDS`): what an unlicensed move means in the owner's
+eyes. Unlicensed settling of wording or stipulation means nothing; an
+unlicensed add means adding as `proposed` with draft wording; an
+unlicensed retraction of a `user` claim means nothing (`PRUNE_GUARD`);
+an unlicensed merge means nothing unless the claims say one thing and
+neither is the owner's. Replaying the log under it gives the owner's
+view, and `hidden` is, per component, the rot the owner's view has
+beyond the record.
 
 Property one is then: agent-only sequences leave `hidden` at zero. The
 rules enforce the sanction table; the harness shows where they enforce

@@ -1,15 +1,33 @@
-"""The moves of the table (`MOVE_TABLE`), each tagged with its actor.
+"""The moves of the table (`MOVE_TABLE`), each tagged with the authority it carries.
+
+Authority, not hands (`AUTHORITY_NOT_HANDS`): a move made by an agent on
+the owner's word carries the owner's authority and cites its license, the
+address of the ruling or of the standing rule. A move with no license is
+the agent's own.
 
 Not yet here: reword, close a question. Neither changes anything the model
 represents until text or a closed state enters it.
 """
 
 from dataclasses import dataclass
-from typing import Literal
 
 from .model import Claim, ClaimId
 
-Actor = Literal["owner", "agent"]
+
+@dataclass(frozen=True)
+class Owner:
+    """The owner's authority, with the address that licenses the move."""
+
+    license: str
+
+
+@dataclass(frozen=True)
+class Agent:
+    """The agent's own authority: no license."""
+
+
+Authority = Owner | Agent
+AGENT = Agent()
 
 
 @dataclass(frozen=True)
@@ -58,5 +76,9 @@ Move = Add | Stipulate | SettleWording | Split | Merge | Retract
 
 @dataclass(frozen=True)
 class Step:
-    actor: Actor
+    authority: Authority
     move: Move
+
+
+def licensed(step: Step) -> bool:
+    return isinstance(step.authority, Owner)

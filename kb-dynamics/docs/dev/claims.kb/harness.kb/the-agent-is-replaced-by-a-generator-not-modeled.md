@@ -9,8 +9,8 @@ why:
 # The agent is replaced by a move generator, not modeled
 
 The harness explores everything an agent could do under the rules; it
-does not predict what an agent will do. Moves are tagged by actor, but
-no actor has a policy. A random or adversarial generator is better than
+does not predict what an agent will do. Moves are tagged by the
+authority they carry, but no one has a policy. A random or adversarial generator is better than
 a realistic one for the purpose, which is to find where the debt
 function, the fields, and the rules are wrong.
 

@@ -1,10 +1,14 @@
-"""Rules gate moves. The set is a candidate (`CANDIDATE_RULES`); the harness shows which have effect."""
+"""Rules gate moves. The set is a candidate (`CANDIDATE_RULES`); the harness shows which have effect.
+
+These are the default standing license: what a move with no license of
+its own may do. A licensed move passes every rule here.
+"""
 
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 
 from .model import State
-from .moves import Add, Merge, Retract, SettleWording, Step, Stipulate
+from .moves import Add, Merge, Retract, SettleWording, Step, Stipulate, licensed
 
 
 @dataclass(frozen=True)
@@ -13,63 +17,40 @@ class Rule:
     permits: Callable[[State, Step], bool]
 
 
-def only_the_owner_settles_wording(state: State, step: Step) -> bool:
-    return step.actor == "owner" or not isinstance(step.move, SettleWording)
-
-
-def only_the_owner_stipulates(state: State, step: Step) -> bool:
-    """Neither the stipulate move nor an add with `basis: user` is an agent's."""
+def owner_only_changes_need_owner_authority(state: State, step: Step) -> bool:
+    """Settling wording, stipulating or adding as user, and retracting or dropping a user claim."""
     move = step.move
-    if step.actor == "owner":
+    if licensed(step):
         return True
-    elif isinstance(move, Stipulate):
+    elif isinstance(move, (SettleWording, Stipulate)):
         return False
     elif isinstance(move, Add):
-        return move.claim.basis != "user"
+        return move.claim.basis != "user" and move.claim.wording == "draft"
+    elif isinstance(move, Retract):
+        return move.claim_id not in state or state[move.claim_id].basis != "user"
+    elif isinstance(move, Merge):
+        return move.drop not in state or state[move.drop].basis != "user"
     else:
         return True
 
 
-def agents_never_retract_user_claims(state: State, step: Step) -> bool:
-    """`PRUNE_GUARD`'s basis guard."""
+def unlicensed_merges_preserve_content(state: State, step: Step) -> bool:
+    """`UNASKED_MOVES`: the unasked merge is of claims that say one thing (`DUPLICATE`)."""
     move = step.move
-    return (
-        step.actor == "owner"
-        or not isinstance(move, Retract)
-        or move.claim_id not in state
-        or state[move.claim_id].basis != "user"
-    )
-
-
-def agents_merge_only_exact_duplicates(state: State, step: Step) -> bool:
-    """`UNASKED_MOVES`: the unasked merge is of exact duplicates, and never drops a user claim."""
-    move = step.move
-    if step.actor == "owner" or not isinstance(move, Merge):
+    if licensed(step) or not isinstance(move, Merge):
         return True
     elif move.keep not in state or move.drop not in state:
         return True
     else:
-        return (
-            state[move.drop].basis != "user"
-            and state[move.keep].content == state[move.drop].content
-        )
-
-
-def agents_add_draft_wording_only(state: State, step: Step) -> bool:
-    move = step.move
-    return (
-        step.actor == "owner"
-        or not isinstance(move, Add)
-        or move.claim.wording == "draft"
-    )
+        return state[move.keep].content == state[move.drop].content
 
 
 RULES: tuple[Rule, ...] = (
-    Rule("agents add draft wording only", agents_add_draft_wording_only),
-    Rule("only the owner settles wording", only_the_owner_settles_wording),
-    Rule("only the owner stipulates", only_the_owner_stipulates),
-    Rule("agents never retract user claims", agents_never_retract_user_claims),
-    Rule("agents merge only exact duplicates", agents_merge_only_exact_duplicates),
+    Rule(
+        "owner-only changes need owner authority",
+        owner_only_changes_need_owner_authority,
+    ),
+    Rule("unlicensed merges preserve content", unlicensed_merges_preserve_content),
 )
 
 

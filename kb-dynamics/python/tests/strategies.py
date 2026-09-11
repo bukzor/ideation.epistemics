@@ -13,6 +13,7 @@ from kb_dynamics.examples import load_bad_states, load_corners, load_good_states
 from kb_dynamics.harness import run
 from kb_dynamics.model import Basis, Claim, ClaimId, State, Sufficiency, Wording
 from kb_dynamics.moves import Add, Merge, Retract, SettleWording, Split, Step, Stipulate
+from kb_dynamics.moves import AGENT
 from kb_dynamics.rules import Rule
 
 STATES: Mapping[str, State] = {
@@ -46,7 +47,7 @@ def agent_steps(state: State) -> st.SearchStrategy[Step]:
     ids = tuple(sorted(state))
     adds = st.builds(Add, NEW_IDS, claims(ids))
     if not ids:
-        return adds.map(lambda move: Step("agent", move))
+        return adds.map(lambda move: Step(AGENT, move))
     existing = st.sampled_from(ids)
     moves: st.SearchStrategy[
         Add | Stipulate | SettleWording | Split | Merge | Retract
@@ -58,7 +59,7 @@ def agent_steps(state: State) -> st.SearchStrategy[Step]:
         st.builds(Merge, existing, existing),
         st.builds(Split, existing, NEW_IDS, NEW_IDS, st.frozensets(ATOMS, min_size=1)),
     )
-    return moves.map(lambda move: Step("agent", move))
+    return moves.map(lambda move: Step(AGENT, move))
 
 
 @st.composite

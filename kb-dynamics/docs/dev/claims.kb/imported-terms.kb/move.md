@@ -10,5 +10,6 @@ why:
 
 A move is one transition from a state, the thing a rule permits or obliges.
 Here a move is one ledger operation -- add, stipulate, reword, derive,
-split, merge, retract, close a question -- tagged with who makes it, owner or agent.
+split, merge, retract, close a question -- tagged with the authority it
+carries, the owner's or the agent's own (`AUTHORITY_NOT_HANDS`).
 Outer argument not restated.

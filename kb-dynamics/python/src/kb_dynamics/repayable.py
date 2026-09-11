@@ -1,12 +1,14 @@
 """Hidden debt: rot the owner's view of the ledger has that the recorded ledger lacks.
 
-The sanction table is the actor column of the move table (`MOVE_TABLE`):
-what an agent's move means in the owner's eyes. An agent settling wording
-or stipulating means nothing; an agent adding a user-basis claim means
-adding it as proposed; an agent retracting a user claim means nothing
-(`PRUNE_GUARD`). Replaying the log under the sanction table gives the
-owner's view, and any debt it carries that the recorded ledger does not is
-hidden: the sandbox's form of "no pathway" (`UNREPAYABLE`).
+The sanction table is the authority column of the move table
+(`MOVE_TABLE`): what an unlicensed move means in the owner's eyes. An
+unlicensed settling of wording or stipulation means nothing; an unlicensed
+add means adding as proposed with draft wording; an unlicensed retraction
+of a user claim means nothing (`PRUNE_GUARD`); an unlicensed merge means
+nothing unless the two claims say one thing and neither is the owner's.
+Replaying the log under the sanction table gives the owner's view, and any
+debt it carries that the recorded ledger does not is hidden: the sandbox's
+form of "no pathway" (`UNREPAYABLE`).
 """
 
 from collections.abc import Sequence
@@ -15,13 +17,13 @@ from typing import assert_never
 
 from .debt import COMPONENTS, Debt, debt
 from .model import State
-from .moves import Add, Merge, Retract, SettleWording, Split, Step, Stipulate
+from .moves import Add, Merge, Retract, SettleWording, Split, Step, Stipulate, licensed
 from .transition import Reject, transition
 
 
 def as_owner_sees(state: State, step: Step) -> Step | None:
-    """The move as sanctioned for its actor, or None when it means nothing."""
-    if step.actor == "owner":
+    """The move as sanctioned for its authority, or None when it means nothing."""
+    if licensed(step):
         return step
     move = step.move
     match move:
