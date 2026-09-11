@@ -36,9 +36,16 @@ O-ledger) live under `./sources.kb/knot-theory-chat.kb/`.
 Check `.claude/todo.md` and `.claude/todo.kb/` for active efforts. Load
 `Skill("llm-subtask")` for maintenance.
 
+## session-model/
+
+The framework ledger for the session-model family (`Skill(llm-claims-kb)`),
+the mechanized rung's first concrete client; its priors live in
+bukzor-agent-skills' design and strata ledgers. Code lands beside the ledger.
+
 ## kb-dynamics/
 
 An executable model of a claim ledger under change -- moves, rules, and a
 debt function the moves must not raise -- tested by generated sequences
 rather than a modeled agent. Its ledger is `kb-dynamics/docs/dev/claims.md`;
 the subpath stays independent of its siblings, and the outer vocabulary it
+uses enters only through the `imported-terms` theory there.
