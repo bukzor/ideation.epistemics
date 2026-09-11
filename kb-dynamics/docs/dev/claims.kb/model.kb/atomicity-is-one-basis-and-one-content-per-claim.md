@@ -1,6 +1,7 @@
 ---
 label: ATOMICITY
-standing: agent
+standing: user
+authority: d3d3f372, the owner's ruling of 2026-09-11, on the restated draft
 why:
   - standing-factors-into-basis-and-wording.md
   - an-arrow-carries-its-kind-and-sufficiency.md
@@ -29,11 +30,11 @@ Two invariants, and the owner's three complaints are them failing:
 
 Three senses are held apart in the third. Form: the text, which finds
 exact duplicates by comparison. Denotation: the recorded grounds, which
-two duplicates need not share and two different claims can share (G
-entails both X and X-and-Y). Semantics: entailment, which is read, not
-computed. Identical recorded ground sets are a candidate for reading,
-never a finding, even were sufficiency certified on every arrow -- and
-on disk it is not, until a process makes it so (`GROUND_RECORD`). The
-sandbox makes content equality the semantic test by fiat
-(`ATOM_CONTENT`); in the field that test is a judgment check, priced as
-one (`CANDIDATE_RULES`).
+two duplicates need not share and two different claims can share.
+Semantics: entailment, which is read, not computed; identical recorded
+ground sets are a candidate for reading, never a finding. The
+correspondence holds within one ledger: one content in two scopes is an
+import, a bare claim that cites the outer one (`IMPORTED_TERMS`).
+
+> [!@bukzor] d3d3f372
+> ATOMICITY: looks good now. Perhaps a bit wordy? I'm not sure the last paragraph is necessary? But wordiness is okay in these docs as long as it conveys some value.

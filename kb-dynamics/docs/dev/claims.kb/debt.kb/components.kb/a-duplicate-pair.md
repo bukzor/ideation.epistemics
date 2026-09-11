@@ -8,6 +8,7 @@ why:
 
 # Two claims that say one thing
 
-Exact duplicates are found by text; near-duplicates by the graph, where
-two claims share grounds and dependents. Each pair splits the trust that
+Exact duplicates are found by text; near-duplicates by reading, with
+the graph nominating candidates that share grounds and dependents
+(`ATOMICITY`). Each pair splits the trust that
 should accrue to one claim. Lowered by the merge move.
