@@ -4,7 +4,7 @@ from dataclasses import dataclass, replace
 from typing import assert_never
 
 from .model import Claim, ClaimId, State
-from .moves import Add, Merge, Retract, SettleWording, Split, Step, Stipulate
+from .moves import Add, Close, Merge, Retract, SettleWording, Split, Step, Stipulate
 
 
 @dataclass(frozen=True)
@@ -79,6 +79,15 @@ def transition(state: State, step: Step) -> State | Reject:
         case Retract(claim_id):
             if claim_id not in state:
                 return Reject(f"{claim_id} missing")
+            else:
+                return {k: v for k, v in state.items() if k != claim_id}
+        case Close(claim_id):
+            if claim_id not in state:
+                return Reject(f"{claim_id} missing")
+            elif state[claim_id].basis != "question":
+                return Reject(f"{claim_id} is not a question")
+            elif any(claim_id in claim.grounds for claim in state.values()):
+                return Reject(f"{claim_id} is not a leaf")
             else:
                 return {k: v for k, v in state.items() if k != claim_id}
         case _:

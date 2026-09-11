@@ -5,8 +5,8 @@ the owner's word carries the owner's authority and cites its license, the
 address of the ruling or of the standing rule. A move with no license is
 the agent's own.
 
-Not yet here: reword, close a question. Neither changes anything the model
-represents until text or a closed state enters it.
+Not yet here: reword, which changes nothing the model represents until
+text enters it.
 """
 
 from dataclasses import dataclass
@@ -71,7 +71,14 @@ class Retract:
     claim_id: ClaimId
 
 
-Move = Add | Stipulate | SettleWording | Split | Merge | Retract
+@dataclass(frozen=True)
+class Close:
+    """A question's terminal state besides answered (`CLOSED_QUESTION`): removed, once a leaf."""
+
+    claim_id: ClaimId
+
+
+Move = Add | Stipulate | SettleWording | Split | Merge | Retract | Close
 
 
 @dataclass(frozen=True)

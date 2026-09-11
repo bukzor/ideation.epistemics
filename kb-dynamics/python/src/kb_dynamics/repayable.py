@@ -17,7 +17,17 @@ from typing import assert_never
 
 from .debt import COMPONENTS, Debt, debt
 from .model import State
-from .moves import Add, Merge, Retract, SettleWording, Split, Step, Stipulate, licensed
+from .moves import (
+    Add,
+    Close,
+    Merge,
+    Retract,
+    SettleWording,
+    Split,
+    Step,
+    Stipulate,
+    licensed,
+)
 from .transition import Reject, transition
 
 
@@ -48,7 +58,7 @@ def as_owner_sees(state: State, step: Step) -> Step | None:
                 return None
             else:
                 return step
-        case Split():
+        case Split() | Close():
             return step
         case _:
             assert_never(move)

@@ -51,8 +51,9 @@ Decided and partly built: the ledger; `examples/` (bad states, good
 states, and corners, no traces yet); `python/` with the four core
 modules plus `moves`, `repayable` (the owner's view and hidden debt,
 `OWNER_VIEW`), `harness` (run a generator under rules), `trust`,
-`examples`, `agents/constant`, and tests for properties one through
-four. The random rung is `tests/strategies.py`, hypothesis strategies
-drawn against the live state so counterexamples shrink, rather than an
-`agents/random` module. `agents/biased`, `enumerate`,
-`test_reachability`, and `lean/` wait on the property that demands each.
+`examples`, `agents/constant`, `agents/repair` (property five's
+witness), and tests for all five properties. The random rung is
+`tests/strategies.py`, hypothesis strategies drawn against the live
+state so counterexamples shrink, rather than an `agents/random` module.
+`agents/biased`, `enumerate`, and `lean/` wait on the property that
+demands each.

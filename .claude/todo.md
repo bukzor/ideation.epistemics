@@ -50,8 +50,10 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       Ruled: a move is tagged by the authority it carries, not the hands
       (`AUTHORITY_NOT_HANDS`); the rules are now two, owner-only changes
       need owner authority and unlicensed merges preserve content, each
-      with a witness. Next: property five and a closing move for
-      questions.
+      with a witness. Property five holds with the yes-owner as witness
+      (`REPAIR_WITNESS`) and a closing move for leaf questions. All five
+      properties run. Next: bounded enumeration, or real ledgers through
+      the loader (`ROUND_TRIP` blocks the latter).
       Reconciliation with `session-model/` and the {TL, RN} schema is a
       deliberate later pass, through that theory. Two agent choices to
       audit: `todo.kb/suggestions-to-audit.kb/kb-dynamics-*.md`
