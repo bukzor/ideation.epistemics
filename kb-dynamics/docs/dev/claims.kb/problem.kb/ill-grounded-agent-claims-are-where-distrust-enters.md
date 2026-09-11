@@ -4,7 +4,6 @@ standing: user
 authority: f65fbdf3#L815
 why:
   - review-cost-scales-with-the-ledger-not-the-payoff.md
-  - drift-becomes-load-bearing-by-grounding-on-a-proposed-claim.md
   - one-standing-field-confuses-three-situations.md
 ---
 
