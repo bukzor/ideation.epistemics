@@ -1,6 +1,7 @@
 ---
 label: REVIEW_RATIO
-standing: agent
+standing: user
+authority: f65fbdf3#L606, the owner's ruling of 2026-09-11
 ---
 
 # Review cost scales with the ledger; its payoff scales with a small subset
@@ -15,7 +16,10 @@ or their own energy:
 
 It is the review: the reluctance is a rational response to the ratio,
 and the review procedure is what sets it. The ledgers are not the root
-cause.
+cause, and they are not up for elimination.
+
+> [!@bukzor] f65fbdf3#L606
+> no, the ledgers solve too many other things to be eliminated. we need to design/use them better, not eliminate them. In your terms: "the reviews are the cause"
 
 > [!@bukzor] chat.md#L103
 > But as I continue down this path, I find that some portion of these kb rest on agent-written claims that are subtly misaligned with my own beliefs/goals.  When I go to review them agent presents me with a "wall o text" that requires I personally load weeks of reasoning into my own working store. And doing this across several (N) mature kb means I need to do this N times.

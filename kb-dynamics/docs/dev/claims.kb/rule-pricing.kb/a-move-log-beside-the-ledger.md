@@ -1,6 +1,8 @@
 ---
 label: MOVE_LOG
-standing: open
+standing: user
+authority: f65fbdf3#L995, "seems good enough to me", on a yes deferred behind move-table enforcement
+todo: true
 why:
   - replay-computes-firings-and-attribution-when-triggers-are-code.md
   - ../model.kb/the-move-table-is-total-and-an-empty-cell-is-a-finding.md
@@ -27,7 +29,7 @@ the context and sampling it. That probability is the agent's behavior,
 and sampling a model of it is the simulation problem entering by a side
 door; the funnel reads the same quantity from real events.
 
-Open: the owner raised the log and then withdrew the message that raised
-it (chat.md#L422), so no ruling exists; and enforcement of the move
-table, which the log is a line of, is itself deferred until an agent is
-caught setting a field it should not.
+Decided, not built. The owner raised the log and withdrew the message
+that raised it (chat.md#L422), then ruled yes on 2026-09-11 with the
+sequencing: not before the move table is enforced, which is itself
+deferred until an agent is caught setting a field it should not.

@@ -30,10 +30,10 @@ kb-dynamics/
       examples.py     loader for ../../examples
       agents/         constant.py  random.py  biased.py    the fidelity ladder's rungs
     tests/
-      strategies.py   test_monotone.py  test_examples.py
+      strategies.py   test_repayable.py  test_examples.py
       test_necessity.py  test_reachability.py              the five properties
   lean/
-    KbDynamics/       Model  Transition  Rules  Debt  Monotone  Necessity
+    KbDynamics/       Model  Transition  Rules  Debt  Repayable  Necessity
 ```
 
 - `examples/` is the bridge to the field and the only outside input the
@@ -42,7 +42,7 @@ kb-dynamics/
   are the harness's regression residue.
 - The four core modules are the whole port surface. `agents/` and
   `tests/` have no Lean counterpart: the Lean side replaces sampling
-  with theorems, so `test_monotone.py` maps to `Monotone.lean`, not to
+  with theorems, so `test_repayable.py` maps to `Repayable.lean`, not to
   a test file.
 - Left out: a collection of rule-pricing records. That is the field-side
   artifact and belongs beside the must-read tooling, not in the sandbox.

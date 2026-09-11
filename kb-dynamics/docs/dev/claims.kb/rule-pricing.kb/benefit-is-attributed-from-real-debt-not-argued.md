@@ -3,7 +3,7 @@ label: ATTRIBUTION
 standing: agent
 why:
   - a-rule-record-separates-check-from-trigger.md
-  - ../debt.kb/debt-is-a-vector-and-leaves-are-not-in-it.md
+  - ../debt.kb/components.md
 ---
 
 # A rule's benefit is attributed from real debt, never argued

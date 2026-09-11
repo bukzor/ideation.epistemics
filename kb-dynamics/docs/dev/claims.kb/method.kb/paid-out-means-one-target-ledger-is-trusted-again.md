@@ -1,11 +1,21 @@
 ---
 label: PAYOUT_TEST
-standing: agent
+standing: user
+verdict: rejected
+authority: f65fbdf3#L606, the owner's ruling of 2026-09-11
 why:
   - ../debt.kb/owner-review-is-a-queue-sorted-by-debt.md
 ---
 
 # Paid out means one target ledger can be opened, queued, reviewed in a session, and trusted
+
+Rejected: a singular target hard-codes what the design must not.
+
+> [!@bukzor] f65fbdf3#L606
+> i don't see any need to decide this now. or ever, really. Why would "the target" be a singular? A system that hard-codes the target is a broken design.
+
+The criterion, restated for every ledger, is asked again as
+`TRUST_TEST`; the two guards below are re-posed there.
 
 Pick one durable ledger the owner has lost confidence in and make it the
 target for the whole line. The work has paid out when the owner can

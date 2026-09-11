@@ -30,6 +30,10 @@ non-claim-tokens:
   - L501
   - L576
   - L632
+  # `f65fbdf3#L<n>`: the 2026-09-11 grounding sitting, same collision
+  - L606
+  - L815
+  - L995
 stale-when: a property that passes under a random agent while a real ledger still drifts under the same rules
 ---
 
@@ -45,7 +49,7 @@ in this ledger.
 Formed 2026-09-10 from the chat captured under
 `../../../docs/dev/chats/claude/Created=2026/09/09/14:14:39-05:00/`; the
 ledger replaces that chat as the entry point, and a `chat.md#L<n>`
-address anywhere in it points into that directory's `chat.md`.
+address anywhere in it points into the `chat.md` one titled directory below it.
 
 ## Theories
 
@@ -53,6 +57,7 @@ address anywhere in it points into that directory's `chat.md`.
     problem          <- imported-terms
     model            <- imported-terms, problem
     debt             <- model, imported-terms
+      components     <- debt (nested: one claim per kind of rot)
     harness          <- debt, model, imported-terms
     rule-pricing     <- debt, harness, imported-terms
     method           <- harness, rule-pricing, debt

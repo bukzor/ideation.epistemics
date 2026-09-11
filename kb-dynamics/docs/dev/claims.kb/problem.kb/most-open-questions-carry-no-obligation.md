@@ -1,6 +1,7 @@
 ---
 label: MINUTIAE
-standing: agent
+standing: bare
+verify: kb-dynamics/docs/dev/claims.kb/problem.kb/most-open-questions-carry-no-obligation.verify.py
 why:
   - review-cost-scales-with-the-ledger-not-the-payoff.md
   - ../imported-terms.kb/obligation.md
@@ -12,7 +13,9 @@ The minutiae that exhausted the owner's review are open questions and
 proposed claims with no descendants. Under obligation-as-derived
 (`IMPORTED_OBLIGATION`) such a node is obligated to nothing, and
 resolving it changes nothing downstream. They are findable without
-reading: a reverse-dependency query with an empty answer.
+reading: a reverse-dependency query with an empty answer. Measured
+2026-09-11 over the fleet's ledgers: fifty-seven of seventy-five open
+questions had no dependents; the verify script re-runs the count.
 
 This is the measurement behind `REVIEW_RATIO`: the owner had already
 observed that the review's payoff was small, and the graph can say which

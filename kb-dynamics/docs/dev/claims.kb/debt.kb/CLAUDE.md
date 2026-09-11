@@ -4,9 +4,10 @@
 
 ## What belongs here
 
-A debt component, a property of the function (monotonicity, what is not
-debt), or a candidate rule with what it permits or obliges and which
-component it targets.
+A property of the debt function (what is wanted, what is repayable, how
+the queue orders), a candidate rule with what it permits or obliges and
+which component it targets, or a guard on an unasked move. A kind of rot
+itself goes in `components.kb/`.
 
 ## What does NOT belong here
 

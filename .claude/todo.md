@@ -27,9 +27,14 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       `imported-terms` (the one place a `why:` may leave the subpath,
       certified by `imported-terms.verify.py`) plus six theories
       (problem, model, debt, harness, rule-pricing, method) that replace
-      the chat as the entry point; open: `ROUND_TRIP`, `MOVE_LOG`. Next:
-      the first red test, a hand-written bad state with debt above zero, which
-      brings `examples/` and `python/` into existence. Reconciliation
+      the chat as the entry point. Grounded 2026-09-11: the spine now rests
+      on the owner's word (the reviews are the cause, debt is wanted and
+      only unrepayable debt is rot, no claim is exempt from review, a
+      nested `components` theory holds the five rot kinds); open:
+      `ROUND_TRIP`, `ROT_LIST`. Next: the first red test, a hand-written
+      bad state with unrepayable debt above zero, which brings
+      `examples/` and `python/` into existence; then stress `TRUST_TEST`'s
+      three conditions at the corners. Reconciliation
       with `session-model/` and the {TL, RN} schema is a deliberate
       later pass, through that theory. Two agent choices to audit:
       `todo.kb/suggestions-to-audit.kb/kb-dynamics-*.md`
