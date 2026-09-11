@@ -47,7 +47,10 @@ kb-dynamics/
 - Left out: a collection of rule-pricing records. That is the field-side
   artifact and belongs beside the must-read tooling, not in the sandbox.
 
-Decided and partly built: the ledger, `examples/` (bad and good states,
-no traces yet), and `python/` with `model`, `debt`, `examples`, and
-`test_examples`. `transition`, `rules`, `agents/`, the four remaining
-property tests, and `lean/` wait on the property that demands each.
+Decided and partly built: the ledger; `examples/` (bad states, good
+states, and corners, no traces yet); `python/` with the four core
+modules plus `moves`, `repayable` (the owner's view and hidden debt,
+`OWNER_VIEW`), `harness` (run a generator under rules), `trust`,
+`examples`, `agents/constant`, and tests for properties one through
+four. `agents/random`, `agents/biased`, `strategies`, `enumerate`,
+`test_reachability`, and `lean/` wait on the property that demands each.

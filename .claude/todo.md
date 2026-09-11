@@ -41,9 +41,12 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       vetoable, 2026-09-11: `UNREPAYABLE`'s fourth route withdrawn (a
       leaf is repaid by closure, not voided), `FIVE_PROPERTIES` 3 and 4
       re-scoped, `NO_SILENT_RAISE` and `FIELDS_NOT_CARRIED` re-signed
-      bare. Next
-      rung: the arrow carries sufficiency (`GROUND_RECORD`), then
-      property one brings `transition`, `rules`, the generator.
+      bare. Built later 2026-09-11: sufficiency on the claim (the
+      weak-arrows corner is a bad state); property one as hidden debt,
+      the owner's view of the log minus the record (`OWNER_VIEW`), with
+      `transition`, `rules`, and the constant-worst agent; property four
+      as the flip test, two rules with witnesses. Next rung: the random
+      agent (`strategies.py`), then property five and a closing move.
       Reconciliation with `session-model/` and the {TL, RN} schema is a
       deliberate later pass, through that theory. Two agent choices to
       audit: `todo.kb/suggestions-to-audit.kb/kb-dynamics-*.md`
