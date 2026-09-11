@@ -11,7 +11,7 @@ import sys
 from collections.abc import Iterable
 from pathlib import Path
 
-from llm_claims_kb.grounding import Grounding, grounding
+from llm_claims_kb.grounding import Grounding, grounding, load_reachable
 from llm_claims_kb.ledger import ledger_roots, read_ledger
 
 HERE = Path(__file__).resolve()
@@ -30,7 +30,8 @@ def open_claims(roots: Iterable[Path]) -> tuple[Grounding, ...]:
         record
         for root in roots
         if not root.resolve().is_relative_to(SUBPATH) and not in_worktree(root)
-        for record in grounding(read_ledger(root))
+        for ledger in (read_ledger(root),)
+        for record in grounding(ledger, load_reachable(ledger))
         if record.standing == "open"
     )
 

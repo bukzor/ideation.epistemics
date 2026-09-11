@@ -19,11 +19,15 @@ why:
    a real ledger -- has debt above zero. Failure: debt is blind to
    something the owner cares about.
 3. Every debt-zero state satisfies every named goodness predicate. The
-   converse of 2.
+   converse of 2. No predicate is named yet: the candidates are posed in
+   `TRUST_CORNERS` and await the owner, and one of them, a queue that
+   fits a sitting, is a field quantity the sandbox can only stub.
 4. For each rule, some sequence exists where removing it lets debt go
    unrepayable. Failure: the rule is dead weight. This is the flip test
-   (`IMPORTED_FLIP`) in miniature, and the minimality test as something
-   the machine runs rather than an argument.
+   (`IMPORTED_FLIP`) in miniature. It shows a rule has an effect, not
+   that it earns its cost: against an adversarial generator nearly every
+   rule has a breaking sequence, so cost is the field's to measure
+   (`ATTRIBUTION`, `MINIMAL_IS_LOCAL`).
 5. From any reachable state, some owner-plus-agent sequence reaches debt
    zero. Failure: a stuck state, a missing transition.
 

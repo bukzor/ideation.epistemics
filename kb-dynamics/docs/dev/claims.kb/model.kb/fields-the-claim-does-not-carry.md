@@ -1,8 +1,10 @@
 ---
 label: FIELDS_NOT_CARRIED
-standing: agent
+standing: bare
 why:
   - effective-basis-is-computed-from-grounds-not-stored.md
+  - two-situations-are-one-state-iff-the-next-action-is-the-same.md
+  - standing-factors-into-basis-and-wording.md
 ---
 
 # Fields the claim does not carry

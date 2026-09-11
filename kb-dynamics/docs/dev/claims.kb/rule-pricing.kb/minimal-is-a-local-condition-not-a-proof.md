@@ -22,6 +22,7 @@ tally yields a candidate set; running for a period and re-measuring the
 debt rate validates it; removal is the second test -- drop a rule, and
 if the debt rate does not move the rule was not earning its cost.
 
-In the sandbox the same condition is the fourth property: a rule earns
-its place only if some sequence flips when it is removed
-(`IMPORTED_FLIP`). Neither is an argument, which is the point.
+In the sandbox the fourth property is the weaker half of this: a rule
+with no sequence that flips when it is removed is dead weight
+(`IMPORTED_FLIP`), while a rule with one may still not earn its cost.
+Neither is an argument, which is the point.

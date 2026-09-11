@@ -37,7 +37,11 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       confusions. **Awaiting operator:** `TRUST_CORNERS` -- two
       decisions from six corner states (does unruled-leaf and
       non-proposed rot block trust; does a sitting count items or
-      weight); rule by editing the open or moving a corner file. Next
+      weight); rule by editing the open or moving a corner file. Also
+      vetoable, 2026-09-11: `UNREPAYABLE`'s fourth route withdrawn (a
+      leaf is repaid by closure, not voided), `FIVE_PROPERTIES` 3 and 4
+      re-scoped, `NO_SILENT_RAISE` and `FIELDS_NOT_CARRIED` re-signed
+      bare. Next
       rung: the arrow carries sufficiency (`GROUND_RECORD`), then
       property one brings `transition`, `rules`, the generator.
       Reconciliation with `session-model/` and the {TL, RN} schema is a

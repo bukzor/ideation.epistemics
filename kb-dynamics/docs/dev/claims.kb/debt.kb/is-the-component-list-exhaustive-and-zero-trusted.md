@@ -17,6 +17,9 @@ ruling:
 
 Open on two counts. Whether a kind of rot exists that no component
 counts: the witness is a ledger the owner distrusts whose vector reads
-zero. And whether zero on every component is sufficient for trust, which
-`TRUST_TEST` answers for three specific conditions and the harness is to
-stress at the corners.
+zero, and it cannot come from the sandbox, since `ATOM_CONTENT` strips
+the content that stale and near-duplicate rot live in; it is a field
+measurement over the fleet's ledgers (`SANDBOX_VS_FIELD`). And whether
+zero on every component is sufficient for trust, which `TRUST_TEST`
+answers for three specific conditions and the harness stresses at the
+corners (`TRUST_CORNERS`).

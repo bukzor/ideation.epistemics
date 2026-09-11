@@ -5,6 +5,7 @@ why:
   - ../problem.kb/one-standing-field-confuses-three-situations.md
   - ../imported-terms.kb/standing.md
   - ../imported-terms.kb/stipulated.md
+  - ../imported-terms.kb/certified.md
 ---
 
 # Standing factors into two fields: basis and wording
