@@ -10,9 +10,10 @@ why:
 # A claim's effective basis is computed from its grounds, never stored
 
 A derived claim is as trustworthy as its weakest ground. Effective basis
-is the fold over the grounds: derived from `user` bases all the way down
-is effectively stipulated; `proposed` anywhere in the ancestry is
-effectively proposed, whatever the agent called the claim. The fold
+is the fold over the grounds: derived from `user` bases all the way down,
+by grounds that entail it, is effectively stipulated; `proposed` anywhere
+in the ancestry, or grounds that only motivate (`MOTIVATES_IS_PROPOSED`),
+is effectively proposed, whatever the agent called the claim. The fold
 stops at `user` and `evidence`, the two bases that rest on nothing in
 the ledger.
 
