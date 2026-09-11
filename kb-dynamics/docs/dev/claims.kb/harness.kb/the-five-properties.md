@@ -21,7 +21,7 @@ why:
 3. Every debt-zero state satisfies every named goodness predicate. The
    converse of 2. No predicate is named yet: the candidates posed in
    `TRUST_CORNERS` dissolved into aggregations over claims
-   (`TRUST_PER_CLAIM`, `EMPTY_QUEUE_TRUST`), and a queue that fits a
+   (`TRUST_TEST`, `EMPTY_QUEUE_TRUST`), and a queue that fits a
    sitting is a field quantity the sandbox does not compute.
 4. For each rule, some sequence exists where removing it lets debt go
    unrepayable. Failure: the rule is dead weight. This is the flip test

@@ -3,7 +3,7 @@ label: EMPTY_QUEUE_TRUST
 standing: agent
 verify: ../../../../python/tests/test_trust.py
 why:
-  - ../model.kb/trust-is-per-claim-a-ledgers-trust-is-an-aggregation.md
+  - ../method.kb/any-of-three-conditions-says-review-is-done-or-doable.md
   - ../model.kb/effective-basis-is-computed-from-grounds-not-stored.md
   - components.md
 ---

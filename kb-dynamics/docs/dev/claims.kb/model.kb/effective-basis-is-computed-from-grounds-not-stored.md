@@ -22,5 +22,12 @@ descendants weighted toward stipulated ones. Effective basis and
 load-bearing count together are the review query: claims whose effective
 trust is lower than their downstream importance.
 
+A ledger carries no trust of its own. "All claims trusted" is a state a
+ledger can be in, computed by aggregating the folds, never an attribute
+the ledger carries; the queue is a separate instrument (`TRUST_TEST`):
+
+> [!@bukzor] 9b6f24ad
+> A ledger can have state "all claims trusted" but that's better represented as a aggregation over the claims, rather than as attribute of the ledger.
+
 Declined: a stored "well-grounded" value. It would be asserted by the
 agent that wanted it, and go stale the moment a ground changed.

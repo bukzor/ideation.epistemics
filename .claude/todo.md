@@ -35,7 +35,7 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       `python/` (debt vector, effective-basis fold, queue, trust
       conditions), properties two and three green on the owner's
       confusions. Ruled 2026-09-11: trust is per claim, a ledger's
-      trust an aggregation (`TRUST_PER_CLAIM`); the harness settled the
+      trust an aggregation (now in `TRUST_TEST` and `EFFECTIVE_BASIS`); the harness settled the
       owner's conjecture (`EMPTY_QUEUE_TRUST`: empty queue entails all
       trusted, converse fails, witness pinned). Also
       vetoable, 2026-09-11: `UNREPAYABLE`'s fourth route withdrawn (a

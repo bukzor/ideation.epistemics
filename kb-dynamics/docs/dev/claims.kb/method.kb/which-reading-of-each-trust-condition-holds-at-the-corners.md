@@ -4,14 +4,15 @@ standing: user
 verdict: dissolved
 authority: 9b6f24ad, the owner's ruling of 2026-09-11
 why:
-  - any-of-three-conditions-restores-trust.md
-  - ../model.kb/trust-is-per-claim-a-ledgers-trust-is-an-aggregation.md
+  - any-of-three-conditions-says-review-is-done-or-doable.md
+  - ../model.kb/effective-basis-is-computed-from-grounds-not-stored.md
 ---
 
 # Which reading of each trust condition holds at the corners?
 
 Dissolved: the question presumed trust is an attribute of the ledger,
-and the owner rejected the premise (`TRUST_PER_CLAIM`). The two decisions
+and the owner rejected the premise; `TRUST_TEST` and `EFFECTIVE_BASIS`
+now carry the ruling. The two decisions
 it posed, whether unruled leaves block trust and whether a sitting counts
 items or weight, do not survive it:
 
