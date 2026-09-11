@@ -6,7 +6,7 @@ why:
   - ../../../../../claims.kb/two-base-statuses-not-four.md
 ---
 
-# A stipulated claim is warranted by fiat, and the field names whose
+# A stipulated claim is warranted by fiat; the field names the declaring source
 
 A stipulated claim is warranted by fiat; at repo weight the warrant is a
 `stipulated:` field naming the declaring source. Here it is the owner's
