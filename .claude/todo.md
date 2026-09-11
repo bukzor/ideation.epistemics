@@ -31,13 +31,18 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       on the owner's word (the reviews are the cause, debt is wanted and
       only unrepayable debt is rot, no claim is exempt from review, a
       nested `components` theory holds the five rot kinds); open:
-      `ROUND_TRIP`, `ROT_LIST`. Next: the first red test, a hand-written
-      bad state with unrepayable debt above zero, which brings
-      `examples/` and `python/` into existence; then stress `TRUST_TEST`'s
-      three conditions at the corners. Reconciliation
-      with `session-model/` and the {TL, RN} schema is a deliberate
-      later pass, through that theory. Two agent choices to audit:
-      `todo.kb/suggestions-to-audit.kb/kb-dynamics-*.md`
+      `ROUND_TRIP`, `ROT_LIST`. Built 2026-09-11: `examples/` and
+      `python/` (debt vector, effective-basis fold, queue, trust
+      conditions), properties two and three green on the owner's
+      confusions. **Awaiting operator:** `TRUST_CORNERS` -- two
+      decisions from six corner states (does unruled-leaf and
+      non-proposed rot block trust; does a sitting count items or
+      weight); rule by editing the open or moving a corner file. Next
+      rung: the arrow carries sufficiency (`GROUND_RECORD`), then
+      property one brings `transition`, `rules`, the generator.
+      Reconciliation with `session-model/` and the {TL, RN} schema is a
+      deliberate later pass, through that theory. Two agent choices to
+      audit: `todo.kb/suggestions-to-audit.kb/kb-dynamics-*.md`
 - [ ] `session-model/`: the ownership scan (now runnable here) reports two
       trespasses -- `law.kb` says "silence", owned by `session-sim.kb`;
       `budget.kb` says "trace", owned by `trace-sim.kb`. Cull, move,
