@@ -1,6 +1,6 @@
 ---
 label: IMPORTED_STANDING
-standing: agent
+standing: bare
 why:
   - ../../../../../../bukzor-agent-skills/llm-claims/claims.kb/design.claims.kb/notation.kb/the-sigil-signs-the-judge.md
 ---

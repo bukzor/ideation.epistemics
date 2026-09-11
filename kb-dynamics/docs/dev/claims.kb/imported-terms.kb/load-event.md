@@ -1,6 +1,6 @@
 ---
 label: IMPORTED_LOAD_EVENT
-standing: agent
+standing: bare
 why:
   - ../../../../../session-model/session-model.claims.kb/budget.md
 ---

@@ -1,6 +1,6 @@
 ---
 label: IMPORTED_STATE
-standing: agent
+standing: bare
 why:
   - ../../../../../session-model/session-model.claims.kb/law.md
 ---

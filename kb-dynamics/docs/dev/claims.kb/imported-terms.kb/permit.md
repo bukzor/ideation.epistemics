@@ -1,6 +1,6 @@
 ---
 label: IMPORTED_PERMIT
-standing: agent
+standing: bare
 why:
   - ../../../../../session-model/session-model.claims.kb/law.md
   - ../../../../../session-model/session-model.claims.kb/law.kb/a-rule-maps-a-state-to-permitted-or-obliged-moves.md

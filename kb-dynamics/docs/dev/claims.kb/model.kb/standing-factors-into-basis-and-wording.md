@@ -1,6 +1,7 @@
 ---
 label: BASIS_WORDING
-standing: agent
+standing: user
+authority: d3d3f372, the owner's ruling of 2026-09-11
 why:
   - ../problem.kb/one-standing-field-confuses-three-situations.md
   - ../imported-terms.kb/standing.md
@@ -28,6 +29,9 @@ factoring is right: what differed between them, who typed the draft,
 does not change what should happen next (`NEXT_ACTION_TEST`). Case three
 stops needing a status of its own because trust is computed
 (`EFFECTIVE_BASIS`).
+
+> [!@bukzor] d3d3f372
+> Yes, accepted. And yes: round-tripping is a work item.
 
 Declined: keeping one enum and adding values for each case. A single
 enum over a product space produces edge cases forever.

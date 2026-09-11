@@ -2,7 +2,7 @@
 label: ATOM_CONTENT
 standing: agent
 why:
-  - ../model.kb/atomicity-is-one-invariant-for-grounding-factoring-and-duplication.md
+  - ../model.kb/atomicity-is-one-basis-and-one-content-per-claim.md
   - the-sandbox-settles-design-the-field-settles-the-agent.md
 ---
 

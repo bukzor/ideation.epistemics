@@ -29,7 +29,11 @@ theory imports these words by citing this file. The claim's filename is
 the word, so `ls` is the list.
 
 Each claim gives the sense as this project reads it and how the project
-uses it, and signs `+`: the outer argument is not restated, so the reading
-is the importer's judgment. Reconciliation with the outer projects is the
-discarding of this theory, claim by claim, into a real import or a recorded
-divergence.
+uses it. It goes bare where it restates the outer claim and cites it, so
+the fold reads the outer standing through it and the weak link, if any,
+is located in the outer ledger where it belongs. Three sign `+` for now
+-- `certified`, `obligation`, `stipulated` -- because their outer nodes
+are discourse-graph claims the ledger tools cannot yet read as claims;
+they go bare when the repo-weight rung lands. Reconciliation of sense
+with the outer projects is a separate pass: reading each outer theory
+against the use made of its word here, and recording each divergence.

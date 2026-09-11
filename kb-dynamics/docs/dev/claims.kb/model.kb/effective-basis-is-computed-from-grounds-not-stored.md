@@ -1,6 +1,7 @@
 ---
 label: EFFECTIVE_BASIS
-standing: agent
+standing: user
+authority: d3d3f372, the owner's ruling of 2026-09-11
 why:
   - standing-factors-into-basis-and-wording.md
   - ../imported-terms.kb/stipulated.md
@@ -29,6 +30,9 @@ the ledger carries; the queue is a separate instrument (`TRUST_TEST`):
 
 > [!@bukzor] 9b6f24ad
 > A ledger can have state "all claims trusted" but that's better represented as a aggregation over the claims, rather than as attribute of the ledger.
+
+> [!@bukzor] d3d3f372
+> Yes, accepted. And yes: round-tripping is a work item.
 
 Declined: a stored "well-grounded" value. It would be asserted by the
 agent that wanted it, and go stale the moment a ground changed.

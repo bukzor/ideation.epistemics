@@ -1,6 +1,6 @@
 ---
 label: IMPORTED_EXAMPLE
-standing: agent
+standing: bare
 why:
   - ../../../../../session-model/session-model.claims.kb/law.md
   - ../../../../../session-model/session-model.claims.kb/law.kb/an-example-is-a-state-a-ruled-move-and-an-address.md

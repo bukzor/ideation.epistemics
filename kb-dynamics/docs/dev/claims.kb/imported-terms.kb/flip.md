@@ -1,6 +1,6 @@
 ---
 label: IMPORTED_FLIP
-standing: agent
+standing: bare
 why:
   - ../../../../../session-model/session-model.claims.kb/law.md
   - ../../../../../session-model/session-model.claims.kb/law.kb/a-rule-change-is-graded-by-which-examples-flip.md

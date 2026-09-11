@@ -1,6 +1,6 @@
 ---
 label: IMPORTED_WEEKLY_COST
-standing: agent
+standing: bare
 why:
   - ../../../../../session-model/session-model.claims.kb/budget.md
   - ../../../../../session-model/session-model.claims.kb/budget.kb/weekly-cost-is-tokens-per-load-times-loads-per-week.md

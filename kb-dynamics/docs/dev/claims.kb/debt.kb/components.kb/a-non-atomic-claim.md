@@ -3,7 +3,7 @@ label: NON_ATOMIC
 standing: user
 authority: f65fbdf3#L815, the owner's list, given as examples
 why:
-  - ../../model.kb/atomicity-is-one-invariant-for-grounding-factoring-and-duplication.md
+  - ../../model.kb/atomicity-is-one-basis-and-one-content-per-claim.md
 ---
 
 # A claim that cannot be given one basis

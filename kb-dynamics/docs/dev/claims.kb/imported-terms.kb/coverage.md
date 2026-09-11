@@ -1,6 +1,6 @@
 ---
 label: IMPORTED_COVERAGE
-standing: agent
+standing: bare
 why:
   - ../../../../../session-model/session-model.claims.kb/law.md
   - ../../../../../session-model/session-model.claims.kb/law.kb/every-report-states-exhaustive-or-sampled.md
