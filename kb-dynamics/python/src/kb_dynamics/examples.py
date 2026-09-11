@@ -8,7 +8,7 @@ from typing import cast
 import yaml
 
 from .debt import Component
-from .model import Basis, Claim, State, Wording
+from .model import Basis, Claim, State, Sufficiency, Wording
 from .trust import Condition, Verdicts
 
 EXAMPLES = Path(__file__).resolve().parents[3] / "examples"
@@ -49,6 +49,7 @@ def parse_state(claims: object) -> State:
             wording=cast(Wording, fields["wording"]),
             grounds=frozenset(cast(list[str], fields["grounds"])),
             content=frozenset(cast(list[int], fields["content"])),
+            sufficiency=cast(Sufficiency, fields.get("sufficiency", "entails")),
         )
         for claim_id, fields in claims.items()
     }

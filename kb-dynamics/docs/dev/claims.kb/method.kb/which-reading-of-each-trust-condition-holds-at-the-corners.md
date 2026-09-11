@@ -26,5 +26,6 @@ What the corners in `examples/corners/` witness, restated: `TRUST_TEST`'s
 conditions are aggregations over claims that say when the review is done
 or doable; a claim's trust is its own fold; and the two come apart, which
 `EMPTY_QUEUE_TRUST` states exactly. "Fits one sitting" is a field
-quantity the sandbox does not compute. The weak-arrows corner stands as
-the property that demands the arrow record (`GROUND_RECORD`).
+quantity the sandbox does not compute. The weak-arrows corner was the
+property that demanded the arrow record and is now a bad state
+(`MOTIVATES_IS_PROPOSED`).

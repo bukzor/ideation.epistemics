@@ -64,9 +64,9 @@ def weakest(bases: Collection[EffectiveBasis]) -> EffectiveBasis:
 def effective_basis(state: State, claim_id: ClaimId) -> EffectiveBasis:
     """The fold over the grounds: as trustworthy as the weakest ground.
 
-    Stops at `user` and `evidence`. A derived claim with no grounds, a claim
-    missing from the state, and a claim in its own ancestry are all
-    unwarranted, hence proposed.
+    Stops at `user` and `evidence`. A derived claim with no grounds, one whose
+    grounds only motivate it, a claim missing from the state, and a claim in
+    its own ancestry are all unwarranted, hence proposed.
     """
 
     def fold(claim_id: ClaimId, ancestry: frozenset[ClaimId]) -> EffectiveBasis:
@@ -81,7 +81,7 @@ def effective_basis(state: State, claim_id: ClaimId) -> EffectiveBasis:
             case "proposed" | "question":
                 return "proposed"
             case "derived":
-                if not claim.grounds:
+                if not claim.grounds or claim.sufficiency == "motivates":
                     return "proposed"
                 else:
                     folded: set[EffectiveBasis] = {

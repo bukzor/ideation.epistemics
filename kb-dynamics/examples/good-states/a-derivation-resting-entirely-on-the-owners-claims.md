@@ -17,11 +17,13 @@ claims:
     basis: derived
     wording: settled
     grounds: [ruling-a, ruling-b]
+    sufficiency: entails
     content: [3]
 ---
 
 # A derivation resting entirely on the owner's claims
 
-Agent-drafted, grounded on two settled owner rulings and nothing else.
+Agent-drafted, grounded on two settled owner rulings that together
+entail it, and nothing else.
 Under the incumbent one-field standing it read as an agent claim; here
 its effective basis folds to stipulated and it carries no debt.

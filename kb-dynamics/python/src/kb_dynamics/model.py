@@ -11,6 +11,8 @@ from typing import Literal
 ClaimId = str
 Basis = Literal["user", "derived", "evidence", "proposed", "question"]
 Wording = Literal["settled", "draft"]
+# Whether the grounds together entail the claim or only motivate it (`GROUND_RECORD`).
+Sufficiency = Literal["entails", "motivates"]
 
 
 @dataclass(frozen=True)
@@ -19,6 +21,7 @@ class Claim:
     wording: Wording
     grounds: frozenset[ClaimId]
     content: frozenset[int]
+    sufficiency: Sufficiency = "entails"
 
 
 State = Mapping[ClaimId, Claim]
