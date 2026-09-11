@@ -5,7 +5,8 @@ at the lowest priority and never zero (`COMPONENTS`, `LEAF_EXEMPT`). The
 weight across components is the owner's and is not set here.
 """
 
-from collections.abc import Collection, Mapping
+from collections.abc import Collection, Iterator, Mapping
+from dataclasses import dataclass
 from typing import Literal, assert_never
 
 from .model import ClaimId, State
@@ -22,6 +23,15 @@ Debt = Mapping[Component, int]
 
 EffectiveBasis = Literal["stipulated", "certified", "proposed"]
 WEAKEST_FIRST: tuple[EffectiveBasis, ...] = ("proposed", "certified", "stipulated")
+
+
+@dataclass(frozen=True)
+class Item:
+    """One thing the owner can rule on: a claim, the rot it carries, and its contribution."""
+
+    claim: ClaimId
+    component: Component
+    contribution: int
 
 
 def dependents(state: State) -> Mapping[ClaimId, frozenset[ClaimId]]:
@@ -84,36 +94,58 @@ def effective_basis(state: State, claim_id: ClaimId) -> EffectiveBasis:
     return fold(claim_id, frozenset())
 
 
-def contribution(state: State, claim_id: ClaimId) -> int:
-    return 1 + load(state, claim_id)
+def proposed_roots(state: State) -> Iterator[ClaimId]:
+    """Claims where proposedness enters: effectively proposed with no proposed ground.
+
+    A ruling on the root repays everything that folds to it, so the root is
+    the queue item and its dependents are its weight, not items of their own.
+    """
+    for claim_id, claim in state.items():
+        if effective_basis(state, claim_id) == "proposed" and not any(
+            effective_basis(state, ground) == "proposed" for ground in claim.grounds
+        ):
+            yield claim_id
+
+
+def duplicates(state: State) -> Iterator[ClaimId]:
+    """Every claim after the first with the same content, in state order."""
+    seen: set[frozenset[int]] = set()
+    for claim_id, claim in state.items():
+        if claim.content in seen:
+            yield claim_id
+        else:
+            seen.add(claim.content)
+
+
+def rot(state: State) -> tuple[Item, ...]:
+    """Every (claim, component) the state is rotten at, with its contribution."""
+    by_component: Mapping[Component, Collection[ClaimId]] = {
+        "proposed-basis": tuple(proposed_roots(state)),
+        "non-atomic": tuple(c for c, claim in state.items() if len(claim.content) > 1),
+        "duplicate": tuple(duplicates(state)),
+        "wording": tuple(c for c, claim in state.items() if claim.wording == "draft"),
+        # Staleness compares a claim against rulings newer than it, which needs
+        # the move log; empty until a property demands it.
+        "stale": (),
+    }
+    weight = dependents(state)
+    return tuple(
+        Item(claim_id, component, 1 + len(weight[claim_id]))
+        for component in COMPONENTS
+        for claim_id in by_component[component]
+    )
 
 
 def debt(state: State) -> Debt:
-    seen_content: dict[frozenset[int], ClaimId] = {}
-    duplicates: list[ClaimId] = []
-    for claim_id, claim in state.items():
-        if claim.content in seen_content:
-            duplicates.append(claim_id)
-        else:
-            seen_content[claim.content] = claim_id
+    items = rot(state)
     return {
-        "proposed-basis": sum(
-            contribution(state, claim_id)
-            for claim_id in state
-            if effective_basis(state, claim_id) == "proposed"
-        ),
-        "non-atomic": sum(
-            contribution(state, claim_id)
-            for claim_id, claim in state.items()
-            if len(claim.content) > 1
-        ),
-        "duplicate": sum(contribution(state, claim_id) for claim_id in duplicates),
-        "wording": sum(
-            contribution(state, claim_id)
-            for claim_id, claim in state.items()
-            if claim.wording == "draft"
-        ),
-        # Staleness compares a claim against rulings newer than it, which needs
-        # the move log; a constant until a property demands it.
-        "stale": 0,
+        component: sum(
+            item.contribution for item in items if item.component == component
+        )
+        for component in COMPONENTS
     }
+
+
+def queue(state: State) -> tuple[Item, ...]:
+    """The owner's review, highest contribution first (`QUEUE`); leaves come last."""
+    return tuple(sorted(rot(state), key=lambda item: (-item.contribution, item.claim)))

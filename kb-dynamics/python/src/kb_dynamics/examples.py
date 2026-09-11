@@ -9,6 +9,7 @@ import yaml
 
 from .debt import Component
 from .model import Basis, Claim, State, Wording
+from .trust import Condition, Verdicts
 
 EXAMPLES = Path(__file__).resolve().parents[3] / "examples"
 
@@ -23,6 +24,13 @@ class BadState:
 @dataclass(frozen=True)
 class GoodState:
     path: Path
+    state: State
+
+
+@dataclass(frozen=True)
+class Corner:
+    path: Path
+    verdicts: Verdicts
     state: State
 
 
@@ -58,3 +66,10 @@ def load_good_states(root: Path = EXAMPLES) -> Iterator[GoodState]:
     for path in sorted((root / "good-states").glob("*.md")):
         front = parse_front_matter(path.read_text())
         yield GoodState(path, parse_state(front["claims"]))
+
+
+def load_corners(root: Path = EXAMPLES) -> Iterator[Corner]:
+    for path in sorted((root / "corners").glob("*.md")):
+        front = parse_front_matter(path.read_text())
+        verdicts = cast(Mapping[Condition, bool], front["verdicts"])
+        yield Corner(path, verdicts, parse_state(front["claims"]))

@@ -13,8 +13,9 @@ Layout, as it fills in:
 - `docs/dev/claims.md` -- the design ledger ([llm-claims-kb]). The
   `imported-terms` theory inside it is the only place a `why:` may leave
   this directory; `imported-terms.verify.py` beside it certifies that.
-- `examples/` -- language-neutral bad states, good states, and traces with
-  provenance, consumed by every implementation.
+- `examples/` -- language-neutral bad states, good states, corners where
+  the trust conditions disagree, and traces with provenance, consumed by
+  every implementation.
 - `python/` -- the first implementation. `transition`, `rules`, and `debt`
   stay pure and total so a later port is a translation.
 - `lean/` -- the port, if the design ever stops changing.
