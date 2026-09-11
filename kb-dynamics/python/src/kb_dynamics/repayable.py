@@ -26,12 +26,10 @@ def as_owner_sees(state: State, step: Step) -> Step | None:
     move = step.move
     match move:
         case Add(claim_id, claim):
-            if claim.basis == "user":
-                return replace(
-                    step, move=Add(claim_id, replace(claim, basis="proposed"))
-                )
-            else:
-                return step
+            basis = "proposed" if claim.basis == "user" else claim.basis
+            return replace(
+                step, move=Add(claim_id, replace(claim, basis=basis, wording="draft"))
+            )
         case Stipulate() | SettleWording():
             return None
         case Retract(claim_id):
@@ -39,7 +37,16 @@ def as_owner_sees(state: State, step: Step) -> Step | None:
                 return None
             else:
                 return step
-        case Split() | Merge():
+        case Merge(keep, drop):
+            if keep not in state or drop not in state:
+                return step
+            elif state[drop].basis == "user":
+                return None
+            elif state[keep].content != state[drop].content:
+                return None
+            else:
+                return step
+        case Split():
             return step
         case _:
             assert_never(move)

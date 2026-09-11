@@ -13,17 +13,17 @@ Generator = Callable[[State], Step | None]
 def run(
     initial: State, generate: Generator, rules: Iterable[Rule], steps: int
 ) -> tuple[State, tuple[Step, ...]]:
-    """Apply up to `steps` permitted moves; stop at the first the rules or the table refuse."""
+    """Make `steps` attempts; a move the rules or the table refuse is skipped, not logged."""
     rules = tuple(rules)
     state = initial
     log: list[Step] = []
     for _ in range(steps):
         step = generate(state)
         if step is None or not permitted(rules, state, step):
-            break
+            continue
         after = transition(state, step)
         if isinstance(after, Reject):
-            break
+            continue
         log.append(step)
         state = after
     return state, tuple(log)

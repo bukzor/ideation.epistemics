@@ -45,8 +45,10 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       weak-arrows corner is a bad state); property one as hidden debt,
       the owner's view of the log minus the record (`OWNER_VIEW`), with
       `transition`, `rules`, and the constant-worst agent; property four
-      as the flip test, two rules with witnesses. Next rung: the random
-      agent (`strategies.py`), then property five and a closing move.
+      as the flip test. The random agent (hypothesis, `strategies.py`)
+      then found three more rules and a debt bug (cycles had no root);
+      five rules, each with a witness. Next: property five and a
+      closing move for questions.
       Reconciliation with `session-model/` and the {TL, RN} schema is a
       deliberate later pass, through that theory. Two agent choices to
       audit: `todo.kb/suggestions-to-audit.kb/kb-dynamics-*.md`

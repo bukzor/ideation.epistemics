@@ -99,9 +99,16 @@ def proposed_roots(state: State) -> Iterator[ClaimId]:
 
     A ruling on the root repays everything that folds to it, so the root is
     the queue item and its dependents are its weight, not items of their own.
+    A claim in a cycle has only proposed grounds and no root below it, so
+    every member of a cycle is a root.
     """
+    reach = dependents(state)
     for claim_id, claim in state.items():
-        if effective_basis(state, claim_id) == "proposed" and not any(
+        if effective_basis(state, claim_id) != "proposed":
+            continue
+        elif claim_id in reach[claim_id]:
+            yield claim_id
+        elif not any(
             effective_basis(state, ground) == "proposed" for ground in claim.grounds
         ):
             yield claim_id

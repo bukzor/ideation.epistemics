@@ -27,9 +27,16 @@ record.
 Property one is then: agent-only sequences leave `hidden` at zero. The
 rules enforce the sanction table; the harness shows where they enforce
 too little. The constant-worst agent found two rules on its first run,
-only the owner settles wording and only the owner stipulates, each with
-recorded states as witnesses (`python/tests/test_necessity.py`), and a
-rule the agent never trips has none.
+only the owner settles wording and only the owner stipulates; the random
+agent found three more, one shrunk step at a time: agents never retract
+a `user` claim, agents merge only exact duplicates and never drop a
+`user` claim, agents add draft wording only, and stipulation covers
+adding as `user`. Each rule has a recorded state or a shrunk random run
+as its witness (`python/tests/test_necessity.py`), and a rule the agents
+never trip has none. The random agent's second find was also a debt bug:
+a claim in a cycle was never a proposed root, so a cycle of derivations
+had debt zero; now every member of a cycle is a root, pinned by
+`examples/bad-states/derivations-that-ground-on-each-other.md`.
 
 What this cannot see: an agent retracting a settled `user` claim hides
 no rot, since a clean claim carries none, yet the owner's content is
