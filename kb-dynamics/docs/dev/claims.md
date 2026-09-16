@@ -10,6 +10,8 @@ ontology:
   - load-bearing
 non-claim-tokens:
   - RULES
+  - LABEL  # the layout rule's placeholder, `<slug>/LABEL.md`
+  - CLAUDE  # `CLAUDE.md`, in the scans
   - DRAFT
   - README
   # `chat.md#L<n>` quote addresses: label-shaped, a known scanner collision
@@ -53,25 +55,30 @@ address anywhere in it points into the `chat.md` one titled directory below it.
 
 ## Theories
 
-    imported-terms   <- (outer projects, by outward `why:` links)
-    problem          <- imported-terms
-    model            <- imported-terms, problem
-    debt             <- model, imported-terms
-      components     <- debt (nested: one claim per kind of rot)
-    harness          <- debt, model, imported-terms
-    rule-pricing     <- debt, harness, imported-terms
-    method           <- harness, rule-pricing, debt
+    words-from-outside/IMPORTED_TERMS       <- (outer projects, by outward `why:` links)
+    why-ledgers-rot/PROBLEM                 <- IMPORTED_TERMS
+    states-and-moves/MODEL                  <- IMPORTED_TERMS, PROBLEM
+    what-no-move-may-raise/DEBT             <- MODEL, IMPORTED_TERMS
+      the-kinds-of-rot/COMPONENTS           <- DEBT (nested: one claim per kind of rot)
+    what-the-harness-shows/HARNESS          <- DEBT, MODEL, IMPORTED_TERMS
+    weighing-a-candidate-rule/RULE_PRICING  <- DEBT, HARNESS, IMPORTED_TERMS
+    the-order-of-work/METHOD                <- HARNESS, RULE_PRICING, DEBT
 
-`imported-terms` alone may cite outside `kb-dynamics/`; every other theory
-takes the outer words through it. Read top-down: `problem` says why the
-model exists, `model` and `debt` say what it is, `harness` says what is
-shown about it and how, `rule-pricing` is the field-side vocabulary for
-weighing a rule, `method` is the order of work and the payout test.
+`IMPORTED_TERMS` alone may cite outside `kb-dynamics/`; every other theory
+takes the outer words through it. Read top-down: `PROBLEM` says why the
+model exists, `MODEL` and `DEBT` say what it is, `HARNESS` says what is
+shown about it and how, `RULE_PRICING` is the field-side vocabulary for
+weighing a rule, `METHOD` is the order of work and the payout test.
+
+Every claim is `<slug>/LABEL.md`, the slug naming its locus and the stem
+its label; a theory is that beside `<slug>/LABEL.kb/`. So a path is a
+citation, and `find` is the label index.
 
 ## Scans
 
+    find claims.kb -name '*.md' -not -name CLAUDE.md | sort   # every claim, slug and label
     grep -rH '^standing:' claims.kb/ | sort -t: -k3
     grep -rl 'verdict:' claims.kb/
     grep -rl 'standing: open' claims.kb/      # what no one has ruled
     grep -rl 'todo: true' claims.kb/          # decided, not built
-    claims.kb/imported-terms.verify.py
+    claims.kb/words-from-outside/IMPORTED_TERMS.verify.py

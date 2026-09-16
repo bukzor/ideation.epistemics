@@ -35,7 +35,7 @@ def owner_only_changes_need_owner_authority(state: State, step: Step) -> bool:
 
 
 def unlicensed_merges_preserve_content(state: State, step: Step) -> bool:
-    """`UNASKED_MOVES`: the unasked merge is of claims that say one thing (`DUPLICATE`)."""
+    """`AGENT_REDUCTIONS`: the unasked merge is of claims that say one thing (`DUPLICATE`)."""
     move = step.move
     if licensed(step) or not isinstance(move, Merge):
         return True

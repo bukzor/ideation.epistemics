@@ -1,7 +1,7 @@
 """Debt: a vector over the state, one component per kind of rot.
 
 Every rotten claim contributes one plus what rests on it, so a leaf counts
-at the lowest priority and never zero (`COMPONENTS`, `LEAF_EXEMPT`). The
+at the lowest priority and never zero (`COMPONENTS`, `LEAF_PRIORITY`). The
 weight across components is the owner's and is not set here.
 """
 

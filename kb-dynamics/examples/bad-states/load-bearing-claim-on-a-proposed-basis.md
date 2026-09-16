@@ -1,7 +1,7 @@
 ---
 rot: proposed-basis
 provenance:
-  address: docs/dev/claims.kb/problem.kb/drift-becomes-load-bearing-by-grounding-on-a-proposed-claim.md
+  address: docs/dev/claims.kb/why-ledgers-rot/PROBLEM.kb/drift-becomes-load-bearing-by-grounding-on-a-proposed-claim/DRIFT_MECHANISM.md
   note: DRIFT_MECHANISM, the owner's ranking of where distrust enters
 claims:
   guess:

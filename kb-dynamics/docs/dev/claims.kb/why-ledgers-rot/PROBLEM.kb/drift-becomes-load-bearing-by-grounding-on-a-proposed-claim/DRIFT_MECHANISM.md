@@ -1,0 +1,25 @@
+---
+label: DRIFT_MECHANISM
+standing: bare
+why:
+  - ../ill-grounded-agent-claims-are-where-distrust-enters/DRIFT_ENTRY.md
+  - ../review-cost-scales-with-the-ledger-not-the-payoff/REVIEW_RATIO.md
+  - ../../../words-from-outside/IMPORTED_TERMS.kb/obligation/IMPORTED_OBLIGATION.md
+---
+
+# Drift becomes load-bearing when an agent grounds new claims on a proposed one
+
+Subtle misalignment enters as a plausible agent-drafted claim with no
+owner ruling, and becomes load-bearing three sessions later when other
+claims are grounded on it; by then it reads as settled ground. Nothing
+in the incumbent procedure stops an agent from building depth on such a
+claim, and the incumbent review only meets it cold, after the depth
+exists. This is the owner's own account of the route, in `DRIFT_ENTRY`:
+weightless at first, so not worth reviewing then; load-bearing later,
+with no pathway to review it when it is.
+
+The consequence for the model: the cheapest moment to review a proposed
+claim is the move that first grounds on it, with the context that gives
+it meaning already loaded. That is review at write time rather than
+review as audit, and the rule that realizes it is
+`SURFACE_BEFORE_GROUNDING` in `../../../what-no-move-may-raise/DEBT.md`.

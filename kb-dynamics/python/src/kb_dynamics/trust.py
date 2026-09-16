@@ -1,6 +1,6 @@
 """Trust is per claim; a ledger's trust is an aggregation over its claims.
 
-The owner's review conditions (`TRUST_TEST`) say when the queue is done or
+The owner's review conditions (`REVIEW_DONE`) say when the queue is done or
 doable; they are computed here as aggregations too, and none is an
 attribute of the ledger. "Fits one sitting" is a field quantity the
 sandbox cannot compute and is not stubbed.

@@ -2,7 +2,7 @@
 
 Existence is all the property asks, so the constructive witness is the
 cheapest owner: every queue item is repaid by the ruling that clears it,
-and the unasked moves (`UNASKED_MOVES`) go first, since they need no
+and the unasked moves (`AGENT_REDUCTIONS`) go first, since they need no
 ruling at all.
 """
 

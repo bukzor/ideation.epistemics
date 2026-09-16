@@ -31,19 +31,19 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       on the owner's word (the reviews are the cause, debt is wanted and
       only unrepayable debt is rot, no claim is exempt from review, a
       nested `components` theory holds the five rot kinds); open:
-      `ROUND_TRIP`, `ROT_LIST`. Built 2026-09-11: `examples/` and
+      `ROUND_TRIP`, `COMPONENTS_CLOSURE`. Built 2026-09-11: `examples/` and
       `python/` (debt vector, effective-basis fold, queue, trust
       conditions), properties two and three green on the owner's
       confusions. Ruled 2026-09-11: trust is per claim, a ledger's
-      trust an aggregation (now in `TRUST_TEST` and `EFFECTIVE_BASIS`); the harness settled the
-      owner's conjecture (`EMPTY_QUEUE_TRUST`: empty queue entails all
+      trust an aggregation (now in `REVIEW_DONE` and `EFFECTIVE_BASIS`); the harness settled the
+      owner's conjecture (`QUEUE_EMPTY_TRUST`: empty queue entails all
       trusted, converse fails, witness pinned). Also
       vetoable, 2026-09-11: `UNREPAYABLE`'s fourth route withdrawn (a
       leaf is repaid by closure, not voided), `PROPERTY_SET` 3 and 4
       re-scoped, `NO_SILENT_RAISE` and `FIELDS_NOT_CARRIED` re-signed
       bare. Built later 2026-09-11: sufficiency on the claim (the
       weak-arrows corner is a bad state); property one as hidden debt,
-      the owner's view of the log minus the record (`OWNER_VIEW`), with
+      the owner's view of the log minus the record (`DEBT_HIDDEN`), with
       `transition`, `rules`, and the constant-worst agent; property four
       as the flip test. The random agent (hypothesis, `strategies.py`)
       then found three more rules and a debt bug (cycles had no root).
@@ -51,17 +51,17 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       (`AUTHORITY_NOT_HANDS`); the rules are now two, owner-only changes
       need owner authority and unlicensed merges preserve content, each
       with a witness. Property five holds with the yes-owner as witness
-      (`REPAIR_WITNESS`) and a closing move for leaf questions. All five
+      (`REACHABILITY_WITNESS`) and a closing move for leaf questions. All five
       properties run. Next: bounded enumeration, or real ledgers through
       the loader (`ROUND_TRIP` blocks the latter).
       Reconciliation with `session-model/` and the {TL, RN} schema is a
       deliberate later pass, through that theory. Two agent choices to
       audit: `todo.kb/suggestions-to-audit.kb/kb-dynamics-*.md`
       Review sitting 2026-09-16 (dfc18e9d): the grounding table read
-      against the ledger; ruled and filed: `VETO_QUEUE`, `RESOLUTION`,
-      `RESTING_STATES`, `CONFLICT` (absorbs `STALE`), `CYCLIC_CONFLICT`,
+      against the ledger; ruled and filed: `QUEUE_VETO`, `CONFLICT_REDUCTIONS`,
+      `CONFLICT_RESTING_STATES`, `CONFLICT` (absorbs `STALE`), `CONFLICT_ARITY`,
       `OBJECTIVE`, `EXCHANGE_RATE`; "lowering" is "reduction";
-      `UNREPAYABLE` restored to four routes with `LEAF_REPAYS` (agent)
+      `UNREPAYABLE` restored to four routes with `LEAF_OUTGROWN` (agent)
       as the contested pick; `authority:` may be an object (schema and
       reader in bukzor-agent-skills); "verbatim" is "sensatim" (VOICE);
       three bad states drawn from this ledger, the conflict one
@@ -76,8 +76,9 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
             object form (about thirty files, mechanical)
       - [ ] debt.py weights dependents uniformly; `EFFECTIVE_BASIS` says
             weighted toward stipulated ones. Needs the owner's number
-      - [ ] `todo.kb/2026-09-16-000-rename--filename-and-label-versus-meaning.md`:
-            one ruling on what a filename names, then a batch of renames
+      - [x] `todo.kb/2026-09-16-000-rename--filename-and-label-versus-meaning.md`:
+            ruled and executed 2026-09-16: `<slug>/LABEL.md` layout,
+            whole-word labels, sixteen labels renamed; residue listed there
 - [ ] `session-model/`: the ownership scan (now runnable here) reports two
       trespasses -- `law.kb` says "silence", owned by `session-sim.kb`;
       `budget.kb` says "trace", owned by `trace-sim.kb`. Cull, move,

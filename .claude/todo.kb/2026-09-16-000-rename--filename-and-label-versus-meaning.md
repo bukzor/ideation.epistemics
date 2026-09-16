@@ -1,6 +1,6 @@
 ---
 managed-by: Skill(llm-subtask)
-status: not-started
+status: done
 cost-benefit-sweh:
   timebox:
     "@value": 2
@@ -17,172 +17,103 @@ cost-benefit-sweh:
 **Priority:** medium, before the next batch of claims lands
 **Complexity:** low per rename; one ruling gates the batch
 **Context:** `kb-dynamics/docs/dev/claims.kb/`, reviewed 2026-09-16
-(session dfc18e9d) after the conflict, reduction, and objective rulings.
-Agent-authored suggestions, every one vetoable.
+(session dfc18e9d) after the conflict, reduction, and objective rulings;
+re-evaluated and executed the same day in a second sitting.
 
 ## Problem Statement
 
-Revision has pulled several labels, filenames, and titles apart from
-what the claims now say. Three causes, each with its own remedy:
+Revision had pulled several labels, filenames, and titles apart from
+what the claims say. Three causes:
 
-1. **The filename states the conclusion, so it churns.** The label rule
-   (`claim.jsonschema.yaml`) says a label names the locus of contention
-   so it survives revision. No rule says what a filename names, and
-   this ledger has used the title, which is the current conclusion.
-   Result: `three-things-void-repayment.md` became
-   `what-voids-repayment.md` when the count changed, and
-   `attention-and-tokens-are-priced-in-dollars.md` bakes the chosen
-   answer into the path.
-2. **A ruling withdrew the framing the label names.** `TRUST_TEST`'s
-   body says "none is trust"; `OWNER_VIEW` is about hidden debt.
-3. **The prefix rule blocks a family.** No label may prefix another, so
-   the bare component label `CONFLICT` forbids `CONFLICT_*` and forced
-   `RESOLUTION` onto a claim that is half about not resolving.
+1. **The filename stated the conclusion, so it churned.** One commit
+   (e22adaf) renamed three files for a count or ordinal that had
+   changed, and `four-debt-reductions...` still carried a count.
+2. **A ruling withdrew the framing the label named.** `TRUST_TEST`'s
+   body said "none is trust"; `OWNER_VIEW` was about hidden debt.
+3. **The prefix rule blocked a family.** `CONFLICT` forbade
+   `CONFLICT_*` and forced `RESOLUTION` onto a claim half about not
+   resolving.
 
-## Proposed Solution
+## Rulings (owner, dfc18e9d and the executing sitting)
 
-Rule first, then the batch under it.
+- [x] **Layout: `<slug>/LABEL.md` beside `<slug>/LABEL.kb/`.** The slug
+      is llm-kb's self-describing kebab name for the locus, the stem the
+      label exactly. A plain directory inside a collection is a prefix on
+      its members' names, S3 style; in a ledger a slug holds one label.
+      Merits: a `why:` line reads as a citation, definitions are found by
+      path, the stem-equals-label check replaces frontmatter parsing, and
+      the `grep '^label:'` scan goes away.
+- [x] **Theories get a proper slug**, the ontology's locus, never the
+      label lowercased: `what-no-move-may-raise/DEBT.md`.
+- [x] **The ledger root does not change.** `claims.md` beside
+      `claims.kb/` is llm-kb's type marker saying a ledger starts here;
+      the rule governs what is inside. Removing the root's `label:` would
+      fail the root schema stub, so it stays.
+- [x] **Labels are distinct as whole words**, nothing more. The
+      no-prefix rule (bukzor-agent-skills 13d53a9, 2026-07-28) came from
+      two-letter initialisms; `grep -w` and `\<LABEL` do the work.
+      Withdrawn in the claim schema and the flatten check.
+- [x] **Think french:** related tokens share a head, modifiers trail.
+- [x] **Sense over verbatim** when naming: a name preserves the claim's
+      sense under surrounding change; matching the owner's wording is
+      lower priority.
+- [x] **trash/ stays.** The validator asks git; the ledger reader now
+      does too.
 
-- [ ] **Rule (owner, dfc18e9d; layout the agent's recommendation among
-      the owner's three offers, vetoable): `slug/LABEL.md` beside
-      `slug/LABEL.kb/`, plain directories transparent.** The label is
-      llm-claims' short greppable token, exact, the file's stem; the
-      slug is llm-kb's self-describing kebab name, a plain directory
-      llm-kb treats as part of the item's name. Both name the locus of
-      contention (the open question, the acceptance criteria), never
-      the current choice. Acceptance criterion for the convention:
-      no rename when new facts or decisions arrive, short of a
-      paradigm shift.
-      - No special cases. A theory is a claim with multi-atom
-        elaboration: `debt/DEBT.md` beside `debt/DEBT.kb/`, its slug
-        the ontology's locus, not a sentence. Imports are cited by
-        path (vim `gf`) and imported-terms files follow the rule;
-        `imported-terms.verify.py`'s `word()` reads the slug segment.
-      - Transparency (owner, dfc18e9d): a plain directory is a prefix
-        on the names of all its contents, S3 style. No one-item rule;
-        `slug/A.md` and `slug/B.md` are two items named `slug/A` and
-        `slug/B`. `jsonschema/` holds no items; `trash/` would name
-        items `trash/...`, so it moves to the repo root as the
-        scratch convention already wants.
-      - Validator: `LABEL.md`'s stem equals `label:`, an exact match.
-      - Tooling: llm-kb's validators and link checker descend plain
-        directories and join the segment into the name; `ledger.py`'s
-        claim id follows. No by-label glob resolution: the slug names
-        the locus, so full paths stay stable.
-      - To rule: the ledger root. `claims.md` + `claims.kb/` is found
-        today by its reserved name; under the rule it is
-        `<slug>/KB_DYNAMICS.md` + `KB_DYNAMICS.kb/`, recognized by
-        shape (a defining claim beside its collection), the tools
-        taking the path as they already do.
-      - Declined: `{LABEL}--{slug}.md` (parses a string that was
-        opaque; slug twice per theory in a recursive listing);
-        `slug.kb/LABEL.md` (one collection per claim, so one schema
-        stub per claim under llm-kb's sibling-schema lookup, and a bare
-        `X.kb/` already means an open theory in the claims-kb skill);
-        `LABEL/slug.md` (hides the slug from `ls`).
+## Done
 
-- [x] **Docs:** checked. `llm-claims/SKILL.md` already says a theory "is
-      no second kind of thing: it is a claim", and `llm-claims-kb/SKILL.md`
-      says "a claim like any other". The special-casing of theories was
-      the agent's, not the docs'; nothing to touch up.
-- [x] **Docs, naming (branch eb08c9ed, bukzor-agent-skills b81056b):**
-      the positive statement exists as `NAME_LOCUS` ("names outlive
-      contents", good-smells), widened to cover a claim's file name,
-      with the count case as its second failing example; the
-      operational test fires at write time in
-      `before/writing-a-claim.md`; one bullet in llm-kb Naming. Done
-      under it: `FIVE_PROPERTIES` is `PROPERTY_SET`,
-      `the-five-properties.md` is `the-properties.md`. `NAME_LOCUS` is
-      still `open`: ruling it settles the first open question below.
+Tooling (bukzor-agent-skills): validator and ledger reader walk plain
+directories, schema by enclosing collection, scope from path, stem
+equals label; flatten reports duplicates only; schema and skill text
+updated. Tests added in both packages.
 
-Under that rule, the suggestions. Each row is one `git mv` plus a sweep
-of `why:` and prose mentions, then `bin/llm-claims-kb-graph`,
-`llm-claims-kb-mentions`, `llm-claims-kb-flatten` (it checks the prefix
-rule), and `llm.kb-validate`.
+Ledger: every file moved to `<slug>/LABEL.md`; `why:`, `verify:`, prose
+path cites, and label mentions re-pointed; label set and edge set
+verified identical to HEAD by label. Labels renamed:
 
-### Strong: name contradicts content
+| was | is |
+|---|---|
+| `TRUST_TEST` | `REVIEW_DONE` |
+| `OWNER_VIEW` | `DEBT_HIDDEN` |
+| `WANTED_DEBT` | `DEBT_WANTED` |
+| `REPAIR_WITNESS` | `REACHABILITY_WITNESS` |
+| `PRICING` | `RULE_PRICING` |
+| `RESOLUTION` | `CONFLICT_REDUCTIONS` |
+| `CYCLIC_CONFLICT` | `CONFLICT_ARITY` |
+| `RESTING_STATES` | `CONFLICT_RESTING_STATES` |
+| `LEAF_REPAYS` | `LEAF_OUTGROWN` |
+| `LEAF_EXEMPT` | `LEAF_PRIORITY` |
+| `UNASKED_MOVES` | `AGENT_REDUCTIONS` |
+| `SERVICE_RATE` | `GLOBAL_CONDITION` |
+| `RECORD_FIELDS` | `RULE_RECORD` |
+| `ROT_LIST` | `COMPONENTS_CLOSURE` |
+| `VETO_QUEUE` | `QUEUE_VETO` |
+| `EMPTY_QUEUE_TRUST` | `QUEUE_EMPTY_TRUST` |
 
-- [ ] `TRUST_TEST` / `any-of-three-conditions-says-review-is-done-or-doable.md`:
-      the body withdraws "trust" ("None is trust"). Label
-      `REVIEW_DONE`, file `when-review-is-done-or-doable.md`.
-- [ ] `OWNER_VIEW` / `hidden-debt-is-the-owners-view-minus-the-record.md`:
-      the claim defines hidden debt; the owner's view is the mechanism.
-      Label `HIDDEN_DEBT`, file `hidden-debt.md`.
-- [ ] `REPAIR_WITNESS` / `the-reachability-witness-is-the-owner-who-rules-yes.md`
-      / title "Property five's witness": three nouns for one thing.
-      Label `REACHABILITY_WITNESS`, file `the-reachability-witness.md`,
-      title without "Property five's".
-- [ ] `GROUND_RECORD` / `an-arrow-carries-its-kind-and-sufficiency.md`:
-      body says only sufficiency entered, on the claim not the arrow.
-      File `the-ground-record.md`; label stays.
-- [ ] `PRICING` / `rule-pricing.md`: theory label should match the
-      theory name. Label `RULE_PRICING`.
+Slugs renamed for the ruled rows only; the rest keep their former stem
+as slug. Titles amended: the reachability witness lost "Property
+five's"; `AGENT_REDUCTIONS` says "under agent authority" for "need no
+ask". `GROUND_RECORD` kept its label, file `the-ground-record/`.
 
-### Conflict family: free the prefix or accept suffixes
+## Left open, by design
 
-- [ ] `RESOLUTION` / `the-reductions-of-a-conflict.md`: the claim
-      covers resolve *and* mark. Options: (a) keep `CONFLICT` bare and
-      use suffix labels, e.g. `REDUCING_A_CONFLICT`; (b) give the
-      component a compound label so `CONFLICT_*` opens up. (a) is
-      cheaper; the other components (`DUPLICATE`, `NON_ATOMIC`) are
-      bare too.
-- [ ] `CYCLIC_CONFLICT` / `a-conflict-can-need-more-than-two-claims.md`:
-      names the witness, not the locus, which is how many claims a
-      conflict needs. Label `N_ARY_CONFLICT`, file
-      `how-many-claims-a-conflict-needs.md`.
-- [ ] `LEAF_REPAYS` / `a-leaf-is-not-a-route-to-unrepayability.md`: the
-      locus is the contested fourth route. Label `FOURTH_ROUTE`, file
-      `the-fourth-route.md`.
-
-### Overfit to the chosen answer
-
-- [ ] `EXCHANGE_RATE` / `attention-and-tokens-are-priced-in-dollars.md`:
-      file `the-exchange-rate-between-attention-and-tokens.md`; body
-      restructured as acceptance criterion first ("the two currencies
-      compare on one scale the owner sets, and changing the scale
-      re-ranks rules without re-measuring"), chosen answer second
-      (dollars, $150/hour today).
-- [ ] `UNASKED_MOVES` / `four-debt-reductions-need-no-ask-and-stay-reviewable.md`:
-      "four" is a count, and "unasked" is the wording `VETO_QUEUE`
-      asked to retire. Label `AGENT_REDUCTIONS`, file
-      `the-reductions-an-agent-may-make-under-its-own-authority.md`.
-- [ ] `SERVICE_RATE` / `no-global-condition-only-repayability.md`: label
-      names a declined option; under the locus rule that is legal (the
-      contention was whether a rate condition exists) but the file is
-      the answer. File `the-global-condition-on-debt.md`; label
-      `GLOBAL_CONDITION` or keep.
-- [ ] `RECORD_FIELDS` / `a-rule-record-separates-check-from-trigger.md`:
-      label is generic. Label `RULE_RECORD`, file `the-rule-record.md`.
-
-### Borderline, decide with the rule
-
-- [ ] `LEAF_EXEMPT` / `a-leaf-is-low-priority-never-exempt.md`: label
-      reads as asserting exemption; under the locus rule it names the
-      contention and the answer is "never". Keep, or `LEAF_PRIORITY`.
-- [ ] `ROT_LIST` / `is-the-component-list-exhaustive.md`: "rot" versus
-      "component". `COMPONENT_LIST`, or keep as the owner's word.
-- [ ] `MINUTIAE` / `most-open-questions-carry-no-obligation.md`: the
-      owner's word for the phenomenon; the claim is about leaves and
-      obligation. Keep unless the locus rule wants `LEAF_OBLIGATION`.
-
-## Open Questions
-
-- Does the locus rule apply to filenames at all, or only labels? (the
-  gating ruling above)
-- Should the flatten tool's prefix check be relaxed for a bare label
-  and its `LABEL_*` family, or is bare-label-blocks-family the intended
-  pressure toward locus-naming?
-
-## Success Criteria
-
-- [ ] Every label and filename names its claim's locus; every title
-      states its current conclusion
-- [ ] `llm-claims-kb-flatten`, `-mentions`, `llm.kb-validate` clean;
-      graph shows no dangling `why:`
-- [ ] `EXCHANGE_RATE`'s body opens with its acceptance criterion
+- [ ] **Slugs that still state a conclusion** (`a-leaf-is-...`,
+      `no-agent-move-raises-debt-silently`, most of the ledger). Each is
+      a naming judgment; batch them when the claims are next touched.
+- [ ] **`EXCHANGE_RATE` body:** reordering is fine as draft wording;
+      the proposed "re-ranks without re-measuring" criterion is a second
+      basis in a user claim and belongs in a draft callout or its own
+      agent claim, not in the body.
+- [ ] **`GROUND_RECORD` versus the build:** the claim stands `user`
+      with no `todo:` while `model.py` carries sufficiency on the claim
+      and no arrow kind. Flag it `todo:` or say in the body that the
+      sandbox carries sufficiency only.
+- [ ] **Fleet:** the validator now reaches `must-read.kb/before/*.md`
+      and `when/*.md`; 23 carry `triggers:` frontmatter their bank has
+      no schema for (`~/.claude/must-read.kb`, `reference.kb/git`).
 
 ## Notes
 
 Not in scope: the `IMPORTED_*` family, whose names are the words they
 import; the struck claims (`PAYOUT_TEST`, `TREND_UNIT`,
-`TRUST_CORNERS`), which are history and keep their names.
+`TRUST_CORNERS`), which keep their names.

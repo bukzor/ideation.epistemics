@@ -11,7 +11,7 @@ drawn from), the state itself under `claims:`, and for a bad state the
 - `good-states/` -- states the owner would trust; property three says
   each has debt zero.
 - `corners/` -- queue shapes: states where the review conditions
-  (`TRUST_TEST`, read as aggregations over claims) and per-claim trust
+  (`REVIEW_DONE`, read as aggregations over claims) and per-claim trust
   come apart. Each pins the verdict the implementation gives under every
   reading, with a note on what the state witnesses.
 - `traces/` -- move sequences with an expected debt trajectory; every
@@ -19,4 +19,4 @@ drawn from), the state itself under `claims:`, and for a bad state the
 
 A claim is `{basis, wording, grounds, content}`; content is a set of
 integer atoms standing in for recognized meaning (`ATOM_CONTENT` in
-`../docs/dev/claims.kb/harness.md`).
+`../docs/dev/claims.kb/what-the-harness-shows/HARNESS.md`).

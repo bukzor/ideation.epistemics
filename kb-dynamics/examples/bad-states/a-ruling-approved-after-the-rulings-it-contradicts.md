@@ -6,7 +6,7 @@ provenance:
   commit: 5ca4c77
   note: >
     UNREPAYABLE's fourth route, approved at f65fbdf3#L995, against
-    LEAF_EXEMPT and WANTED_DEBT at f65fbdf3#L815. Neither cites the other.
+    LEAF_PRIORITY and DEBT_WANTED at f65fbdf3#L815. Neither cites the other.
     The state format cannot say that two contents conflict, so `conflicts:`
     below is read by no loader yet; the test is expected red until the conflict
     component exists (CONFLICT).
