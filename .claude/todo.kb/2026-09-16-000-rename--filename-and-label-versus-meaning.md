@@ -85,6 +85,15 @@ Rule first, then the batch under it.
       no second kind of thing: it is a claim", and `llm-claims-kb/SKILL.md`
       says "a claim like any other". The special-casing of theories was
       the agent's, not the docs'; nothing to touch up.
+- [x] **Docs, naming (branch eb08c9ed, bukzor-agent-skills b81056b):**
+      the positive statement exists as `NAME_LOCUS` ("names outlive
+      contents", good-smells), widened to cover a claim's file name,
+      with the count case as its second failing example; the
+      operational test fires at write time in
+      `before/writing-a-claim.md`; one bullet in llm-kb Naming. Done
+      under it: `FIVE_PROPERTIES` is `PROPERTY_SET`,
+      `the-five-properties.md` is `the-properties.md`. `NAME_LOCUS` is
+      still `open`: ruling it settles the first open question below.
 
 Under that rule, the suggestions. Each row is one `git mv` plus a sweep
 of `why:` and prose mentions, then `bin/llm-claims-kb-graph`,
