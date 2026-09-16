@@ -63,7 +63,7 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       `OBJECTIVE`, `EXCHANGE_RATE`; "lowering" is "reduction";
       `UNREPAYABLE` restored to four routes with `LEAF_REPAYS` (agent)
       as the contested pick; `authority:` may be an object (schema and
-      reader in bukzor-agent-skills); "verbatim" is "faithful" (VOICE);
+      reader in bukzor-agent-skills); "verbatim" is "sensatim" (VOICE);
       three bad states drawn from this ledger, the conflict one
       expected red. Next, in order:
       - [ ] The conflict relation in the state, so the red example
