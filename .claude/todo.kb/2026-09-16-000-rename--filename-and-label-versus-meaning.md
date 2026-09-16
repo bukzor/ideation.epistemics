@@ -100,14 +100,13 @@ ask". `GROUND_RECORD` kept its label, file `the-ground-record/`.
 - [ ] **Slugs that still state a conclusion** (`a-leaf-is-...`,
       `no-agent-move-raises-debt-silently`, most of the ledger). Each is
       a naming judgment; batch them when the claims are next touched.
-- [ ] **`EXCHANGE_RATE` body:** reordering is fine as draft wording;
-      the proposed "re-ranks without re-measuring" criterion is a second
-      basis in a user claim and belongs in a draft callout or its own
-      agent claim, not in the body.
-- [ ] **`GROUND_RECORD` versus the build:** the claim stands `user`
-      with no `todo:` while `model.py` carries sufficiency on the claim
-      and no arrow kind. Flag it `todo:` or say in the body that the
-      sandbox carries sufficiency only.
+- [x] **`EXCHANGE_RATE` body:** criterion first, dollars and the rate
+      second, the agent's inference (a rate change re-ranks without
+      re-measuring) as a `[!DRAFT]` callout. Done 2026-09-16.
+- [x] **`GROUND_RECORD` versus the build:** no finding. The sandbox
+      carrying sufficiency per claim and no arrow kind is a
+      `FIDELITY_LADDER` rung, replaced when a property demands it;
+      `todo:` marks decided-not-built, which this is not.
 - [ ] **Fleet:** the validator now reaches `must-read.kb/before/*.md`
       and `when/*.md`; 23 carry `triggers:` frontmatter their bank has
       no schema for (`~/.claude/must-read.kb`, `reference.kb/git`).
