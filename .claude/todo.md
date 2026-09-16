@@ -39,7 +39,7 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       owner's conjecture (`EMPTY_QUEUE_TRUST`: empty queue entails all
       trusted, converse fails, witness pinned). Also
       vetoable, 2026-09-11: `UNREPAYABLE`'s fourth route withdrawn (a
-      leaf is repaid by closure, not voided), `FIVE_PROPERTIES` 3 and 4
+      leaf is repaid by closure, not voided), `PROPERTY_SET` 3 and 4
       re-scoped, `NO_SILENT_RAISE` and `FIELDS_NOT_CARRIED` re-signed
       bare. Built later 2026-09-11: sufficiency on the claim (the
       weak-arrows corner is a bad state); property one as hidden debt,
@@ -57,6 +57,27 @@ Ranked by `mission.md`: reach the rungs the operator runs on first.
       Reconciliation with `session-model/` and the {TL, RN} schema is a
       deliberate later pass, through that theory. Two agent choices to
       audit: `todo.kb/suggestions-to-audit.kb/kb-dynamics-*.md`
+      Review sitting 2026-09-16 (dfc18e9d): the grounding table read
+      against the ledger; ruled and filed: `VETO_QUEUE`, `RESOLUTION`,
+      `RESTING_STATES`, `CONFLICT` (absorbs `STALE`), `CYCLIC_CONFLICT`,
+      `OBJECTIVE`, `EXCHANGE_RATE`; "lowering" is "reduction";
+      `UNREPAYABLE` restored to four routes with `LEAF_REPAYS` (agent)
+      as the contested pick; `authority:` may be an object (schema and
+      reader in bukzor-agent-skills); "verbatim" is "faithful" (VOICE);
+      three bad states drawn from this ledger, the conflict one
+      expected red. Next, in order:
+      - [ ] The conflict relation in the state, so the red example
+            (`a-ruling-approved-after-the-rulings-it-contradicts`) goes
+            green and `CONFLICT` is a computed component
+      - [ ] The adapter from `ledger.py` to `State`, so the grounding
+            table gains a wording column and runs `queue()` over real
+            ledgers (rung 2; `ROUND_TRIP` is the blocker it answers)
+      - [ ] Normalize the remaining string `authority:` fields to the
+            object form (about thirty files, mechanical)
+      - [ ] debt.py weights dependents uniformly; `EFFECTIVE_BASIS` says
+            weighted toward stipulated ones. Needs the owner's number
+      - [ ] `todo.kb/2026-09-16-000-rename--filename-and-label-versus-meaning.md`:
+            one ruling on what a filename names, then a batch of renames
 - [ ] `session-model/`: the ownership scan (now runnable here) reports two
       trespasses -- `law.kb` says "silence", owned by `session-sim.kb`;
       `budget.kb` says "trace", owned by `trace-sim.kb`. Cull, move,
