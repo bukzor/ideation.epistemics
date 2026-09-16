@@ -14,4 +14,4 @@ claims:
 # A claim that needs two bases
 
 Two atoms in one claim. It cannot be ruled on, grounded on, or matched
-for duplication as a unit; the split move lowers it.
+for duplication as a unit; the split move reduces it.

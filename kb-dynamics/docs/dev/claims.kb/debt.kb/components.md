@@ -11,7 +11,7 @@ ontology:
   - non-atomic
   - duplicate pair
   - draft wording
-  - stale
+  - conflict
 stale-when: a kind of rot the owner points at that no component here counts
 ---
 

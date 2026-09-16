@@ -8,7 +8,7 @@ why:
   - basis-and-record-guard-agent-pruning.md
 ---
 
-# Four debt-lowering moves need no ask, and every one stays reviewable
+# Four debt reductions need no ask, and every one stays reviewable
 
 An agent may, without asking:
 

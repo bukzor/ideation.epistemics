@@ -20,5 +20,5 @@ already has.
 For the existing mature ledgers the fastest route is probably not
 repair: extract the `user`-basis claims from the ephemeral ones and let
 agents re-derive under the rules when something needs it; give the
-durable ones one agent-run pass that applies the permitted debt-lowering
-moves exhaustively and hands the owner the residue.
+durable ones one agent-run pass that applies the permitted debt reductions
+exhaustively and hands the owner the residue.

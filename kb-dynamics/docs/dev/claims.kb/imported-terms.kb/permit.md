@@ -10,4 +10,4 @@ why:
 
 A rule permits a move when the move may be made from the state and nothing
 requires it. Here permission is what an agent may do without asking; the
-moves that lower debt are the permitted ones. Outer argument not restated.
+debt reductions are the permitted moves. Outer argument not restated.

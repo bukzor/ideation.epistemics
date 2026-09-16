@@ -1,7 +1,10 @@
 ---
 label: GROUND_RECORD
 standing: user
-authority: f65fbdf3#L995, "seems good enough to me", on the draft below
+authority:
+  address: f65fbdf3#L995
+  words: seems good enough to me
+  about: the draft below
 why:
   - derivation-earns-unread-trust-only-when-entire-and-rigorous.md
   - ../problem.kb/ill-grounded-agent-claims-are-where-distrust-enters.md

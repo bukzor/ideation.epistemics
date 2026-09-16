@@ -10,4 +10,4 @@ why:
 
 A claim that needs two bases is two claims written as one; it cannot be
 ruled on, grounded on, or matched for duplication as a unit. Found by
-the atomicity check; lowered by the split move.
+the atomicity check; reduced by the split move.

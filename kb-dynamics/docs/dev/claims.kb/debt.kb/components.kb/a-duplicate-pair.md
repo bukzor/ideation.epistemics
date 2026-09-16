@@ -11,4 +11,4 @@ why:
 Exact duplicates are found by text; near-duplicates by reading, with
 the graph nominating candidates that share grounds and dependents
 (`ATOMICITY`). Each pair splits the trust that
-should accrue to one claim. Lowered by the merge move.
+should accrue to one claim. Reduced by the merge move.

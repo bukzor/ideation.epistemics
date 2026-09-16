@@ -3,7 +3,7 @@ label: MINIMAL_IS_LOCAL
 standing: agent
 why:
   - benefit-is-attributed-from-real-debt-not-argued.md
-  - ../harness.kb/the-five-properties.md
+  - ../harness.kb/the-properties.md
   - ../imported-terms.kb/flip.md
 ---
 

@@ -9,6 +9,6 @@ found mechanically. Owner-given kinds carry the owner's words.
 
 ## What does NOT belong here
 
-A rule that lowers a component, or the queue that sorts by it: those are
+A reduction of a component, or the queue that sorts by it: those are
 claims of `../../debt.md`. A kind of rot that cannot be computed from the
 state is a review concern, not a component.

@@ -34,5 +34,5 @@ What each route demands of the model: a ground record fine enough to
 tell inference-from-remark from stipulation and from poor inference
 (`GROUND_RECORD`); a queue that surfaces a claim when it becomes
 load-bearing and defers it until then (`DEFER_NOT_DISMISS`); the
-steelman move granted unasked (`UNASKED_MOVES`); and the stale component
-(`STALE`).
+steelman move granted unasked (`UNASKED_MOVES`); and the conflict component
+(`CONFLICT`).

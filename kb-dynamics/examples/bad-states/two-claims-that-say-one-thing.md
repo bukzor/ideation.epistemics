@@ -19,4 +19,4 @@ claims:
 # Two claims that say one thing
 
 Equal content, two files. Each splits the trust that should accrue to one
-claim; the merge move lowers it.
+claim; the merge move reduces it.

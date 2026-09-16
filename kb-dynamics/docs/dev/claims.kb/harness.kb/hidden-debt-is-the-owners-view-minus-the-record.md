@@ -3,8 +3,8 @@ label: OWNER_VIEW
 standing: agent
 verify: ../../../../python/tests/test_repayable.py
 why:
-  - the-five-properties.md
-  - ../debt.kb/three-things-void-repayment.md
+  - the-properties.md
+  - ../debt.kb/what-voids-repayment.md
   - ../debt.kb/no-agent-move-raises-debt-silently.md
   - ../model.kb/the-move-table-is-total-and-an-empty-cell-is-a-finding.md
   - ../debt.kb/basis-and-record-guard-agent-pruning.md

@@ -11,13 +11,13 @@ from typing import Literal, assert_never
 
 from .model import ClaimId, State
 
-Component = Literal["proposed-basis", "non-atomic", "duplicate", "wording", "stale"]
+Component = Literal["proposed-basis", "non-atomic", "duplicate", "wording", "conflict"]
 COMPONENTS: tuple[Component, ...] = (
     "proposed-basis",
     "non-atomic",
     "duplicate",
     "wording",
-    "stale",
+    "conflict",
 )
 Debt = Mapping[Component, int]
 
@@ -131,9 +131,9 @@ def rot(state: State) -> tuple[Item, ...]:
         "non-atomic": tuple(c for c, claim in state.items() if len(claim.content) > 1),
         "duplicate": tuple(duplicates(state)),
         "wording": tuple(c for c, claim in state.items() if claim.wording == "draft"),
-        # Staleness compares a claim against rulings newer than it, which needs
-        # the move log; empty until a property demands it.
-        "stale": (),
+        # A conflict is a set of claims that cannot all stand (`CONFLICT`); the
+        # state carries no relation between contents yet, so none is found.
+        "conflict": (),
     }
     weight = dependents(state)
     return tuple(

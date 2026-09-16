@@ -1,7 +1,10 @@
 ---
 label: PRUNE_GUARD
 standing: user
-authority: f65fbdf3#L995, "seems good enough to me", on the draft below
+authority:
+  address: f65fbdf3#L995
+  words: seems good enough to me
+  about: the draft below
 why:
   - a-leaf-is-low-priority-never-exempt.md
   - ../problem.kb/agents-mistake-the-owners-content-for-fabrication.md

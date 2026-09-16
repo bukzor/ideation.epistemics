@@ -4,7 +4,7 @@ standing: user
 authority: chat.md#L632
 why:
   - ../imported-terms.kb/coverage.md
-  - ../harness.kb/the-five-properties.md
+  - ../harness.kb/the-properties.md
 ---
 
 # Lean pays back only after the design stops changing; Python first, possibly forever

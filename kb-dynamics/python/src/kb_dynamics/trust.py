@@ -9,18 +9,16 @@ sandbox cannot compute and is not stubbed.
 from collections.abc import Mapping
 from typing import Literal
 
-from .debt import effective_basis, load, proposed_roots, queue
+from .debt import effective_basis, queue
 from .model import ClaimId, State
 
 Condition = Literal[
     "queue-empty",
-    "no-load-bearing-on-proposed",
     "skeleton-right",
     "all-trusted",
 ]
 CONDITIONS: tuple[Condition, ...] = (
     "queue-empty",
-    "no-load-bearing-on-proposed",
     "skeleton-right",
     "all-trusted",
 )
@@ -38,10 +36,6 @@ def all_trusted(state: State) -> bool:
 
 def queue_empty(state: State) -> bool:
     return not queue(state)
-
-
-def no_load_bearing_on_proposed(state: State) -> bool:
-    return all(load(state, root) == 0 for root in proposed_roots(state))
 
 
 def skeleton_right(state: State) -> bool:
@@ -70,7 +64,6 @@ def skeleton_right(state: State) -> bool:
 def verdicts(state: State) -> Verdicts:
     return {
         "queue-empty": queue_empty(state),
-        "no-load-bearing-on-proposed": no_load_bearing_on_proposed(state),
         "skeleton-right": skeleton_right(state),
         "all-trusted": all_trusted(state),
     }

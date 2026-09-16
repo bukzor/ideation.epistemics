@@ -1,7 +1,6 @@
 ---
 verdicts:
   queue-empty: false
-  no-load-bearing-on-proposed: true
   skeleton-right: false
   all-trusted: false
 note: >

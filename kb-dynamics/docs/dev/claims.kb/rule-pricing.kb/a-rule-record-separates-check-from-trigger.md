@@ -17,7 +17,7 @@ A candidate rule decomposes into:
   past turns.
 - `scope` -- what the check ranges over, as a function of ledger size.
 - `targets` -- which debt component.
-- `mode` -- prevent, detect, or repair. Detect does not lower debt; it
+- `mode` -- prevent, detect, or repair. Detect does not reduce debt; it
   converts hidden debt to visible debt, worth something and also a cost
   to the owner.
 - `surfaces` -- never, on failure, or always: whether the owner sees

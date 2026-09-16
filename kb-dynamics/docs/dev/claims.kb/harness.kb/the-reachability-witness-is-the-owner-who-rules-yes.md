@@ -3,8 +3,8 @@ label: REPAIR_WITNESS
 standing: agent
 verify: ../../../../python/tests/test_reachability.py
 why:
-  - the-five-properties.md
-  - ../debt.kb/four-debt-lowering-moves-need-no-ask-and-stay-reviewable.md
+  - the-properties.md
+  - ../debt.kb/four-debt-reductions-need-no-ask-and-stay-reviewable.md
   - ../model.kb/a-question-has-a-terminal-state-besides-answered.md
 ---
 

@@ -21,7 +21,7 @@ def fresh(state: State, stem: ClaimId) -> ClaimId:
 
 
 def repair(state: State) -> Step | None:
-    """The next move that lowers debt, or None at debt zero."""
+    """The next debt reduction, or None at debt zero."""
     for drop in duplicates(state):
         keep = next(k for k, c in state.items() if c.content == state[drop].content)
         authority = YES if state[drop].basis == "user" else AGENT

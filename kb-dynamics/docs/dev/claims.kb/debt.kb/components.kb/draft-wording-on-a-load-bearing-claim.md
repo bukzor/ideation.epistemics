@@ -11,4 +11,4 @@ why:
 A claim whose content is endorsed but whose text has not been settled --
 an agent draft of the owner's position, or the owner's own shorthand --
 misleads every reader that loads it, in proportion to what rests on it.
-Lowered by the steelman move, which keeps the basis and revises the text.
+Reduced by the steelman move, which keeps the basis and revises the text.

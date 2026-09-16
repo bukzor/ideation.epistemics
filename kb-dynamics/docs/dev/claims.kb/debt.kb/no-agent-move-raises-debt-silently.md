@@ -3,7 +3,7 @@ label: NO_SILENT_RAISE
 standing: bare
 why:
   - debt-is-wanted-unrepayable-debt-is-not.md
-  - three-things-void-repayment.md
+  - what-voids-repayment.md
   - components.md
   - ../imported-terms.kb/permit.md
   - ../imported-terms.kb/oblige.md
@@ -14,7 +14,7 @@ why:
 An agent move may raise debt. What it may not do is raise debt that
 nothing will ever surface: every raise lands in the review queue with
 what a later reader needs to rule on it, so the debt stays repayable
-(`WANTED_DEBT`, `UNREPAYABLE`). Moves that lower debt are permitted without asking,
+(`WANTED_DEBT`, `UNREPAYABLE`). Debt reductions are permitted under agent authority,
 under the guards of `UNASKED_MOVES`.
 
 The earlier form of this claim, "every agent move is non-increasing in

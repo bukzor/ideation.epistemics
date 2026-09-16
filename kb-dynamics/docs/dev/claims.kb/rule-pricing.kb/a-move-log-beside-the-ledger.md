@@ -1,7 +1,10 @@
 ---
 label: MOVE_LOG
 standing: user
-authority: f65fbdf3#L995, "seems good enough to me", on a yes deferred behind move-table enforcement
+authority:
+  address: f65fbdf3#L995
+  words: seems good enough to me
+  about: a yes deferred behind move-table enforcement
 todo: true
 why:
   - replay-computes-firings-and-attribution-when-triggers-are-code.md

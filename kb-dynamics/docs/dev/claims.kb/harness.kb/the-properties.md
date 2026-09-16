@@ -1,5 +1,5 @@
 ---
-label: FIVE_PROPERTIES
+label: PROPERTY_SET
 standing: agent
 why:
   - the-agent-is-replaced-by-a-generator-not-modeled.md
@@ -8,7 +8,7 @@ why:
   - ../imported-terms.kb/flip.md
 ---
 
-# The five properties, and what a failure of each means
+# The properties, and what a failure of each means
 
 1. Agent-only move sequences never leave debt unrepayable under the
    current rules: debt may rise, and every item of it keeps a pathway to

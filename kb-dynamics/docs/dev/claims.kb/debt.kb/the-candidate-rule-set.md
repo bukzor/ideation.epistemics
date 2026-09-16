@@ -3,6 +3,7 @@ label: CANDIDATE_RULES
 standing: agent
 why:
   - no-agent-move-raises-debt-silently.md
+  - the-system-seeks-benefit-then-minimizes-cost-per-benefit.md
   - ../imported-terms.kb/rule.md
   - ../imported-terms.kb/permit.md
   - ../imported-terms.kb/oblige.md
@@ -22,11 +23,12 @@ Judgment, at the move that creates the risk:
 2. One basis per claim. A claim that cannot be given one is split.
 3. Ground it or mark it `proposed`. A blank basis is never admitted --
    this is what the add move is obliged to carry.
-4. An agent may lower debt without asking: merge exact duplicates, split
+4. An agent may reduce debt under agent authority: merge exact duplicates, split
    non-atomic claims, close leaf questions, propose rewording of drafts.
 
 Rule 4 is what makes the ledger trend rather than merely not worsen;
-without it agents only ever add. This set is a candidate: which rules
-have any effect the harness shows (`FIVE_PROPERTIES` in
-`../harness.md`), and which earn their cost is priced in
-`../rule-pricing.md`.
+without it agents only ever add. This set is a candidate. Rules 2 and 3 are structural in the model and
+rule 4 is a permission; which rules have any effect the harness shows
+(`PROPERTY_SET` in `../harness.md`). Rule 1 prevents visible, repayable
+debt, so no property demands it: it grounds on `OBJECTIVE`'s cost goal,
+and its cost, like every rule's, is priced in `../rule-pricing.md`.

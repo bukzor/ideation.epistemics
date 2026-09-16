@@ -4,7 +4,7 @@ standing: user
 authority: 9b6f24ad, the owner's ruling of 2026-09-11
 why:
   - the-move-table-is-total-and-an-empty-cell-is-a-finding.md
-  - ../debt.kb/four-debt-lowering-moves-need-no-ask-and-stay-reviewable.md
+  - ../debt.kb/four-debt-reductions-need-no-ask-and-stay-reviewable.md
   - ../rule-pricing.kb/a-move-log-beside-the-ledger.md
 ---
 

@@ -21,11 +21,11 @@ Two invariants, and the owner's three complaints are them failing:
   sufficient for Z, usually each necessary, and no proper part of Z is
   already carried by a proper subset of them. Z is non-atomic when it
   is P and Q with A sufficing for P and B, C for Q -- two claims
-  written as one, each wanting its own grounding. Lowered by the split
+  written as one, each wanting its own grounding. Reduced by the split
   move. A claim with several alternative sufficient ground sets is not
   non-atomic; it is overdetermined, and such claims are the surest.
 - One claim per content: a duplicate is two claims that entail each
-  other. Lowered by the merge move, which loses nothing, since a
+  other. Reduced by the merge move, which loses nothing, since a
   restatement for another theory's reader is a citation, not a claim.
 
 Three senses are held apart in the third. Form: the text, which finds

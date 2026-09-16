@@ -1,4 +1,9 @@
-#!/usr/bin/env -S uv run
+#!/usr/bin/env -S uv run --script
+# /// script
+# dependencies = ["llm-claims-kb"]
+# [tool.uv.sources]
+# llm-claims-kb = { path = "../../../../../bukzor-agent-skills/llm-claims-kb", editable = true }
+# ///
 """Certify IMPORTED_TERMS: the one theory whose `why:` may leave the subpath.
 
 Passes when every `why:` that resolves outside `kb-dynamics/` is carried by
