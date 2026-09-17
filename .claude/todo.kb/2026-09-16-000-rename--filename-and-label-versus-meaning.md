@@ -145,8 +145,8 @@ Layout and naming, passes 1 to 3:
 The veto queue. The owner's reading, 2026-09-17, which the first two
 boxes rest on:
 
-> [!@bukzor] 9b6f24ad
-> In my imagination, the queue indeed holds ever agent-authority move, but those with excellent warrant have near-zero weight, won't be reviewed until after most everything else.
+> [!@bukzor] 9b6f24ad, sensatim: "ever" read as "every"; verbatim at 2d7d4f5
+> In my imagination, the queue indeed holds every agent-authority move, but those with excellent warrant have near-zero weight, won't be reviewed until after most everything else.
 
 > [!@bukzor] 9b6f24ad
 > And debt is a superset of agent-authority moves: all such moves "should" be reviewed if we require maximal certainty, which is "debt", but there are other categories contributing to debt as well.
