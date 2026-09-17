@@ -116,3 +116,62 @@ ask". `GROUND_RECORD` kept its label, file `the-ground-record/`.
 Not in scope: the `IMPORTED_*` family, whose names are the words they
 import; the struck claims (`PAYOUT_TEST`, `TREND_UNIT`,
 `TRUST_CORNERS`), which keep their names.
+
+## Acceptance criteria from the 2026-09-17 review (agent-authored, session 9b6f24ad, vetoable)
+
+Each box certifies one concern from the review of `589ffac..6572225`
+plus this file. Strike a box to reject the concern; the review stands
+addressed when every box is ticked or struck.
+
+Layout and naming, passes 1 to 3:
+
+- [ ] Passes 1 to 3 land as one commit, and the sweep's scope includes
+      `python/` and `examples/` as `8d25f9c`'s did: no label or path
+      cite in a docstring, test, example, or the examples README points
+      at a name that no longer exists
+- [ ] The naming rulings that bind future sessions (names are
+      questions-sans-answer; the spec/imperative exemption, ruled either
+      way; the plural-claims rule; a question's `.kb/` is not a theory)
+      are filed in the llm-claims design ledger upstream beside
+      `NAME_LOCUS`, in the owner's voice where they are the owner's, and
+      this file points at them rather than carrying them
+- [ ] The upstream amendment "a question's `.kb/` is not a theory" lands
+      before pass 4 files its first `QUESTION.kb/`, so the flatten tool
+      does not report every one
+- [ ] `HARNESS` keeps its name or is renamed on the owner's word, not
+      the agent's form of it; the rule's own "a noun with no obvious
+      question is an implicit what" covers keeping it
+
+The veto queue. The owner's reading, 2026-09-17, which the first two
+boxes rest on:
+
+> [!@bukzor] 9b6f24ad
+> In my imagination, the queue indeed holds ever agent-authority move, but those with excellent warrant have near-zero weight, won't be reviewed until after most everything else.
+
+> [!@bukzor] 9b6f24ad
+> And debt is a superset of agent-authority moves: all such moves "should" be reviewed if we require maximal certainty, which is "debt", but there are other categories contributing to debt as well.
+
+- [ ] QUEUE_VETO's commitment is either computed or marked. Computed:
+      an unvetoed agent-authority move is a debt component in its own
+      right, per the second callout; debt and `queue()` take the state
+      and the log, and a corner or trace pins the verdict. Marked:
+      QUEUE_VETO carries `todo: true` and `DEBT_HIDDEN` names the gap,
+      until then
+- [ ] A veto item's weight is a constant until a property demands more,
+      and the claim that says so names the field quantity it stands in
+      for, warrant, per the first callout and `FIDELITY_LADDER`
+- [ ] The two callouts above are filed in the ledger as the owner's
+      claim, not left here: a sixth rot kind under `ROT_KINDS` or an
+      amendment to QUEUE_VETO, on the owner's word
+- [ ] AGENT_REDUCTIONS and PRUNE_GUARD cite QUEUE_VETO in `why:`, as
+      QUEUE_VETO says its instances do
+
+Conflict:
+
+- [ ] CONFLICT's "Declined: a conflict record beside the ledger" is
+      reconciled with its own "may be cached": either the decline goes,
+      or it is marked as the agent's reading and says what it declines
+      that a cache is not
+- [ ] The conflict relation enters the state before the loader runs
+      `queue()` over real ledgers, or the loader's report says the
+      conflict component is a stub
